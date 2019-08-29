@@ -1,0 +1,48 @@
+';All scripts run after this one from the same master script that
+';use these variables as arguments will have these values applied
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, SampleMultiplier, 1, ,,,,,,,,,
+000, 3014,, HighResRate, 0, ,,,,,,,,,
+000, 3014,, CyclesOverride, 0, ,,,,,,,,,
+000, 3009,, TimoRate, {Rate}, ,,,,,,,,,
+000, 3009,, Cycles, 4.0, {Not CyclesOverride},,,,,,,,,
+000, 3009,, Cycles, 8.0, {(Rate > 500) And (Not CyclesOverride)},,,,,,,,,
+000, 3009,, TotalCountFactor, 1, ,,,,,,,,,
+000, 3009,, TotalCountFactor, {ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+000, 3009,, SampleFactor, 1, ,,,,,,,,,
+000, 3009,, SampleFactor, {ChanCount}, {(PerChan = 0) And (TComp = -1)},,,,,,,,,
+000, 3009,, Samples, 100, ,,,,,,,,,
+000, 3009,, Samples, 200, {Rate > 5},,,,,,,,,
+000, 3009,, Samples, 500, {Rate > 40},,,,,,,,,
+000, 3009,, Samples, 3000, {Rate > 500},,,,,,,,,
+000, 3009,, Samples, 10000, {Rate > 3000},,,,,,,,,
+000, 3009,, Samples, 50000, {Rate > 20000},,,,,,,,,
+000, 3009,, Samples, {Samples * SampleMultiplier}, ,,,,,,,,,
+000, 3009,, Samples, {Samples * SampleFactor}, {(Samples \ SampleFactor) < 100},,,,,,,,,
+000, 3009,, TempRate, {Rate}, ,,,,,,,,,
+000, 3009,, TempSamples, {Samples}, ,,,,,,,,,
+000, 3009,, TempSamples, {Samples * ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+000, 3009,, TempFreq, {(1.0 / (TempSamples / TempRate)) * Cycles}, ,,,,,,,,,
+000, 3009,, FreqFactor, 1, ,,,,,,,,,
+000, 3009,, FreqFactor, {ChanCount}, {RatePerChan And (PerChan = 1)},,,,,,,,,
+000, 3009,, SourceFreq, {TempFreq * FreqFactor}, ,,,,,,,,,
+000, 3009,, Rate, {Rate * 1000}, {HighResRate},,,,,,,,,
+000, 3009,, Samples, {Samples * ChanCount}, {PerChan = 0},,,,,,,,,
+'If BurstIO
+000, 3009,, ChangeSamples, {(Samples * TotalCountFactor) > FifoSetting}, ,,,,,,,,,
+000, 3009,, FifoBlock, {FifoSetting \ TotalCountFactor}, ,,,,,,,,,
+000, 3009,, Samples, {(FifoBlock \ ChanCount) * ChanCount}, {ChangeSamples},,,,,,,,,
+000, 3009,, TempSamples, {Samples}, ,,,,,,,,,
+000, 3009,, TempSamples, {Samples * ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+000, 3009,, TempFreq, {(1.0 / (TempSamples / TempRate)) * Cycles}, {ChangeSamples},,,,,,,,,
+000, 3009,, FreqFactor, {ChanCount}, {(PerChan = 0) And ChangeSamples},,,,,,,,,
+000, 3009,, SourceFreq, {TempFreq * FreqFactor}, {ChangeSamples},,,,,,,,,
+'End If
+000, 3009,, GenRate, FR{SourceFreq}HZ, ,,,,,,,,,
+000, 3009,, Tolerance, 2,,,,,,,,,,
+000, 3009,, Timeout, {(TempSamples / TimoRate) * 3}, ,,,,,,,,,
+'If Not ScriptRateSet
+000, 3008,, 500,,,,,,,,,,,
+'End If
+'; 

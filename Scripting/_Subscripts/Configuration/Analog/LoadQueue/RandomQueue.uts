@@ -1,0 +1,98 @@
+'Loads maximum queue size (MaxQueue) for Device
+'All channels specified are queued using specified Range
+'--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, MaxQueue, 0,,,,,,,,,,
+000, 3014,, MaxOverride, 0,,,,,,,,,,
+000, 3014,, RangeList, 0;0,,,,,,,,,,
+000, 3014,, NumRanges, 2,,,,,,,,,,
+000, 3014,, ChanMode, -1,,,,,,,,,,
+000, 3014,, QSwapGroup, -1&1,,,,,,,,,,
+000, 3014,, DataRate, -1,,,,,,,,,,
+000, 3009,, ChanRange, {(HighChan - LowChan) + 1},,,,,,,,,,
+000, 3017,, 1, QueueList, [UniqueChan], ,,,,,,,,
+000, 3017,, 2, QueueList, [ConsecutiveChan], ,,,,,,,,
+000, 3017,, 3, QueueList, [OrderedChan], ,,,,,,,,
+000, 3017,, 4, QueueList, [ChanModeSupport], ,,,,,,,,
+000, 3017,, 5, QueueList, [DataRateSupport], ,,,,,,,,
+000, 3009,, UniqueChan, -1, {OrderedChan},,,,,,,,,
+000, 3009,, OrderedChan, 0, {ConsecutiveChan},,,,,,,,,
+000, 3019,, &, 0, QSwapGroup, [QExceptionList],,,,,,,,
+000, 3019,, &, 1, QSwapGroup, [QReplacementList],,,,,,,,
+'If MaxQueue = 0
+000, 3009,, MaxQueue, {NumADChans}, {Not MaxOverride},,,,,,,,,
+'If Not OrderedChan
+000, 3009,, MaxQueue, {ChanRange}, {UniqueChan},,,,,,,,,
+'End If
+'End If
+000, 3009,, Channel, {LowChan}, ,,,,,,,,,
+000, 3009,, OrdChan, {LowChan}, ,,,,,,,,,
+000, 3014,, Elements, 0,,,,,,,,,,
+000, 3009,, OrdRange, {(HighChan - LowChan) + 1}, ,,,,,,,,,
+100, 3009,, QueueLow, {LowChan}, ,,,,,,,,,
+100, 3009,, SeedValue, {ChanRange - 2}, ,,,,,,,,,
+000, 3009,, UniCon, {UniqueChan And ConsecutiveChan}, ,,,,,,,,,
+'If UniCon
+000, 3018,, {SeedValue}, [RandOffset],,,,,,,,,,
+100, 3009,, Channel, {RandOffset}, ,,,,,,,,,
+100, 3009,, Channel, {TopChan - Elements}, {(Channel + QueueSize) > TopChan},,,,,,,,,
+'End If
+'If MaxQueue > 0
+100, 3009,, Elements, {MaxQueue - 1},,,,,,,,,,
+000, 3009,, QueueSize, {MaxQueue},,,,,,,,,,
+'End If
+100, 3,,, 0, 0, -1, 0, 0, 0,,,,,
+100, 3009,, ReplacementIndex, 0,,,,,,,,,,
+100, 3009,, NewIndex, 0,,,,,,,,,,
+'For Element = 0 To {Elements - 1}
+000, 3018,, {NumRanges}, [RangeIndex],,,,,,,,,,
+000, 3022,, QExceptionList, {RangeIndex}, [ReplaceRange], [ReplacementIndex], ,,,,,,,
+000, 3017,, {ReplacementIndex}, QReplacementList, [NewIndex], , ,,,,,,,
+100, 3009,, RangeIndex, {NewIndex}, {ReplaceRange},,,,,,,,,
+000, 3017,, {RangeIndex}, RangeList, [RangeCode], ,,,,,,,,
+'If UniqueChan = 0
+000, 3018,, {SeedValue}, [RandOffset],,,,,,,,,,
+000, 3009,, Channel, {QueueLow + RandOffset},,,,,,,,,,
+000, 3009,, Channel, {HighChan - RandOffset}, {(Channel + QueueSize) > HighChan},,,,,,,,,
+'End If
+'If OrderedChan
+100, 3009,, QueueLow, {OrdChan}, ,,,,,,,,,
+000, 3018,, {SeedValue}, [RandOffset],,,,,,,,,,
+000, 3009,, Channel, {QueueLow + RandOffset},,,,,,,,,,
+000, 3009,, Channel, {QueueLow}, {(Channel + ChanCount) > ChanRange},,,,,,,,,
+100, 3009,, OrdChan, {Channel + 1}, ,,,,,,,,,
+000, 3009,, OrdRange, {(HighChan - OrdChan) + 1}, ,,,,,,,,,
+100, 3009,, SeedValue, {OrdRange - 1}, ,,,,,,,,,
+'End If
+000, 3009,, ChanMode, {UseSEMode}, {ChanModeSupport},,,,,,,,,
+'100, 3015,, ,,,,,,,,,,,
+100, 3,,, QueueSize, Element, -2, Channel, RangeCode, 0, ChanMode, DataRate,,,
+000, 3009,, Channel, {Channel + 1},,,,,,,,,,
+'If Channel > HighChan
+000, 3009,, Channel, {LowChan},,,,,,,,,,
+'End If
+'Next
+'***************  Final Element and Load Queue  ***********
+000, 3018,, {NumRanges}, [RangeIndex],,,,,,,,,,
+000, 3022,, QExceptionList, {RangeIndex}, [ReplaceRange], [ReplacementIndex], ,,,,,,,
+000, 3017,, {ReplacementIndex}, QReplacementList, [NewIndex], , ,,,,,,,
+100, 3009,, RangeIndex, {NewIndex}, {ReplaceRange},,,,,,,,,
+000, 3017,, {RangeIndex}, RangeList, [RangeCode], ,,,,,,,,
+'If UniqueChan = 0
+000, 3018,, {ChanRange - 1}, [RandOffset],,,,,,,,,,
+000, 3009,, Channel, {LowChan + RandOffset},,,,,,,,,,
+'End If
+'If OrderedChan
+100, 3009,, QueueLow, {OrdChan}, ,,,,,,,,,
+000, 3018,, {SeedValue}, [RandOffset],,,,,,,,,,
+000, 3009,, Channel, {QueueLow + RandOffset},,,,,,,,,,
+000, 3009,, Channel, {QueueLow}, {Not (Channel < ChanRange)},,,,,,,,,
+'End If
+100, 3,,, QueueSize, Elements, -1, Channel, RangeCode, 0, ChanMode, DataRate,,,
+100, 3009,, Range, -1,,,,,,,,,,
+100, 3009,, QueueMode, random, ,,,,,,,,,
+100, 3009,, QueueMode, unique, {UniqueChan},,,,,,,,,
+100, 3009,, QueueMode, unique consecutive, {ConsecutiveChan},,,,,,,,,
+100, 3009,, QueueMode, unique ordered, {OrderedChan},,,,,,,,,
+;Gain queue loaded with {MaxQueue} random range and {QueueMode} channel values
+'; 

@@ -1,0 +1,14 @@
+000, 3008,, 100,,,,,,,,,,,
+{DIOBoard}, 2042,, -1, ,,,,,,,,,,
+{DIOBoard}, 2042,, FirstPort, LastPort,,,,,,,,,,
+000, 3017,, {FirstPort}, DioPortList, [PortType], ,,,,,,,,
+{DIOBoard}, 3016,, 24, 0, {PortType}, [StartPortName],,,,,,,,
+000, 3017,, {LastPort}, DioPortList, [PortType], ,,,,,,,,
+{DIOBoard}, 3016,, 24, 0, {PortType}, [EndPortName],,,,,,,,
+000, 3009,, PortName, {StartPortName}, ,,,,,,,,,
+000, 3009,, PortName, {StartPortName} To {EndPortName}, {LastPort > FirstPort},,,,,,,,,
+'********************* Digital Input **********************
+000, 3009,, StateSet, ., ,,,,,,,,,
+{DIOBoard}, 2043,, 2,,,,,,,,,,,
+;{PortName} set to input on test board
+'; 

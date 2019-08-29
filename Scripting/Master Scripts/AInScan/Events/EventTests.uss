@@ -1,0 +1,115 @@
+;Testing input scan events on {Device} using {LibString} in {InputMode} mode
+;Signal from HP3325 to all chans in the range {LowChan} to {HighChan}
+;
+;Connect HP3325 to input terminals {AiChans}
+;Analog ground terminals {AGnd}
+;{LowGrounds}
+;{FudgeWarning}
+'Initialize
+000, 3029,, 1.3.9, >=,,,,,,,,,,
+000, 3009,, UseDAQFlex, 0, ,,,,,,,,,
+000, 3009,, UseSEMode, 0, ,,,,,,,,,
+000, 3009,, UseMCCControl, -1, ,,,,,,,,,
+000, 3009,, LowChan, 0,,,,,,,,,,
+000, 3019,, &, {UseSEMode}, AToleranceGroups, [AToleranceList],,,,,,,,
+000, 3017,, UseSEMode, MaxAiChanList, [HighChan], ,,,,,,,,
+000, 3017,, UseSEMode, ULChanCfgList, [NumADChans], ,,,,,,,,
+000, 3017,, UseSEMode, DFChanCfgList, [MsgMode], ,,,,,,,,
+000, 3017,, UseSEMode, ChanCfgStrList, [InputMode], ,,,,,,,,
+000, 3017,, UseDAQFlex, LibStrList, [LibString], ,,,,,,,,
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3017,, 0, MaxAiChanRateList, [MaxAiChanRate], ,,,,,,,,
+000, 3017,, 0, MinAiChanRateList, [MinAiChanRate], ,,,,,,,,
+000, 3017,, 0, AiORunRateList, [AiORunRate], , 10000,,,,,,,
+000, 3017,, {LowChan} To {HighChan}, AiList, [AiChans], ,,,,,,,,
+000, 3009,, LowGrounds, |,,,,,,,,,,
+000, 3009,, AiLoChans, |,,,,,,,,,,
+'If UseSEMode = 0
+000, 3017,, {LowChan} To {HighChan}, AiNonInvList, [AiChans], ,,,,,,,,
+000, 3017,, {LowChan} To {HighChan}, AiInvList, [AiLoChans], ,,,,,,,,
+000, 3009,, LowGrounds, Also ground terminals {AiLoChans},,,,,,,,,,
+'End If
+000, 3009,, DefaultRate, 100, ,,,,,,,,,
+000, 3009,, DefaultRateFactor, 1, ,,,,,,,,,
+000, 3009,, DefaultRateFactor, {MinAiChanRate / DefaultRate}, {MinAiChanRate > DefaultRate},,,,,,,,,
+000, 3009,, DefaultRate, {MaxAiChanRate}, {DefaultRate > MaxAiChanRate},,,,,,,,,
+000, 3009,, DefaultRate, {MinAiChanRate}, {DefaultRate < MinAiChanRate},,,,,,,,,
+000, 3009,, TestBlock1, GPIB;Auto Signaling;Iterate Channel Count;Individual Channels;OnEndOfAIScan Event, ,,,,,,,,,
+000, 3009,, TestBlocks, {TestBlock1};OnDataAvailable Event;OnScanError Event;OnPretrigger Event, ,,,,,,,,,
+000, 3009,, Test0, 0, ,,,,,,,,,
+000, 3009,, Test1, 0, ,,,,,,,,,
+000, 3009,, Test2, 0, ,,,,,,,,,
+000, 3009,, Test3, 0, ,,,,,,,,,
+000, 3009,, Test4, -1, ,,,,,,,,,
+000, 3009,, Test5, -1, ,,,,,,,,,
+000, 3009,, Test6, -1, ,,,,,,,,,
+000, 3009,, Test7, 0, ,,,,,,,,,
+000, 3009,, ParameterOpts, Continuous;Default Rate Override;Data Avail Increment;Overrun Rate, ,,,,,,,,,
+000, 3009,, Param0, 0, ,,,,,,,,,
+000, 3009,, Param1, {DefaultRate}, ,,,,,,,,,
+000, 3009,, Param2, {200 * DefaultRateFactor}, ,,,,,,,,,
+000, 3009,, Param3, {AiORunRate}, ,,,,,,,,,
+'End Initialize
+;
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3020,, LibType,,,,,,,,,,,
+000, 3027,, UseMCCControl,,,,,,,,,,,
+000, 3009,, Continuous, {Param0}, ,,,,,,,,,
+000, 3009,, BadRate, {Param3}, ,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+4001, 0, Configuration\Analog\GetAiDefaults.uts, 0
+000, 3009,, TComp, 1,,,,,,,,,,
+000, 3009,, CyclesOverride, -1, ,,,,,,,,,
+000, 3009,, Cycles, 4, ,,,,,,,,,
+000, 3009,, TComp, -1, {(RatePerChan = 0) And (PerChan = 1)},,,,,,,,,
+4001, 0, Signals\MapSwitch.uts, 0, {Test1}
+4001, 0, openain.uts, {Device}
+4001, 0, opengpib.uts, 0, {Test0}
+4001, 0, opencfg.uts, {Device}
+4001, 0, Configuration\Analog\InputMode\{ConfigInputFile}, 0
+4001, 0, CloseCfg.uts, 0
+4001, 0, Configuration\Options\SOSingleIO.uts, 0, {CapSingleIO}
+4001, 0, Configuration\Options\SOBackground.uts, 0
+'If Not Continuous = 0
+4001, 0, Configuration\Options\SOContinuous.uts, 0
+000, 3009,, Samples, 2000,,,,,,,,,,
+'End If
+000, 3017,, RangeIndex, RangeList, [RangeCode], ,,,,,,,,
+'**********************************************************************************************************************************
+'If Test3
+000, 3017,, 3, TestBlocks, [CurTestMode], ,,,,,,,,
+;*
+;******************   Testing {CurTestMode}   ******************
+000, 3009,, Rate, {Param1},,,,,,,,,,
+000, 3009,, SingleChannel, -1, ,,,,,,,,,
+000, 3009,, ChanCount, 1, ,,,,,,,,,
+000, 3009,, SampleMultiplier, {ChanCount}, {PerChan = 0},,,,,,,,,
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, LastChan, {HighChan},,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateSetter.uts, 0
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+4001, 0, AInScan\Events\InScanEvents.UTS, 0
+'End If
+'**********************************************************************************************************************************
+000, 3017,, 2, TestBlocks, [CurTestMode], ,,,,,,,,
+000, 3009,, CurTestMode, all channels, {Not Test2},,,,,,,,,
+;*
+;******************   Testing {CurTestMode}   ******************
+000, 3009,, SingleChannel, 0, ,,,,,,,,,
+000, 3009,, FirstChan, {LowChan}, ,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test2},,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {StartChan > HighChan},,,,,,,,,
+000, 3009,, StartChan, {HighChan}, {Not (Test2 Or Test3)},,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+'000, 3009,, SampleMultiplier, {ChanCount}, {PerChan = 0},,,,,,,,,
+000, 3009,, Rate, {Param1},,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateSetter.uts, 0
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+4001, 0, AInScan\Events\InScanEvents.UTS, 0
+'Next
+'**********************************************************************************************************************************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, closeain.uts, 0
+4001, 0, closegpib.uts, 0, {Test0}

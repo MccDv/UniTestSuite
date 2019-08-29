@@ -1,0 +1,11 @@
+800, 3022,, TrigSrcNames, AUXTRIG0, DigTrigSource, AuxIndex, $,,,,,,,
+'If DigTrigSource
+800, 202,,, {Param5}, M1 {AuxIndex}, , ,,,,,,,
+800, 202,,, LOOPBACK, AUXTRIGLOOP {AuxIndex}, , ,,,,,,,
+'End If
+'If Not DigTrigSource
+800, 202,,, XSELECT, XTRIG, , ,,,,,,,
+800, 202,,, XSELECT, TRG8112SRC, , {Param5 = AltTrig},,,,,,,
+800, 202,,, LOOPBACK, TRIGLOOP, , ,,,,,,,
+'End If
+;Selected external trigger signal and loop back

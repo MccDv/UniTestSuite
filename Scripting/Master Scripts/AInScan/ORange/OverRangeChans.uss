@@ -1,0 +1,97 @@
+;Testing all ranges on {Device} using {LibString} in {InputMode} mode
+;Signal from DP8200 to all chans in the range {LowChan} to {HighChan}
+;
+;Connect DP8200 to input terminals {AiChans}
+;Analog ground terminals {AGnd}
+;{LowGrounds}
+;{FudgeWarning}
+'Initialize
+000, 3029,, 1.3.9, >=,,,,,,,,,,
+000, 3009,, UseDAQFlex, 0, ,,,,,,,,,
+000, 3009,, UseSEMode, 0, ,,,,,,,,,
+000, 3009,, LowChan, 0,,,,,,,,,,
+000, 3019,, &, {UseSEMode}, AToleranceGroups, [AToleranceList],,,,,,,,
+000, 3017,, UseSEMode, MaxAiChanList, [HighChan], ,,,,,,,,
+000, 3017,, UseSEMode, ULChanCfgList, [NumADChans], ,,,,,,,,
+000, 3017,, UseSEMode, DFChanCfgList, [MsgMode], ,,,,,,,,
+000, 3017,, UseSEMode, ChanCfgStrList, [InputMode], ,,,,,,,,
+000, 3017,, UseDAQFlex, LibStrList, [LibString], ,,,,,,,,
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3017,, 0, MaxAiChanRateList, [MaxAiChanRate], ,,,,,,,,
+000, 3017,, {LowChan} To {HighChan}, AiList, [AiChans], ,,,,,,,,
+000, 3009,, LowGrounds, |,,,,,,,,,,
+000, 3009,, AiLoChans, |,,,,,,,,,,
+'If UseSEMode = 0
+000, 3017,, {LowChan} To {HighChan}, AiNonInvList, [AiChans], ,,,,,,,,
+000, 3017,, {LowChan} To {HighChan}, AiInvList, [AiLoChans], ,,,,,,,,
+000, 3009,, LowGrounds, Also ground terminals {AiLoChans},,,,,,,,,,
+'End If
+000, 3009,, DefaultRate, 1000, ,,,,,,,,,
+000, 3009,, DefaultRate, {MaxAiChanRate}, {1000 > MaxAiChanRate},,,,,,,,,
+000, 3009,, TestBlocks, Auto Signaling;Inversion;Disable Overrange Cal, ,,,,,,,,,
+000, 3009,, Test0, 0, ,,,,,,,,,
+000, 3009,, Test1, 0, ,,,,,,,,,
+000, 3009,, Test2, 0, ,,,,,,,,,
+000, 3009,, ParameterOpts, Continuous;Default Rate Override, ,,,,,,,,,
+000, 3009,, Param0, 0, ,,,,,,,,,
+000, 3009,, Param1, {DefaultRate}, ,,,,,,,,,
+'End Initialize
+;
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3027,, 0,,,,,,,,,,,
+000, 3020,, LibType,,,,,,,,,,,
+000, 3009,, Continuous, {Param0}, ,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+4001, 0, Configuration\Analog\GetAiDefaults.uts, 0
+000, 3009,, TComp, 1,,,,,,,,,,
+000, 3009,, CyclesOverride, -1, ,,,,,,,,,
+000, 3009,, Cycles, 4, ,,,,,,,,,
+000, 3009,, TComp, -1, {(RatePerChan = 0) And (PerChan = 1)},,,,,,,,,
+4001, 0, Signals\MapSwitch.uts, 0, {Test0}
+4001, 0, openain.uts, {Device}
+4001, 0, opengpib.uts, 0
+4001, 0, opencfg.uts, {Device}
+4001, 0, Configuration\Analog\InputMode\{ConfigInputFile}, 0
+4001, 0, CloseCfg.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+'If Not Continuous = 0
+4001, 0, Configuration\Options\SOContinuous.uts, 0
+000, 3009,, Samples, 2000,,,,,,,,,,
+'End If
+000, 3009,, InSEMode, {UseSEMode = 1}, ,,,,,,,,,
+'If {(Not Test1) Or InSEMode}
+;******************   Testing Overrange   ******************
+000, 3009,, Rate, {Param1},,,,,,,,,,
+000, 3009,, ChanCount, 1, ,,,,,,,,,
+000, 3009,, SampleMultiplier, {ChanCount}, {PerChan = 0},,,,,,,,,
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, LastChan, {HighChan},,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateSetter.uts, 0
+'For CTR = 0 To NumRanges
+000, 3017,, Ctr, RangeList, [RangeCode], ,,,,,,,,
+000, 3017,, Ctr, AToleranceList, [ATolerance], ,,,,,,,,
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+4001, 0, AInScan\Range\ORangeChans.UTS, 0
+'Next
+'End If
+'**********************************************************************************************************************************
+000, 3009,, InDiffMode, {UseSEMode = 0}, ,,,,,,,,,
+'If {Test1 And InDiffMode}
+;******************   Testing Overrange on Inverting Input  ******************
+000, 3009,, Rate, {Param1},,,,,,,,,,
+000, 3009,, ChanCount, 1, ,,,,,,,,,
+000, 3009,, SampleMultiplier, {ChanCount}, {PerChan = 0},,,,,,,,,
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, LastChan, {HighChan},,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateSetter.uts, 0
+'For CTR = 0 To NumRanges
+000, 3017,, Ctr, RangeList, [RangeCode], ,,,,,,,,
+000, 3017,, Ctr, AToleranceList, [ATolerance], ,,,,,,,,
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+4001, 0, AInScan\Range\DiffORangeChans.UTS, 0
+'Next
+'End If
+000, 3027,, -1,,,,,,,,,,,
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, closeain.uts, 0
+4001, 0, closegpib.uts, 0

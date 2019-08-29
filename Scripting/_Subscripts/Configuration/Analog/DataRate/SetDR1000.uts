@@ -1,0 +1,12 @@
+';Set channel variables before calling this
+';to configure channels other than 0
+';Sets channels to data rate 1000
+';
+000, 3008,, 100,,,,,,,,,,,
+'For Channel = LowChan To HighChan
+700, 55,, 2, Channel,, 121, 1000,,,,,,,
+'Next
+'If Not ScriptRateSet
+000, 3008,, 500,,,,,,,,,,,
+'End If
+';Data rate set to 1000

@@ -1,0 +1,33 @@
+';Tests AInScan with count set to number of channels
+';--
+;Scanning channels {FirstChan} to {LastChan}; {ChanCount} samples at {TempRate}S/s
+000, 3008,, 100,,,,,,,,,,,
+800, 202,,, SWITCH, CLEAR, , {Test0},,,,,,,
+100, 3014,, ChanCount, 1,,,,,,,,,,
+100, 3014,, Rate, 1000,,,,,,,,,,
+100, 3014,, RateTolerance, 2,,,,,,,,,,
+100, 3014,, Iterations, 0,,,,,,,,,,
+100, 3009,, FailTimeout, 0, ,,,,,,,,,
+100, 3009,, FailTimeout, 1, {Continuous = 0},,,,,,,,,
+100, 3009,, TimeLimit, {Timeout}, ,,,,,,,,,
+100, 3009,, SingleSample, {ChanCount}, ,,,,,,,,,
+100, 3009,, SingleSample, 1, {UseDAQFlex = 1},,,,,,,,,
+100, 3009,, CountMultiplier, 1, ,,,,,,,,,
+100, 3009,, CountByRate, 0, ,,,,,,,,,
+100, 2,,, FirstChan, LastChan, {SingleSample}, Rate, Range,, 0,,,,
+'If Continuous = 0
+100, 2053,, 0, 30,,,,,,,,,,
+'End If
+'If Continuous = 1
+100, 2056,, {ChanCount * 10}, {TimeLimit},,,,,,,,,,
+100, 3009,, CountMultiplier, 10, ,,,,,,,,,
+100, 3009,, CountByRate, {Rate * ChanCount}, ,,,,,,,,,
+'End If
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 10001, 0, {SingleSample * CountMultiplier}, {(SingleSample * CountMultiplier) + CountByRate}, {FailTimeout},,,,,,,,,
+'For TestChan = 0 To {ChanCount - 1}
+100, 10010, {ChanCount}, {TestChan}, 0.0, 4,,,,,,,,,
+'Next
+800, 202,,, SWITCH, CHS {LowSig}-{HighSig}, , {Test0},,,,,,,
+';

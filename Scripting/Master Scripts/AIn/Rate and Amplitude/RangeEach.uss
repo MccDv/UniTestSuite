@@ -1,0 +1,87 @@
+;Testing {Device} using {LibString} in {InputMode} mode
+;Signal from HP3325 to all chans in the range {LowChan} to {HighChan}
+;
+;Analog input channel list {AiChans}
+;Analog ground list {AGnd}
+;{LowGrounds}
+;{FudgeWarning}
+;
+'Initialize
+000, 3029,, 1.3.9, >=,,,,,,,,,,
+000, 3009,, UseDAQFlex, 0, ,,,,,,,,,
+000, 3009,, UseSEMode, 0, ,,,,,,,,,
+000, 3009,, UseMCCControl, -1, ,,,,,,,,,
+000, 3009,, LowChan, 0,,,,,,,,,,
+000, 3019,, &, {UseSEMode}, AToleranceGroups, [AToleranceList],,,,,,,,
+000, 3017,, UseSEMode, MaxAiChanList, HighChan, ,,,,,,,,
+000, 3017,, UseSEMode, ULChanCfgList, NumADChans, ,,,,,,,,
+000, 3017,, UseSEMode, DFChanCfgList, MsgMode, ,,,,,,,,
+000, 3017,, UseSEMode, ChanCfgStrList, InputMode, ,,,,,,,,
+000, 3017,, UseSEMode, RangeFileList, RangeFile, ,,,,,,,,
+000, 3017,, UseDAQFlex, ChanCfgFileList, ConfigInputFile, ,,,,,,,,
+000, 3017,, UseDAQFlex, LibStrList, LibString, ,,,,,,,,
+000, 3017,, UseDAQFlex, LibTypeList, LibType, ,,,,,,,,
+000, 3017,, UseDAQFlex, AInRateList, RateEst, ,,,,,,,,
+000, 3009,, AiChans, {AiList},,,,,,,,,,
+000, 3009,, LowGrounds,  ,,,,,,,,,,
+'If UseSEMode = 0
+000, 3009,, AiChans, {AiNonInvList},,,,,,,,,,
+000, 3009,, LowGrounds, Also ground low inputs {AiInvList},,,,,,,,,,
+'End If
+000, 3009,, TestBlocks, Auto Signaling;Channel Settling;Rate and Amplitude, ,,,,,,,,,
+000, 3009,, Test0, 0, ,,,,,,,,,
+000, 3009,, Test1, 0, ,,,,,,,,,
+000, 3009,, Test2, -1, ,,,,,,,,,
+000, 3009,, ParameterOpts, Rate Estimate, ,,,,,,,,,
+000, 3009,, Param0, {RateEst}, ,,,,,,,,,
+'End Initialize
+';
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3020,, LibType,,,,,,,,,,,
+000, 3027,, UseMCCControl,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+4001, 0, Configuration\Analog\GetAiDefaults.uts, 0
+'000, 3019,, &, {UseSEMode}, RangeGroups, [RangeList],,,,,,,,
+'000, 3017,, 0, RangeList, [Dummy], [NumRanges],,,,,,,,
+'000, 3017,, UseDAQFlex, SamplesPerChanList, PerChan, ,,,,,,,,
+'000, 3017,, 0, AToleranceList, [AmplitudeTol], ,,,,,,,,
+'000, 3009,, ATolerance, {AmplitudeTol}, ,,,,,,,,,
+000, 3009,, FudgeAddAInAmp, {FudgeAddAInAmp * 2.5}, ,,,,,,,,,
+000, 3009,, RateEstimate, {Param0}, ,,,,,,,,,
+000, 3009,, AiTestFile, EachAIn.uts, ,,,,,,,,,
+000, 3009,, AiTestFile, EachAIn32.uts, {AiResolution > 16},,,,,,,,,
+4001, 0, Signals\MapSwitch.uts, 0, {Test0}
+4001, 0, opengpib.uts, 0
+4001, 0, openain.uts, {Device}
+4001, 0, opencfg.uts, {Device}
+4001, 0, Configuration\Analog\InputMode\{ConfigInputFile}, 0
+4001, 0, closecfg.uts, 0
+'If Test1
+'For CTR = 0 To NumRanges
+000, 3017,, Ctr, RangeList, [RangeCode], ,,,,,,,,
+000, 3017,, Ctr, AToleranceList, [ATolerance], ,,,,,,,,
+000, 3009,, Samples, 100, ,,,,,,,,,
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+'For TestChan = LowChan To HighChan
+000, 3009,, LowSig, {TestChan},,,,,,,,,,
+000, 3009,, HighSig, {TestChan},,,,,,,,,,
+4001, 0, AIn\AInSettle.UTS, 0
+'Next
+'Next
+'End If
+'If Test2
+4001, 0, Configuration\Analog\AInRates\RateSetter.uts, 0
+'For TestChan = LowChan To HighChan
+000, 3009,, LowSig, {TestChan},,,,,,,,,,
+000, 3009,, HighSig, {TestChan},,,,,,,,,,
+4001, 0, Signals\SwitchSetRange.uts, 0, {Test0}
+'For CTR = 0 To NumRanges
+000, 3017,, Ctr, RangeList, [RangeCode], ,,,,,,,,
+000, 3017,, Ctr, AToleranceList, [ATolerance], ,,,,,,,,
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+4001, 0, AIn\{AiTestFile}, 0
+'Next
+'Next
+'End If
+4001, 0, closeain.uts, 0
+4001, 0, closegpib.uts, 0

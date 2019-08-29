@@ -1,0 +1,9 @@
+';Set channel variables before calling this
+';to configure channels other than 0
+';Sets input sensor per TCType value
+';
+000, 3008,, 100,,,,,,,,,,,
+'For Channel = LowChan To HighChan
+700, 55,, 2, Channel,, 169, TCType,,,,,,,
+'Next
+';Input sensor set per TCType value

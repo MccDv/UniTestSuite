@@ -1,0 +1,44 @@
+;Scanning input and output on {ChanCount} channels at {Rate} Hz
+';--
+100, 3009,, Amplitude, {(2 ^ AiResolution) * 0.95}, ,,,,,,,,,
+100, 3009,, ATol, {Amplitude * 0.05}, ,,,,,,,,,
+100, 3009,, ScanTime, {Samples / (AoRate * ChanCount)}, ,,,,,,,,,
+100, 3009,, NumCycles, 8, ,,,,,,,,,
+100, 3009,, SourceFreq, {NumCycles / ScanTime}, ,,,,,,,,,
+100, 3009,, SourceFreq, {SourceFreq / ChanCount}, {UseDAQFlex = 1},,,,,,,,,
+201, 2049,, DataType, {NumCycles}, {Samples}, ChanCount, 95%, 50%, 2, -1, -1, 0,,
+201, 12,,, FirstChan, LastChan, Samples, AoRate, OutRange,, 0,,,,
+201, 2050,,,,,,,,,,,,,
+'If {SimIOScan}
+100, 2,,, FirstChan, LastChan, Samples, Rate, InRange,, 0,,,,
+'End If
+'000, 3008,, 500,,,,,,,,,,,
+201, 2055,, 1, 2, {ScanTime * 1.2},,,,,,,,,
+201, 10001, 1, 0, {Samples * 10}, 0,,,,,,,,,
+'If {SimIOScan}
+100, 2057,, {Samples}, {ScanTime * 1.2},,,,,,,,,,
+'If {UseDAQFlex = 1}
+100, 2055,, 1, {Samples}, 30,,,,,,,,,
+100, 2051,,,,,,,,,,,,,
+'End If
+100, 3009,, Chan, 0, ,,,,,,,,,
+'For Channel = FirstChan To LastChan
+100, 10013, {Samples}, Chan, {AOAmplitude}, {ATol}C, 0,,,,,,,,
+100, 10021, {Samples}, Chan, {AOThresh}V, {ATol \ 10}, SourceFreq, ClockRate, {Samples * 0.05}, ,,,,,
+100, 3009,, Chan, {Chan + 1}, ,,,,,,,,,
+'Next
+100, 2057,, {Samples}, 30,,,,,,,,,,
+100, 3009,, Chan, 0, ,,,,,,,,,
+'For Channel = FirstChan To LastChan
+100, 10013, {Samples}, Chan, {AOAmplitude}, {ATol}C, 0,,,,,,,,
+100, 10021, {Samples}, Chan, {AOThresh}V, {ATol \ 10}, SourceFreq, ClockRate, {Samples * 0.05}, ,,,,,
+100, 3009,, Chan, {Chan + 1}, ,,,,,,,,,
+'Next
+100, 59,,,,,,,,,,,,,
+'End If
+'If {Not SimIOScan}
+201, 2056,, {Samples * 10}, 30, 30,,,,,,,,,
+'End If
+'000, 3008,, 100,,,,,,,,,,,
+201, 59,,,,,,,,,,,,,
+'

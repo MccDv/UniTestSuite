@@ -1,0 +1,10 @@
+;Set channel variables before calling this
+;to configure channels other than 0
+;Sets channels to data rate 25
+;
+000, 3008,, 100,,,,,,,,,,,
+'For Channel = LowChan To HighChan
+700, 55,, 2, Channel,, 121, 25,,,,,,,
+'Next
+000, 3008,, 500,,,,,,,,,,,
+;Data rate set to 25

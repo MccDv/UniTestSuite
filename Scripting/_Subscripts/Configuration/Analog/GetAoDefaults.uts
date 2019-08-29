@@ -1,0 +1,9 @@
+'000, 3022,, AoOptionList, 4096, [CapBurstMode], ,,,,,,,,
+000, 3009,, FifoSetting, {FifoSize}, ,,,,,,,,,
+000, 3009,, NoAoSupport, 0, ,,,,,,,,,
+000, 3009,, NoAoSupport, -1, {MaxAoChan = ~},,,,,,,,,
+000, 3017,, UseDAQFlex, SamplesPerChanList, PerChan,,,,,,,,,
+000, 3017,, {UseSEMode}, DefaultAoRangeIndexList, [RangeIndex], ,,,,,,,,
+000, 3017,, RangeIndex, AoRangeList, [AoRangeCode], [NumAoRanges],,,,,,,,
+000, 3019,, &, {UseSEMode}, LoopAiRangeIndexGroups, [LoopAiRangeIndexList],,,,,,,,
+';

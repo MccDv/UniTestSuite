@@ -1,0 +1,68 @@
+';Tests AInScan with most parameters set up by previous 
+';configuration subscripts such as 'FPBip10Volts.uts'
+';Scans increment from one channel up to the number
+';of channels specified, compensating Rate if required
+';as specified by MaxAggRate
+';--
+'If {FudgeBoolXTalk}
+;XTalk compensation = {XTalkComp}
+'End If
+100, 3009,, AggSamples, {Samples}, ,,,,,,,,,
+100, 3009,, AggSamples, {Samples * ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+;Scanning channels {FirstChan} to {LastChan}; {AggSamples} samples  at {TempRate}S/s
+000, 3008,, 100,,,,,,,,,,,
+800, 202,,, HP3325, FU1,, {Test0},,,,,,,
+800, 202,,, HP3325, GenRate,, {Test0},,,,,,,
+800, 202,,, HP3325, GenVolts,, {Test0},,,,,,,
+800, 202,,, HP3325, GenOffset,, {Test0},,,,,,,
+100, 3014,, Samples, 1000,,,,,,,,,,
+100, 3014,, Rate, 1000,,,,,,,,,,
+100, 3014,, RateTolerance, 2,,,,,,,,,,
+100, 3014,, ATolerance, 4,,,,,,,,,,
+100, 3014,, XTalk, 4,,,,,,,,,,
+100, 3014,, DCTol, 8,,,,,,,,,,
+100, 3014,, EvalChan, 0,,,,,,,,,,
+100, 3014,, SampComp, 0,,,,,,,,,,
+100, 3014,, Iterations, 0,,,,,,,,,,
+100, 3014,, MvgAvg, 1,,,,,,,,,,
+100, 3014,, TrigWindow, 8,,,,,,,,,,
+100, 3014,, DeltaV, 2.5,,,,,,,,,,
+100, 3014,, TComp, 1,,,,,,,,,,
+100, 3009,, PerCycleCount, {Samples / ChanCount / Cycles}, ,,,,,,,,,
+100, 3009,, RateOption, , ,,,,,,,,,
+100, 3009,, RateOption, PercentTol = 0.5, {PerCycleCount < 1000},,,,,,,,,
+100, 3009,, FailTimeout, 0, ,,,,,,,,,
+100, 3009,, FailTimeout, 1, {Continuous = 0},,,,,,,,,
+100, 3009,, TimeMult, {((AggSamples / AggregateRate) + 1) * 3}, ,,,,,,,,,
+100, 3009,, TimeLimit, {TimeMult * 2}, ,,,,,,,,,
+100, 3009,, TimeLimit, {Timeout}, {Continuous = 0},,,,,,,,,
+'100, 3009,, AcqCount, {AggregateRate * 6}, ,,,,,,,,,
+100, 3009,, AcqCount, {Samples}, ,,,,,,,,,
+100, 3009,, AcqCount, {Samples}, {Continuous = 0},,,,,,,,,
+100, 3009,, SamplesPerChan, {Samples}, ,,,,,,,,,
+100, 3009,, SamplesPerChan, {Samples / ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+100, 3009,, AggregateCount, 1.5, ,,,,,,,,,
+100, 3009,, EvalCount, {Samples},,,,,,,,,,
+100, 3009,, EvalCount, {Samples * ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+100, 3009,, ContDaqFlex, {(Continuous = 1) And (UseDAQFlex = 1)}, ,,,,,,,,,
+100, 3009,, EvalCount, {(SamplesPerChan \ 1) * ChanCount * ChanCount}, {ContDaqFlex},,,,,,,,,
+100, 3009,, DeltaOption, 0, ,,,,,,,,,
+100, 3009,, DeltaOption, Ignore 1, {Continuous = 1},,,,,,,,,
+100, 3009,, DeltaOption, {DeltaOption};Tol = {DCTol}, ,,,,,,,,,
+100, 3009,, ScriptRate, 100, ,,,,,,,,,
+100, 3009,, ScriptRate, 500, {Not ContDaqFlex},,,,,,,,,
+000, 3008,, ScriptRate,,,,,,,,,,,
+100, 2,,, FirstChan, LastChan, Samples, Rate, Range,, 0,,,,
+100, 2056,, {Samples}, {Timeout},,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 10001, 0, {AcqCount}, {AcqCount + (AggregateRate * Continuous * TimeLimit)}, {FailTimeout},,,,,,,,,
+'If EvalChan < {ChanCount}
+100, 10013, EvalCount, EvalChan, Amplitude, {ATolerance + FudgeAddAInAmp}C, MvgAvg,,,,,,,,
+'End If
+'If {EvalChan + 1} < {ChanCount}
+100, 10010, {EvalCount}, {EvalChan + 1}, 0.0, DCTol, {EvalCount},,,,,,,,
+100, 10013, EvalCount, {EvalChan + 1}, {XTalk}C, {XTalk}C, 4,,,,,,,,
+'End If
+800, 205,,, All devices, {Test0},,,,,,,,,
+';

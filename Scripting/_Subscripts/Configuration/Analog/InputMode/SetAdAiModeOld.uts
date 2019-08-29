@@ -1,0 +1,9 @@
+'Set channel variables before calling this
+'to configure channels other than 0
+'Sets input mode per AIMode value
+';
+000, 3008,, 100,,,,,,,,,,,
+'For Channel = LowChan To HighChan
+700, 55,, 2, Channel,, 249, AIMode,,,,,,,
+'Next
+'AI Mode set

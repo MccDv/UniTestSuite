@@ -1,0 +1,15 @@
+Configuration\Analog\RangeParams\FPBip10Volts.uts,0,1000,1000,0
+Configuration\Analog\RangeParams\FPBip5Volts.uts,0,1000,1000,0
+Configuration\Analog\RangeParams\FPBip2Pt5Volts.uts,0,1000,1000,0
+Configuration\Analog\RangeParams\FPBip1Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPBipPt5Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPBipPt25Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPBipPt1Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPBipPt05Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPUni10Volts.uts,0,1000,1000,0
+Configuration\Analog\RangeParams\FPUni5Volts.uts,0,1000,1000,0
+Configuration\Analog\RangeParams\FPUni2Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPUni1Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPUniPt5Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPUniPt2Volts.uts,10,5000,5000,1024
+Configuration\Analog\RangeParams\FPUniPt1Volts.uts,10,5000,5000,1024

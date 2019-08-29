@@ -1,0 +1,19 @@
+';All scripts run after this one from the same master script that
+';use these variables as arguments will have these values applied
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, ChanCount, 1, ,,,,,,,,,
+000, 3017,, UseDAQFlex, AoRatePerChanList, [AoRatePerChan], ,,,,,,,,
+000, 3009,, RateComp, {BaseRateHi}, ,,,,,,,,,
+000, 3009,, RateComp, {BaseRateHi / ChanCount}, {AoRatePerChan},,,,,,,,,
+000, 3009,, AoRate, {RateComp + (RateSelector * RateComp)}, ,,,,,,,,,
+000, 3009,, RateSelector, {RateInterval - 1}, {AoRate >= MaxAoChanRate},,,,,,,,,
+000, 3009,, PerChanRate, {AoRate \ ChanCount}, ,,,,,,,,,
+000, 3009,, PerChanRate, {AoRate}, {RatePerChan},,,,,,,,,
+000, 3009,, AggregateAoRate, {AoRate}, ,,,,,,,,,
+000, 3009,, AggregateAoRate, {AoRate * ChanCount}, {AoRatePerChan},,,,,,,,,
+000, 3009,, AoRate, {MaxAoChanRate}, {PerChanRate > MaxAiChanRate},,,,,,,,,
+000, 3009,, RateAdjust, {AggregateAoRate > (MaxAoAggRate - FudgeAddMaxRate)}, ,,,,,,,,,
+000, 3009,, RateSelector, {RateInterval - 1}, {RateAdjust},,,,,,,,,
+000, 3009,, AoRate, {(MaxAoAggRate - FudgeAddMaxRate) \ ChanCount}, {RateAdjust},,,,,,,,,
+'; 

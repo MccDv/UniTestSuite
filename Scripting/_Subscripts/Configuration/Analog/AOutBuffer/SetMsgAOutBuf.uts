@@ -1,0 +1,6 @@
+'If UseDAQFlex = 1
+000, 3009,, BufferSize, {Samples * ChanCount * 2}, ,,,,,,,,,
+700, 55,, 10, 0,, BUFSIZE, {BufferSize},,,,,,,
+;Buffer set to {BufferSize}
+'End If
+';

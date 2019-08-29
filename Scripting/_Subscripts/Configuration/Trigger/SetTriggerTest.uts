@@ -1,0 +1,70 @@
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, BoardID, 100,,,,,,,,,,
+000, 3014,, CfgFormID, 700,,,,,,,,,,
+000, 3014,, ReTriggers, 1,,,,,,,,,,
+000, 3014,, PacketMult, 1,,,,,,,,,,
+000, 3014,, ATrigTolerance, 6,,,,,,,,,,
+000, 3009,, PTConvert, 0,,,,,,,,,,
+000, 3009,, TestVoltage, {Amplitude}, ,,,,,,,,,
+000, 3009,, FailIfDelta, 0,,,,,,,,,,
+000, 3009,, DeltaVal, {Amplitude * 0.03},,,,,,,,,,
+000, 3009,, TrigATol, {ATrigTolerance},,,,,,,,,,
+000, 3009,, TrigThreshold, {TrigLevel},,,,,,,,,,
+000, 3009,, GateTolerance, 0, ,,,,,,,,,
+000, 3009,, CheckRate, 0,,,,,,,,,,
+'*************************  Trigger configuration  ******************************
+000, 3009,, TrigCfgFile, Analog\TrigAbove.uts,,,,,,,,,,
+000, 3009,, TrigCfgFile, {TrigType}|Analog\TrigBelow.uts;Analog\GateNegHys.uts;Analog\GatePosHys.uts;Analog\GateAbove.uts,,,,,,,,,,
+000, 3009,, TrigCfgFile, {TrigType - 4}|Analog\GateBelow.uts;Analog\GateInWindow.uts;Analog\GateOutWindow.uts;Digital\GateHigh.uts, ,,,,,,,,,
+000, 3009,, TrigCfgFile, {TrigType - 8}|Digital\GateLow.uts;Digital\TrigHigh.uts;Digital\TrigLow.uts;Digital\TrigPosEdge.uts;Digital\TrigNegEdge.uts, ,,,,,,,,,
+'***************************  Standard trigger mode   ****************************
+'If TrigMode = 1
+BoardID, 3006,, 16384,,,,,,,,,,,
+000, 3009,, TrigTestFile, XATrig\vATrig.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType}|XATrig\vATrig.uts;XATrig\vATrig.uts;XATrig\vATrig.uts;XATrig\vATrig.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType - 4}|XATrig\vATrig.uts;XATrig\vATrig.uts;XATrig\vATrig.uts;XDTrig\vDTrigger.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType - 8}|XDTrig\vDTrigger.uts;XDTrig\vDTrigger.uts;XDTrig\vDTrigger.uts;XDTrig\vDTrigger.uts;XDTrig\vDTrigger.uts,,,,,,,,,,
+'End If
+'*********************************  Pretrigger mode  ******************************
+'If TrigMode = 2
+'If UseDAQFlex = 1
+BoardID, 3006,, 16384,,,,,,,,,,,
+'End If
+000, 3009,, InvalidATypes, {(TrigType > 1) And (TrigType < 10)},,,,,,,,,,
+000, 3009,, InvalidType, {(TrigType = 8) Or (TrigType = 9) Or InvalidATypes},,,,,,,,,,
+'If InvalidType
+000, 3009,, TrigCfgFile, DummyTrigConfig.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, DummyTrigTest.uts,,,,,,,,,,
+'End
+'End If
+000, 3009,, PTConvert, {PTConvIsRequired},,,,,,,,,,
+000, 3009,, PTSamples, {Samples * 0.1},,,,,,,,,,
+000, 3009,, LeadingEdge, {LeadingEdge + PTSamples},,,,,,,,,,
+000, 3009,, TrailingEdge, {TrailingEdge + PTSamples},,,,,,,,,,
+000, 3009,, TrigTestFile, XATrig\vAPreTrig.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType}|XATrig\vAPreTrig.uts;XATrig\vAPreTrig.uts;XATrig\vAPreTrig.uts;XATrig\vAPreTrig.uts, ,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType - 4}|XATrig\vAPreTrig.uts;XATrig\vAPreTrig.uts;XATrig\vAPreTrig.uts;XDTrig\vDPreTrigger.uts, ,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType - 8}|XDTrig\vDPreTrigger.uts;XDTrig\vDPreTrigger.uts;XDTrig\vDPreTrigger.uts;XDTrig\vDPreTrigger.uts;XDTrig\vDPreTrigger.uts, ,,,,,,,,,
+'End If
+'******************************   Retrigger mode   *********************************
+'If TrigMode = 3
+BoardID, 3006,, 16384,,,,,,,,,,,
+BoardID, 3006,, 131072,,,,,,,,,,,
+000, 3009,, PacketComp, 0, ,,,,,,,,,
+000, 3009,, PacketChans, {PacketMult * ChanCount}, ,,,,,,,,,
+000, 3009,, PacketComp, {Samples Mod (PacketSize * PacketChans)}, {PacketSize > 0},,,,,,,,,
+'000, 3009,, SampComp, {(Samples /\ ChanCount) * ChanCount}, ,,,,,,,,,
+000, 3009,, TrigCount, {Samples - PacketComp}, ,,,,,,,,,
+000, 3009,, Samples, {TrigCount}, {UseDaqFlex = 1},,,,,,,,,
+'If SetFIFO
+'000, 3009,, PacketComp, {PacketSize}, {PacketComp = 0},,,,,,,,,
+CfgFormID, 55,, 2, 0,, 219, {TrigCount},,,,,,,
+000, 3009,, TrigCount, {Samples - PacketComp}, ,,,,,,,,,
+000, 3009,, Samples, {TrigCount * ReTriggers},,,,,,,,,,
+'End If
+000, 3009,, TrigTestFile, XATrig\vAReTrig.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType}|XATrig\vAReTrig.uts;GateNegHys.uts;GatePosHys.uts;GateAbove.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType - 4}|GateBelow.uts;GateInWindow.uts;GateOutWindow.uts;GateHigh.uts,,,,,,,,,,
+000, 3009,, TrigTestFile, {TrigType - 8}|GateLow.uts;XDTrig\vDigitalReTrig.uts;XDTrig\vDigitalReTrig.uts;XDTrig\vDigitalReTrig.uts;XDTrig\vDigitalReTrig.uts,,,,,,,,,,
+'End If
+';

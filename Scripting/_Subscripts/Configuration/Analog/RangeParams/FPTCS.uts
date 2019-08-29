@@ -1,0 +1,14 @@
+';All scripts run after this one from the same master script that
+';use these variables as arguments will have these values applied
+';--
+000, 3008,, 100,,,,,,,,,,,
+;'TCType J=1, K=2, T=3, E=4, R=5, S=6, B=7, N=8
+000, 3009,, TCType, 6,,,,,,,,,,
+000, 3009,, GenVolts, AM0.007VO,,,,,,,,,,
+000, 3009,, Amplitude, 1310°,,,,,,,,,,
+000, 3009,, GenOffset, OF0.007VO,,,,,,,,,,
+000, 3009,, Threshold, 650.0°,,,,,,,,,,
+'If Not ScriptRateSet
+000, 3008,, 500,,,,,,,,,,,
+'End If
+'; 

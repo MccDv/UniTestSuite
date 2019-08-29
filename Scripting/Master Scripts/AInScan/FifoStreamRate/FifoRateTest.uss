@@ -1,0 +1,135 @@
+;Testing analog input streaming rates on {Device} using {LibString} in {InputMode} mode
+;XTalk parameter = {Settling}
+;Checks rates from {MinAiRate + FudgeAddMinRate}S/s up to {DefAiAggRate - FudgeAddMaxRate}S/s
+;
+;Connect HP3325 to AIn {LowChan} (input terminal {AiChan})
+;Ground AIn {LowChan + 1} (input terminal {AiGndChan})
+;Analog ground terminal list: {AGnd}
+;{LowGrounds}
+;{FudgeWarning}
+'Initialize
+000, 3029,, 1.4.5, >=,,,,,,,,,,
+000, 3009,, UseDAQFlex, 0, ,,,,,,,,,
+000, 3009,, UseSEMode, 0, ,,,,,,,,,
+000, 3009,, UseMCCControl, -1, ,,,,,,,,,
+000, 3009,, LowChan, 0,,,,,,,,,,
+000, 3019,, &, {UseSEMode}, AToleranceGroups, [AToleranceList],,,,,,,,
+000, 3017,, UseSEMode, MaxAiChanList, [HighChan],,,,,,,,,
+000, 3017,, UseSEMode, ChanCfgStrList, [InputMode],,,,,,,,,
+000, 3017,, UseDAQFlex, LibStrList, [LibString],,,,,,,,,
+000, 3017,, UseDAQFlex, LibTypeList, [LibType],,,,,,,,,
+000, 3017,, {LowChan}, AiList, [AiChan],,,,,,,,,
+000, 3017,, {LowChan + 1}, AiList, [AiGndChan],,,,,,,,,
+000, 3009,, LowGrounds, |,,,,,,,,,,
+000, 3009,, AiLoChans, |,,,,,,,,,,
+'If UseSEMode = 0
+000, 3017,, {LowChan + 1}, AiNonInvList, [AiGndChan],,,,,,,,,
+000, 3017,, {LowChan + 1}, AiList, [AiGndChan],,,,,,,,,
+'000, 3017,, {LowChan} To {HighChan}, AiInvList, [AiLoChans],,,,,,,,,
+000, 3009,, LowGrounds, Also ground terminals {AiLoChans},,,,,,,,,,
+'End If
+000, 3017,, 0, MinAiChanRateList, [MinAiRate],,,,,,,,,
+000, 3017,, 1, MaxAiAggRateList, [DefAiAggRate], [NumAggRates],,,,,,,,
+000, 3017,, 1, MinAiChanRateList, [MinBurstRate],,,,,,,,,
+000, 3017,, 1, MaxAiAggRateList, [MaxBurstRate],,,,,,,,,
+000, 3017,, 1, MaxAiChanRateList, [MaxChanBurstRate],,,,,,,,,
+000, 3009,, TestBlocks, GPIB;Auto Signaling;Iterate Channel Count,,,,,,,,,,
+000, 3009,, Test0, 0,,,,,,,,,,
+000, 3009,, Test1, 0,,,,,,,,,,
+000, 3009,, Test2, -1,,,,,,,,,,
+000, 3009,, ParamBlock1, Rate Interval;Low Rate Override;Max Rate Override, ,,,,,,,,,
+000, 3009,, ParameterOpts, {ParamBlock1};Chan Rate Override;Max Stream Sample Size;Starting Channel;Min Channel Count, ,,,,,,,,,
+000, 3009,, Param0, 10,,,,,,,,,,
+000, 3009,, Param1, {MinAiRate}, ,,,,,,,,,
+000, 3009,, Param2, {DefAiAggRate}, ,,,,,,,,,
+000, 3009,, Param3, {MaxChanBurstRate}, ,,,,,,,,,
+000, 3009,, Param4, {StreamSize}, ,,,,,,,,,
+000, 3009,, Param5, 0, ,,,,,,,,,
+000, 3009,, Param6, 1, ,,,,,,,,,
+'End Initialize
+;
+;Testing with Rate Interval of {Param0}.
+000, 3017,, UseDAQFlex, LibTypeList, [LibType],,,,,,,,,
+000, 3020,, LibType,,,,,,,,,,,
+000, 3027,, UseMCCControl,,,,,,,,,,,
+000, 3009,, Continuous, 0,,,,,,,,,,
+000, 3009,, Streaming, -1,,,,,,,,,,
+000, 3009,, StreamSamples, {Param4}, ,,,,,,,,,
+000, 3009,, LowChan, {Param5}, ,,,,,,,,,
+000, 3009,, MinChanCount, {Param6 - 1}, ,,,,,,,,,
+000, 3014,, TimeoutOverride, 0, ,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+000, 3009,, BlockSize, 50000, ,,,,,,,,,
+000, 2016,, {BlockSize},,,,,,,,,,,
+4001, 0, Configuration\Analog\GetAiDefaults.uts, 0
+000, 3009,, RateOverride, {Not (Param2 = MaxAiAggRate)}, ,,,,,,,,,
+000, 3009,, MaxAiChanRateList, {Param2};{Param2}, {RateOverride},,,,,,,,,
+000, 3009,, MaxAiAggRateList, {Param2};{Param2}, {RateOverride},,,,,,,,,
+000, 3009,, MaxAiChanRate, {Param3}, {RateOverride},,,,,,,,,
+000, 3009,, MaxAiAggRate, {Param2},,,,,,,,,,
+000, 3009,, BurstIO, 0,,,,,,,,,,
+000, 3009,, BurstMode, 0,,,,,,,,,,
+000, 3009,, FifoSetting, {FifoSize},,,,,,,,,,
+000, 3009,, RateInterval, {Param0},,,,,,,,,,
+000, 3009,, HighResRate, 0,,,,,,,,,,
+000, 3009,, TrigWindow, 256,,,,,,,,,,
+'000, 3017,, UseSEMode, MaxAiChanList, [HighChan],,,,,,,,,
+'000, 3017,, 0, MaxAiChanRateList, [MaxAiChanRate],,,,,,,,,
+000, 3017,, 0, AToleranceList, [BaseTolerance],,,,,,,,,
+000, 3009,, DCTol, 6, ,,,,,,,,,
+000, 3009,, XTalk, {Settling},,,,,,,,,,
+000, 3009,, XTalkComp, 1,,,,,,,,,,
+000, 3009,, SampComp, -1,,,,,,,,,,
+000, 3009,, TComp, 1,,,,,,,,,,
+000, 3009,, TComp, -1, {(RatePerChan = 0) And (PerChan = 1)},,,,,,,,,
+4001, 0, Signals\MapSwitch.uts, 0, {Test1}
+4001, 0, opengpib.uts, 0, {Test0}
+4001, 0, openain.uts, {Device}
+4001, 0, opencfg.uts, {Device}
+000, 3009,, BufferSize, {102400 * (HighChan + 1)},,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, 
+4001, 0, Configuration\Analog\InputMode\{ConfigInputFile}, 0
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+000, 3009,, BaseRateLo, {Param1 + FudgeAddMinRate},,,,,,,,,,
+000, 3009,, BaseRateHi, {MaxAiAggRate / RateInterval},,,,,,,,,,
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, LastChan, {HighChan},,,,,,,,,,
+000, 3009,, LowSig, {LowChan},,,,,,,,,,
+000, 3009,, HighSig, {LowChan},,,,,,,,,,
+4001, 0, Signals\SwitchSetRange.uts, 0, {Test1}
+'**************************************************************************************************
+000, 3009,, BurstIO, 0,,,,,,,,,,
+'If Not RateOverride
+000, 3017,, BurstIO, MaxAiAggRateList, [MaxAiAggRate],,,,,,,,,
+'End If
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBlockIO.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'For RateSelector = 0 To {RateInterval - 1}
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan},,,,,,,,,,
+000, 3009,, StartChan, {LowChan + MinChanCount}, {Test2},,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, XTalk, {Settling},,,,,,,,,,
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1},,,,,,,,,,
+000, 3009,, RatePerChan, {UsesScanRate},,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+000, 3009,, XTalkComp, {(Rate * ChanCount) \ FudgeMultipleXTalkDiv},,,,,,,,,,
+000, 3009,, XTalkComp, 20, {(AggregateRate - Rate) < 10000},,,,,,,,,
+000, 3009,, XTalk, {(XTalkComp * XTalk) + Settling}, {FudgeBoolXTalk},,,,,,,,,
+000, 3009,, Cycles, 1.0, ,,,,,,,,,
+000, 3009,, CyclesOverride, -1, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateSetter.uts, 0
+000, 3009,, BufferSize, {Samples * ChanCount * 2.048}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, {UseDAQFlex}
+4001, 0, AInScan\Rate\StreamTest.UTS, 0
+'Next
+'Next
+000, 3009,, BlockSize, -1, ,,,,,,,,,
+000, 2016,, {BlockSize},,,,,,,,,,,
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, closeain.uts, 0
+4001, 0, CloseCfg.uts, 0
+4001, 0, closegpib.uts, 0, {Test0}

@@ -1,0 +1,4 @@
+'Set BlockSize variable before calling this
+000, 2016,, 500000,,,,,,,,,,,
+';
+;Plot BlockSize set to {BlockSize}

@@ -1,0 +1,21 @@
+';All scripts run after this one from the same master script that
+';use these variables as arguments will have these values applied
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3009,, RateComp, {BaseRateHi}, ,,,,,,,,,
+000, 3009,, RateComp, {BaseRateHi Div ChanCount}, {RatePerChan},,,,,,,,,
+000, 3009,, Rate, {RateComp + (RateSelector * RateComp)}, ,,,,,,,,,
+000, 3009,, Rate, {Rate Div 1}, {UseDAQFlex = 0},,,,,,,,,
+000, 3009,, RateSelector, {RateInterval - 1}, {Rate >= MaxAiChanRate},,,,,,,,,
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+000, 3009,, PerChanRate, {Rate \ ChanCount}, ,,,,,,,,,
+000, 3009,, PerChanRate, {Rate}, {RatePerChan},,,,,,,,,
+000, 3009,, AggregateRate, {Rate}, ,,,,,,,,,
+000, 3009,, AggregateRate, {Rate * ChanCount}, {RatePerChan},,,,,,,,,
+000, 3009,, PerChanAdjust, {PerChanRate > MaxAiChanRate}, ,,,,,,,,,
+000, 3009,, Rate, {MaxAiChanRate}, {PerChanAdjust},,,,,,,,,
+000, 3009,, Rate, {MinAiChanRate}, {(PerChanRate < MinAiChanRate)},,,,,,,,,
+000, 3009,, RateAdjust, {AggregateRate > (MaxAiAggRate - FudgeAddMaxRate)}, ,,,,,,,,,
+000, 3009,, RateSelector, {RateInterval - 1}, {RateAdjust And (Not Test0)},,,,,,,,,
+000, 3009,, Rate, {(MaxAiAggRate - FudgeAddMaxRate) \ ChanCount}, {RateAdjust And (Not PerChanAdjust)},,,,,,,,,
+'; 

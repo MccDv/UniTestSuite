@@ -1,0 +1,17 @@
+';Test AIn with preselected ranges and rates
+';Checks amplitude and approximate rate
+';Requires running subscripts to set ExtClockRate, Samples, etc
+;Testing cbAIn on channel {TestChan} for approximately {ExtClockRate} S/s
+';--
+800, 202,,, HP3325, FU1,,,,,,,,,
+800, 202,,, HP3325, GenRate,,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+000, 3014,, MvgAvg, 1,,,,,,,,,,
+000, 3014,, TestChan, 0,,,,,,,,,,
+000, 3014,, ATolerance, 4,,,,,,,,,,
+100, 1,,,, Range,, TestChan, TestChan, Samples,,,,,
+100, 10013, Samples, 0, {Amplitude}, {ATolerance + FudgeAddAInAmp}C, MvgAvg,,,,,,,,
+100, 10021, Samples, 0, Threshold, {Amplitude * 0.05}, SourceFreq, ExtClockRate, Tolerance,,,,,,
+800, 205,,,All devices,,,,,,,,,,
+';

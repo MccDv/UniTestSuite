@@ -1,0 +1,2 @@
+800, 202,,, LOOPBACK, AOLOOP {LowSig}-{HighSig}, , ,,,,,,,
+;Selected AO Loopback signals {LowSig} through {HighSig}

@@ -1,0 +1,113 @@
+';Tests digital retrigger and set trigger for TRIGPOSEDGE 
+';and TRIGNEGEDGE at rates configured in setup script
+';pulse and signal channels also preset
+000, 3016,, 49, 1, TrigType, [TrigSetting],,,,,,,,
+;Testing Retrigger for {TrigSetting} at {PerChanRate}Hz for {ChanCount} channels.
+;Packet multiplier = {PacketMult}
+';--
+000, 3009,, ShowDialog, {(PreviousTrig = 2) Or (PreviousTrig = 0)},,,,,,,,,,
+'If SwitchWarn
+'If ShowDialog
+000, 2001,, Switch trigger input to digital signal., 0, , Set Digital Trigger, ,,,,,,,
+'End If
+'End If
+000, 3009,, PreviousTrig, 1,,,,,,,,,,
+000, 3014,, TriggerDevice, HP8112, ,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+800, 202,,, {TriggerDevice}, M2,,,,,,,,,
+800, 202,,, {TriggerDevice}, PulseWidth,,,,,,,,,
+800, 202,,, {TriggerDevice}, HIL 2V,,,,,,,,,
+800, 202,,, {TriggerDevice}, D0,,,,,,,,,
+800, 202,,, {TriggerDevice}, ComplPulse,,,,,,,,,
+800, 202,,, HP3325, FU1,,,,,,,,,
+800, 202,,, HP3325, GenRate,,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+100, 49,,, TrigType, 0, 0,,,,,,,,
+000, 3014,, DTrigOffset, 0, ,,,,,,,,,
+100, 3014,, ATolerance, 4
+100, 3014,, MvgAvg, 3,,,,,,,,,,
+100, 3014,, FirstSample, 0,,,,,,,,,,
+100, 3014,, TrigWindow, 8,,,,,,,,,,
+100, 3014,, DeltaV, 0.1,,,,,,,,,,
+100, 3014,, OverCount, {PacketSize},,,,,,,,,,
+100, 3014,, CountMargin, {PacketSize * -1},,,,,,,,,,
+'000, 3008,, 500,,,,,,,,,,,
+100, 3009,, TrigTarget, 0, ,,,,,,,,,
+100, 3009,, RepVal, 0, ,,,,,,,,,
+000, 3014,, Time, 0.25,,,,,,,,,,
+100, 3009,, ClockRate, 0, {Not XClock},,,,,,,,,
+'If Not TrigType > 11
+'If TriggerDevice = "TRIGGER"
+800, 202,,, {TriggerDevice}, WID 50 NS,,,,,,,,,
+'End If
+800, 202,,, {TriggerDevice}, ComplPulse,,,,,,,,,
+'End If
+100, 3009,, TriggerLow, 10,,,,,,,,,,
+100, 3009,, FirstSample, {DTrigOffset * ChanCount}, ,,,,,,,,,
+100, 3009,, Condition, 1,,,,,,,,,,
+100, 3009,, RunPulse, {AggregateRate < 2000}, ,,,,,,,,,
+100, 3009,, EdgeTrig, {(TrigType = 12) Or (TrigType = 13)}, ,,,,,,,,,
+100, 3009,, LevelTrig, {(TrigType > 7) And (TrigType < 12)}, ,,,,,,,,,
+000, 3000,, {Time * 4},,,,,,,,,,,
+100, 2,,, LowChan, LastChan, Samples, {PerChanRate}, Range,, 0,,,,
+100, 10001, 1, 0, 0, 0,,,,,,,,,
+'If EdgeTrig
+800, 204,,, {TriggerDevice},,,,,,,,,,
+'If {RunPulse}
+100, 3009,, RepVal, -1, ,,,,,,,,,
+000, 3000,, {Time},,,,,,,,,,,
+800, 204,,, {TriggerDevice},,,,,,,,,,
+'End If
+'End If
+'If LevelTrig
+800, 202,,, {TriggerDevice}, ChangeState,,,,,,,,,
+'End If
+100, 2055,, 1, 2, 30,,,,,,,,,
+'For Iteration = 1 To ReTriggers
+100, 3009,, TrigTarget, {TrigCount * Iteration}, ,,,,,,,,,
+100, 10001, 2, TriggerLow, {TrigTarget + OverCount}, 0,,,,,,,,,
+100, 2055,, 0, 5, {TrigCount \ 3},,,,,,,,,
+100, 3009,, ReadDfData, {(Iteration < Retriggers) And (Not SetFIFO)}, ,,,,,,,,,
+'If {ReadDfData Or SetFIFO}
+100, 2013,,,,,,,,,,,,,
+'End If
+'If {Iteration = Retriggers}
+100, 3009,, Condition, 0, ,,,,,,,,,
+100, 3009,, Condition, 1, {SetFIFO = 0},,,,,,,,,
+'End If
+100, 3009,, TriggerLow, {TrigTarget}, ,,,,,,,,,
+100, 3009,, TriggerLow, {TrigCount * Iteration}, ,,,,,,,,,
+100, 10001, Condition, {TriggerLow + CountMargin}, {TrigTarget + OverCount}, -1,,,,,,,,,
+'If Not PulseChan > LastChan
+'If Not LowChan > PulseChan
+'100, 3009,, EvalCount, {Samples}, ,,,,,,,,,
+100, 3009,, EvalCount, {TrigCount}, ,,,,,,,,,
+100, 3009,, EvalCount, {TrigTarget}, {SetFIFO},,,,,,,,,
+100, 10011, EvalCount, PulseChanIdx, 4.75, 0.25, 0.5, HiBy, LoBy, Tolerance, FirstPoint = {FirstSample};Repeat = {RepVal},,,,
+100, 3009,, RepVal, 0, ,,,,,,,,,
+'End If
+'End If
+'If Not {WaveChan} > {LastChan}
+'If Not {LowChan} > {WaveChan}
+100, 10013, EvalCount, SigChanIdx, Amplitude, {ATolerance + FudgeAddAInAmp}C, MovingAverage = {MvgAvg};FirstPoint = {FirstSample},,,,,,,,
+'100, 10021, TotalCount, SigChanIdx, Threshold, TrigWindow, SourceFreq, 0, 2,,,,,,
+'End If
+'End If
+100, 3009,, FirstSample, {TrigTarget + (DTrigOffset * ChanCount)}, {SetFIFO},,,,,,,,,
+800, 204,,, {TriggerDevice},,,,,,,,,,
+'Next
+100, 2055,, 1, 2, 30,,,,,,,,,
+100, 2055,, 0, 6, {TrigCount \ 3},,,,,,,,,
+100, 2013,,,,,,,,,,,,,
+100, 3009,, EndCount, {TrigCount * (ReTriggers + 1)}, ,,,,,,,,,
+100, 3009,, EndCount, {Samples}, {SetFIFO},,,,,,,,,
+100, 10001, Condition, {EndCount}, {EndCount}, 1,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+'If {Not SetFIFO}
+100, 3009,, FirstSample, 0,,,,,,,,,,
+'End If
+100, 49,,, 12, 0, 0,,,,,,,,
+800, 202,,, {TriggerDevice}, C0,,,,,,,,,
+800, 205,,,All devices,,,,,,,,,,
+';Digital retrigger tests complete

@@ -1,0 +1,33 @@
+Low chan
+
+	AIn	1,2,4,5,7,8,10,11
+
+	Dig Low	50,48,46,44,42,40,38,36
+	Dig Gnd	49
+
+
+
+High chan
+
+	AIn	1,2,4,5,7,8,10,11
+
+	Tmr0	12
+	Ctr0	13
+	Ctr1	14
+	Gnd	15
+	Trig	16
+	Clock	20
+
+	Dig Hi	50,48,46,44,42,40,38,36
+	Dig Gnd	49
+
+Encoder
+
+	NC	1
+	A+	2
+	NC	3
+	B+	4
+	NC	5
+	Z+	6
+	NC	7
+	NC	8

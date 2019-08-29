@@ -1,0 +1,55 @@
+;Clock = {ClockRate}Hz, Source = {SourceFreq}Hz, Samples = {Samples}, {ChanCount} channels
+';Tests external clock at rates configured in setup script
+';signal channels also preset
+';--
+000, 3008,, 100,,,,,,,,,,,
+800, 202,,, HP8112, M1,,,,,,,,,
+800, 202,,, HP8112, HIL 2V,,,,,,,,,
+800, 202,,, HP8112, DTY 50%,,,,,,,,,
+800, 202,,, HP8112, D0,,,,,,,,,
+800, 202,,, HP8112, {PulsePeriod},,,,,,,,,
+800, 202,,, HP3325, FU1,,,,,,,,,
+800, 202,,, HP3325, GenRate,,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+100, 3014,, RateTolerance, 2,,,,,,,,,,
+100, 3014,, TrigWindow, 8,,,,,,,,,,
+100, 3014,, ATolerance, 4,,,,,,,,,,
+100, 3014,, Samples, 1000,,,,,,,,,,
+100, 3014,, SampComp, 0,,,,,,,,,,
+100, 3014,, ChanCount, 1,,,,,,,,,,
+100, 3009,, FailTimeout, 0, ,,,,,,,,,
+100, 3009,, FailTimeout, 1, {Continuous = 0},,,,,,,,,
+100, 3009,, WaveChan, {(SigChan - LowChan)},,,,,,,,,,
+100, 3009,, WaveChan, 9999, {0 > WaveChan},,,,,,,,,
+100, 3009,, ChanCount, {(LastChan - LowChan) + 1},,,,,,,,,,
+100, 3009,, TimeLimit, {((Samples / AggregateRate) + 1) * 3}, ,,,,,,,,,
+100, 3009,, TimeLimit, {Timeout}, {Continuous = 0},,,,,,,,,
+100, 3009,, AcqCount, {AggregateRate * TimeLimit}, ,,,,,,,,,
+100, 3009,, AcqCount, {Samples}, {Continuous = 0},,,,,,,,,
+100, 3009,, ContDaqFlex, {(Continuous = 1) And (UseDAQFlex = 1)}, ,,,,,,,,,
+100, 3009,, Samps, {Samples},,,,,,,,,,
+100, 3009,, Samps, {Samples \ ChanCount}, {Not (SampComp = 0)},,,,,,,,,
+100, 3009,, TotalCount, {Samps}, ,,,,,,,,,
+100, 3009,, TotalCount, {Samps * ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+100, 3009,, DeltaOption, 0, ,,,,,,,,,
+100, 3009,, DeltaOption, Ignore 1, {Continuous = 1},,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 2,,, LowChan, LastChan, Samps, Rate, Range,, 0,,,,
+'If Continuous = 0
+100, 2056,, {Samples}, {Timeout},,,,,,,,,,
+'End If
+'If Continuous = 1
+100, 2057,, {Samples}, 6,,,,,,,,,,
+100, 2056,, {AcqCount}, {TimeLimit},,,,,,,,,,
+'End If
+100, 59,,,,,,,,,,,,,
+100, 10001, 0, {AcqCount}, {(AcqCount * SampleFactor) + (AggregateRate * Continuous * 3)}, {FailTimeout},,,,,,,,,
+100, 3021,, Amplitude, SourceFreq, PerChan, [DeltaMax],,,,,,,,
+'If WaveChan < {(ChanCount + LowChan)}
+100, 10013, TotalCount, WaveChan, Amplitude, {ATolerance + FudgeAddAInAmp}C, MvgAvg,,,,,,,,
+100, 10021, TotalCount, WaveChan, Threshold, TrigWindow, SourceFreq, ClockRate, {RateTolerance * TComp}, ,,,,,
+100, 10012, TotalCount, WaveChan, {DeltaMax + ATolerance}, 0, DeltaOption,,,,,,,,
+'End If
+800, 205,,,All devices,,,,,,,,,,
+'; 

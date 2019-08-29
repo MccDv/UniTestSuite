@@ -1,0 +1,26 @@
+;Scanning input and output on {ChanCount} channels at {DACRate} Hz
+';--
+100, 3009,, Amplitude, {(2 ^ AiResolution) * 0.95}, ,,,,,,,,,
+100, 3009,, ATol, {Amplitude * 0.05}, ,,,,,,,,,
+100, 3009,, ScanTime, {Samples / ADRate}, ,,,,,,,,,
+100, 3009,, SourceFreq, {4 / ScanTime}, ,,,,,,,,,
+100, 3009,, InScanRate, {ADRate}, ,,,,,,,,,
+100, 3009,, InScanRate, {ADRate \ ChanCount}, {UsesScanRate},,,,,,,,,
+100, 3009,, DACSamples, {Samples * 2 * ChanCount}, ,,,,,,,,,
+100, 3009,, DACSamples, {DACSamples * ChanCount}, {UseDAQFlex = 1},,,,,,,,,
+201, 2049,, DataType, 4, {Samples * 2 * ChanCount}, ChanCount, 95%, 50%, 2, -1, -1, 0,,
+100, 2,,, FirstChan, LastChan, {Samples}, {InScanRate}, InRange,, 0,,,,
+201, 11,,,, OutRange, 0, FirstChan, LastChan, DACSamples,,,,,
+100, 2053,, 0, 30,,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+100, 2050,,,,,,,,,,,,,
+100, 3009,, SourceRate, {SourceFreq}, ,,,,,,,,,
+100, 3009,, SourceRate, {SourceFreq / ChanCount}, {UsesScanRate And (UseDAQFlex = 1)},,,,,,,,,
+100, 3009,, Chan, 0, ,,,,,,,,,
+'For Channel = FirstChan To LastChan
+100, 10013, {Samples}, Chan, {AOAmplitude}, {ATol}C, 0,,,,,,,,
+100, 10021, {Samples}, Chan, {AOThresh}V, {ATol \ 10}, SourceRate, , {Samples * 0.05}, ,,,,,
+100, 3009,, Chan, {Chan + 1}, ,,,,,,,,,
+'Next
+201, 2049,, DataType, 4, 0, ChanCount, 95%, 50%, 2, -1, -1, 0,,
+'

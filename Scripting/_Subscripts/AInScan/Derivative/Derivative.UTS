@@ -1,0 +1,81 @@
+';Tests AInScan with most parameters set up by previous 
+';configuration subscripts such as 'FPBip10Volts.uts'
+;Scanning from channel {FirstChan} to channel {LastChan} at {Rate} S/s
+';--
+000, 3008,, 100,,,,,,,,,,,
+800, 202,,, HP3325, FU1,,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+100, 3014,, GenRate, FR4HZ,,,,,,,,,,
+100, 3014,, SourceFreq, 4,,,,,,,,,,
+800, 202,,, HP3325, GenRate,,,,,,,,,
+100, 3014,, Samples, 1000,,,,,,,,,,
+100, 3014,, SampComp, 0,,,,,,,,,,
+100, 3014,, Rate, 1000,,,,,,,,,,
+100, 3014,, ATolerance, 4,,,,,,,,,,
+100, 3014,, Iterations, 0,,,,,,,,,,
+100, 3014,, MvgAvg, 10,,,,,,,,,,
+100, 3014,, Continuous, 0,,,,,,,,,,
+100, 3014,, TrigWindow, {ATolerance + 32}C,,,,,,,,,,
+100, 3014,, TComp, 1,,,,,,,,,,
+000, 3014,, QueueSize, 0,,,,,,,,,,
+000, 3009,, QComp, 1,,,,,,,,,,
+000, 3009,, StatusHigh, 4,,,,,,,,,,
+000, 3009,, ContPlot, {(UseDAQFlex = 0) And (Continuous = 1)}, ,,,,,,,,,
+100, 2002,, ContPlot,,,,,,,,,,,
+000, 3009,, StatusHigh, 1, {Continuous = 0},,,,,,,,,
+000, 3009,, ContCount, 1, ,,,,,,,,,
+000, 3009,, ContComp, {(UseDAQFlex = 0) And (Continuous = 1)}, ,,,,,,,,,
+000, 3009,, ContCount, 2.5, {ContComp},,,,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+000, 3014,, ChanCount, 1, ,,,,,,,,,
+100, 3009,, EvalCount, {Samples},,,,,,,,,,
+100, 3009,, EvalCount, {Samples * ChanCount}, {PerChan = 1},,,,,,,,,
+100, 3009,, PerCycleCount, {Samples / ChanCount / Cycles}, ,,,,,,,,,
+100, 3009,, RateOption, , ,,,,,,,,,
+100, 3009,, RateOption, PercentTol = 0.5, {PerCycleCount < 1000},,,,,,,,,
+000, 2016,, 500000, , ,,,,,,,,,
+000, 3014,, DiffFactor, 1,,,,,,,,,,
+000, 3009,, DiffAmplitude, {DiffAmplitude * ChanCount}, {IsMultiplexed = 0},,,,,,,,,
+000, 3009,, DiffAmpComp, {DiffAmplitude / DiffFactor}, ,,,,,,,,,
+000, 3009,, DiffTolerance, {DiffAmpComp * 0.6}, ,,,,,,,,,
+;Testing first derivative limits of {DiffAmplitude} ±{DiffTolerance} counts
+;for {TestIterations} iterations and moving average = {MvgAvg} samples
+'If SingleChannel
+'For Index = 0 To Iterations
+'For Channel = FirstChan To LastChan
+800, 202,,, SWITCH, CHS {Channel}-{Channel}, , {Test0},,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+'For Iteration = 0 To {TestIterations - 1}
+100, 2,,, Channel, Channel, {Samples}, Rate, Range,, 0,,,,
+100, 2056,, {Samples * ContCount}, {Timeout},,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 2022,, 6,,,,,,,,,,,
+100, 10013, {EvalCount}, 0, {DiffAmplitude - (DiffTolerance * 0.6)}C, {DiffTolerance}C, MvgAvg,,,,,,,,
+'Next
+'Next
+'Next
+'End If
+'If Not SingleChannel
+000, 3009,, SwitchLow, {FirstChan}, ,,,,,,,,,
+000, 3009,, SwitchHigh, {LastChan}, ,,,,,,,,,
+000, 3009,, SwitchHigh, {HighChan}, {QueueSize > 0},,,,,,,,,
+800, 202,,, SWITCH, CHS {SwitchLow}-{SwitchHigh}, , {Test0},,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+'For Iteration = 0 To {TestIterations - 1}
+100, 2,,, FirstChan, LastChan, {Samples}, Rate, Range,, 0,,,,
+100, 2056,, {Samples * ContCount}, {Timeout},,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 2022,, 6,,,,,,,,,,,
+'For EvalChan = 0 To {ChanCount - 1}
+100, 10013, {EvalCount}, EvalChan, {DiffAmplitude - (DiffTolerance * 0.6)}C, {DiffTolerance}C, MvgAvg,,,,,,,,
+'Next
+'Next
+'End If
+100, 2002,, 0,,,,,,,,,,,
+100, 2022,, 0,,,,,,,,,,,
+800, 205,,,All devices,,,,,,,,,,
+';AInScan base range tests complete
+'; 

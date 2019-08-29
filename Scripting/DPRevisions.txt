@@ -1,0 +1,72 @@
+DPRevision 1.4.5
+	
+	Added:		MemorySize
+	Added:		StreamSize
+
+DPRevision 1.4.4
+	
+	Added:		ChanModeOffset
+
+DPRevision 1.4.3
+	
+	Added:		QSwapGroup
+
+DPRevision 1.4.2
+	
+	Added:		DerivedAInAmpGroups
+	Added:		DerivedScanAmpGroups
+
+DPRevision 1.4.1
+	
+	Added:		CMRRList
+
+DPRevision 1.4.0
+	
+	Added:		DTrigOffset
+	Added:		TimeoutOverride
+
+DPRevision 1.3.9
+	
+	Added:		InvertOut
+	Added:		InvertIn
+
+DPRevision 1.3.8
+	
+	Added:		AbsMaxAi
+	Added:		LinearMaxAiList
+	Added:		ScanXFers
+	Changed:	AToleranceList to AToleranceGroups
+
+DPRevision 1.3.7
+	
+	Added:		AiORunRateList
+
+DPRevision 1.3.6
+	
+	Added:		AoOptionList
+	Added:		CtrBaseList
+
+DPRevision 1.3.5
+	
+	Added:		AOutRateList
+	Changed 	AoRatePerChan to AoRatePerChanList
+	Added:		ScanWithInputList
+
+DPRevision 1.3.4
+	
+	Added:		FirstBitInPortList
+	Added:		PortIdxList
+
+DPRevision 1.3.3
+
+	Modified:	QueueGroups
+			Changed args 1 - 5 to boolean
+	Added: 		arg 2 - Ordered channels 
+			(each chan must be greater than the last) 
+
+DPRevision 1.3.2
+
+	Added:		RateTolerance
+	Deprecated:	RateTolFactor
+
+	Added:		NumBitsInPortList

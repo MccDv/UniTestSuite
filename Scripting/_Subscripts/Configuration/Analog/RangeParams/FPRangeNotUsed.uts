@@ -1,0 +1,18 @@
+';All scripts run after this one from the same master script that
+';use these variables as arguments will have these values applied
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, FormID, 100,,,,,,,,,,
+FormID, 3009,, GenVolts, AM01VO,,,,,,,,,,
+FormID, 3009,, Amplitude, 2.0,,,,,,,,,,
+'If Scaled
+FormID, 3009,, Amplitude, 2.0 V,,,,,,,,,,
+'End If
+FormID, 3009,, Range, -1,,,,,,,,,,
+FormID, 3009,, GenOffset, OF0VO,,,,,,,,,,
+FormID, 3009,, Threshold, 0.0,,,,,,,,,,
+'If Not ScriptRateSet
+000, 3008,, 500,,,,,,,,,,,
+'End If
+;Range set to Not Used, input (p-p voltage) = {Amplitude}
+'; 

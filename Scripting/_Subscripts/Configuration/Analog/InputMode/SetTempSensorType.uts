@@ -1,0 +1,13 @@
+'Set channel variables before calling this
+'to configure channels other than 0
+'Sets input sensor per SensorType value
+';
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, LowChan, 0,,,,,,,,,,
+000, 3014,, HighChan, 0,,,,,,,,,,
+000, 3014,, ScriptRateSet, 0,,,,,,,,,,
+000, 3014,, SensorType, 5,,,,,,,,,,
+'For Channel = LowChan To HighChan
+700, 55,, 2, Channel,, 235, SensorType,,,,,,,
+'Next
+'Input sensor set per SensorType value

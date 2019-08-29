@@ -1,0 +1,158 @@
+';Tests AInScan with events enabled
+;Scanning from channel {FirstChan} to channel {LastChan}
+';--
+000, 3008,, 100,,,,,,,,,,,
+100, 3002, 0, False,,,,,,,,,,,
+100, 3014,, GenRate, FR4HZ,,,,,,,,,,
+100, 3014,, SourceFreq, 4,,,,,,,,,,
+'If Test0
+800, 202,,, HP3325, FU1,,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+800, 202,,, HP3325, GenRate,,,,,,,,,
+'End If
+100, 3014,, Samples, 1000,,,,,,,,,,
+100, 3014,, SampComp, 0,,,,,,,,,,
+100, 3014,, Rate, 1000,,,,,,,,,,
+100, 3014,, ATolerance, 4,,,,,,,,,,
+100, 3014,, Iterations, 3,,,,,,,,,,
+100, 3014,, MvgAvg, 3,,,,,,,,,,
+100, 3014,, Continuous, 0,,,,,,,,,,
+100, 3014,, TrigWindow, {ATolerance + 32}C,,,,,,,,,,
+100, 3014,, TComp, 1,,,,,,,,,,
+000, 3009,, EventList, 16;8;24;1;4, ,,,,,,,,,
+000, 3009,, EventType, 16, ,,,,,,,,,
+000, 3009,, StatusHigh, 4,,,,,,,,,,
+000, 3009,, ContPlot, {(UseDAQFlex = 0) And (Continuous = 1)}, ,,,,,,,,,
+100, 2002,, ContPlot,,,,,,,,,,,
+000, 3009,, StatusHigh, 1, {Continuous = 0},,,,,,,,,
+000, 3009,, ContCount, 1, ,,,,,,,,,
+000, 3009,, ContCount, 2.5, {UseDAQFlex = 0},,,,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+000, 3014,, ChanCount, 1, ,,,,,,,,,
+100, 3009,, EvalCount, {Samples},,,,,,,,,,
+100, 3009,, EvalCount, {Samples * ChanCount}, {PerChan = 1},,,,,,,,,
+'**********************************************************************************************************************************
+'If SingleChannel
+'For Index = 0 To 4
+000, 3017,, Index, {Test4};{Test5};{Test4 And Test5};{Test6};{Test7}, [TestCode], ,,,,,,,,
+000, 3017,, Index, EventList, [EventCode], ,,,,,,,,
+100, 3009,, ShowEventChange, -1, ,,,,,,,,,
+'If TestCode
+000, 3009,, StandardScans, {(Index = 0) Or (Index = 1) Or (Index = 2)}, ,,,,,,,,,
+'For Channel = FirstChan To LastChan
+'If {Test0 And Test1}
+800, 202,,, SWITCH, CHS {Channel}-{Channel}, , {Test0 And Test1},,,,,,,
+'End If
+'If StandardScans
+100, 71,,, {EventCode}, {Samples \ 4},,,,,,,,,
+000, 3016,, 71, 1, {EventCode}, [EventString],,,,,,,,
+'If ShowEventChange
+;{EventString} event enabled
+'End If
+100, 3009,, ShowEventChange, 0, ,,,,,,,,,
+100, 3009,, FailTimeout, {Not (EventCode = 8)}, ,,,,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+100, 2,,, Channel, Channel, {Samples}, Rate, Range,, 0,,,,
+100, 2054,, {EventCode}, {Samples - 1}, 20,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 10003, EventCode, {Samples}, 3, 0, {FailTimeout},,,,,,,,
+100, 3021,, Amplitude, {SourceFreq}, {PerChan}, [DeltaMax],,,,,,,,
+100, 10013, {EvalCount}, 0, Amplitude, {ATolerance + (FudgeAddAInAmp * 2)}C, MvgAvg,,,,,,,,
+100, 10021, {EvalCount}, 0, Threshold, TrigWindow, SourceFreq, 0, {RateTolerance * TComp}, ,,,,,
+100, 10012, {EvalCount}, 0, {DeltaMax * 2}, 0, Ignore = 1,,,,,,,,
+100, 10001, 0, {Samples}, {Samples * StatusHigh}, {(Continuous = 0) And FailTimeout},,,,,,,,,
+100, 72,,, 255,,,,,,,,,,
+'End If
+'If {EventCode = 1}
+100, 3004,, 0,,,,,,,,,,,
+100, 3001,, 0,,,,,,,,,,,
+100, 3005,, 0,,,,,,,,,,,
+100, 3003,, 0,,,,,,,,,,,
+100, 71,,, 1, {Samples \ 4},,,,,,,,,
+000, 3016,, 71, 1, 1, [EventString],,,,,,,,
+'If ShowEventChange
+;{EventString} event enabled
+'End If
+100, 3009,, ShowEventChange, 0, ,,,,,,,,,
+000, 3014,, BadRate, 10000, ,,,,,,,,,
+100, 2,,, Channel, Channel, 100000, BadRate, Range,, 0,,,,
+100, 2054,, 1, -1, 20,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+100, 10001, 0, 0, 99000, -1,,,,,,,,,
+100, 72,,, 255,,,,,,,,,,
+100, 3004,, -1,,,,,,,,,,,
+100, 3001,, -1,,,,,,,,,,,
+100, 3005,, -1,,,,,,,,,,,
+100, 3003,, -1,,,,,,,,,,,
+'End If
+'Next
+'End If
+'Next
+'End If
+'**********************************************************************************************************************************
+'If Not SingleChannel
+'For Index = 0 To 4
+000, 3017,, Index, {Test4};{Test5};{Test4 And Test5};{Test6};{Test7}, [TestCode], ,,,,,,,,
+000, 3017,, Index, EventList, [EventCode], ,,,,,,,,
+100, 3009,, FailTimeout, {Not (EventCode = 8)}, ,,,,,,,,,
+'If TestCode
+000, 3009,, StandardScans, {(Index = 0) Or (Index = 1) Or (Index = 2)}, ,,,,,,,,,
+'If StandardScans
+100, 71,,, {EventCode}, {Samples \ 4},,,,,,,,,
+000, 3016,, 71, 1, {EventCode}, [EventString],,,,,,,,
+;{EventString} event enabled
+000, 3009,, SwitchLow, {FirstChan}, ,,,,,,,,,
+000, 3009,, SwitchHigh, {LastChan}, ,,,,,,,,,
+'If {Test0 And Test1}
+800, 202,,, SWITCH, CHS {SwitchLow}-{SwitchHigh}, , ,,,,,,,
+'End If
+000, 3008,, 500,,,,,,,,,,,
+100, 2,,, FirstChan, LastChan, {Samples}, Rate, Range,, 0,,,,
+100, 2054,, {EventCode}, {Samples - 1}, 20,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 3021,, Amplitude, SourceFreq, PerChan, [DeltaMax],,,,,,,,
+100, 10003, EventCode, {Samples}, 3, 0, {FailTimeout},,,,,,,,
+'For EvalChan = 0 To {ChanCount - 1}
+100, 10013, {EvalCount}, EvalChan, Amplitude, {ATolerance + (FudgeAddAInAmp * 2)}C, MvgAvg,,,,,,,,
+100, 10021, {EvalCount}, EvalChan, Threshold, TrigWindow, SourceFreq, 0, {RateTolerance * TComp}, ,,,,,
+100, 10001, 0, {Samples}, {Samples * StatusHigh}, {(Continuous = 0) And FailTimeout},,,,,,,,,
+'Next
+100, 72,,, 255,,,,,,,,,,
+'End If
+'If {EventCode = 1}
+100, 3001,, 0,,,,,,,,,,,
+100, 3003,, 0,,,,,,,,,,,
+100, 3005,, 0,,,,,,,,,,,
+100, 3004,, 0,,,,,,,,,,,
+100, 71,,, 1, {Samples \ 4},,,,,,,,,
+000, 3016,, 71, 1, 1, [EventString],,,,,,,,
+;{EventString} event enabled
+000, 3014,, BadRate, 10000, ,,,,,,,,,
+000, 3009,, OverRate, {BadRate}, ,,,,,,,,,
+000, 3009,, OverRate, {BadRate / ChanCount}, {RatePerChan},,,,,,,,,
+000, 3009,, OverSamples, {BadRate * 10}, {RatePerChan},,,,,,,,,
+100, 2,,, FirstChan, LastChan, OverSamples, OverRate, Range,, 0,,,,
+'100, 2055,, 1, 2, 30,,,,,,,,,
+100, 2054,, {EventCode}, -1, 15000,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+'100, 10001, 0, 0, {OverSamples * 0.9}, -1,,,,,,,,,
+100, 10003, EventCode, {OverSamples * 0.9}, 3, 0, -1,,,,,,,,
+100, 72,,, 255,,,,,,,,,,
+100, 3001,, -1,,,,,,,,,,,
+100, 3003,, -1,,,,,,,,,,,
+100, 3005,, -1,,,,,,,,,,,
+100, 3004,, -1,,,,,,,,,,,
+'End If
+'End If
+'Next
+'End If
+100, 2002,, 0,,,,,,,,,,,
+100, 72,,, 255,,,,,,,,,,
+100, 3002, 0, True,,,,,,,,,,,
+'If {Test0 And Test1}
+800, 205,,,All devices,,,,,,,,,,
+'End If
+';AInScan base range tests complete

@@ -1,0 +1,14 @@
+';Requires initialization with DeviceParams file first
+';determines valid ranges for current configuration and queue if any
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3019,, &, 0, RangeGroups, [Dummy], [NumRangeGroups],,,,,,,
+000, 3009,, GroupSelect, 0,,,,,,,,,,
+'If NumRangeGroups > 0
+000, 3009,, GroupSelect, {UseSEMode},,,,,,,,,,
+'End If
+000, 3017,, GroupSelect, RangeFileList, [RangeFile], ,,,,,,,,
+000, 3019,, &, GroupSelect, RangeGroups, [RangeList],,,,,,,,
+000, 3017,, 0, QueueList, MaxQueue, [QParams],,,,,,,,
+000, 3009,, QSupport, {QParams > 0},,,,,,,,,,
+'; 

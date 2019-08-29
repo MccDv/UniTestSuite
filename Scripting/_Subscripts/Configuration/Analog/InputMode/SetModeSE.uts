@@ -1,0 +1,4 @@
+000, 3009,, SetSingleEnded, -1, ,,,,,,,,,
+000, 3009,, SetSingleEnded, 0, {UseSEMode = 0},,,,,,,,,
+100, 131,,, SetSingleEnded,,,,,,,,,,
+;Input mode set to {InputMode}

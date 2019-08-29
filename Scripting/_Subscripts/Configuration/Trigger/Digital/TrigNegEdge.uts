@@ -1,0 +1,15 @@
+';Configure the rate before configuring trigger type
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, FormID, 100,,,,,,,,,,
+FormID, 3009,, ComplPulse, C1,,,,,,,,,,
+FormID, 3009,, TrigType, 13,,,,,,,,,,
+000, 3009,, EdgeMult, 1, ,,,,,,,,,
+000, 3009,, EdgeMult, {ChanCount}, {PulseAdjust},,,,,,,,,
+'Added line below for 7204 using DAQFlex
+000, 3009,, EdgeMult, {1 / ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+FormID, 3009,, HiBy, {TrailingEdge * EdgeMult}, ,,,,,,,,,
+FormID, 3009,, LoBy, {LeadingEdge},,,,,,,,,,
+000, 3009,, TrigATol, 1.0,,,,,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+'; 

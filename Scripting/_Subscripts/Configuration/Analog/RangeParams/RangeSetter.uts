@@ -1,0 +1,38 @@
+'All scripts run after this one from the same master script that
+'use these variables as arguments will have these values applied
+'--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, Scaled, 0,,,,,,,,,,
+000, 3014,, CalFactor, 1.0,,,,,,,,,,
+000, 3009,, RangeItemFile, UniRangeParams.txt, ,,,,,,,,,
+000, 3009,, RangeItemFile, BipRangeParams.txt, {RangeCode < 100},,,,,,,,,
+'If Streaming
+;These files are only implemented for the first 3 ranges currently - update for other ranges
+000, 3009,, RangeItemFile, Uni3QRangeParams.txt, ,,,,,,,,,
+000, 3009,, RangeItemFile, Bip3QRangeParams.txt, {RangeCode < 100},,,,,,,,,
+'End If
+000, 2029,, Configuration\Analog\RangeParams\{RangeItemFile}, [ListLength], [ArgsPerLine], [BipRanges],,,,,,,,
+000, 3009,, ADiv, 1, ,,,,,,,,,
+000, 3009,, ADiv, 2, {RangeCode < 100},,,,,,,,,
+000, 3009,, RCode, {RangeCode - 100}, ,,,,,,,,,
+000, 3009,, RCode, {RangeCode}, {RangeCode < 100},,,,,,,,,
+000, 2033,, RCode, 0, Range, BipRanges,,,,,,,,
+000, 2033,, RCode, 1, GenVolts, BipRanges,,,,,,,,
+000, 2033,, RCode, 2, Amplitude, BipRanges,,,,,,,,
+000, 2033,, RCode, 3, RangeText, BipRanges,,,,,,,,
+000, 2033,, RCode, 5, GenOffset, BipRanges,,,,,,,,
+000, 2033,, RCode, 6, Threshold, BipRanges,,,,,,,,
+000, 2033,, RCode, 7, FSVolts, BipRanges,,,,,,,,
+'If InvertInput
+'If {RangeCode > 99}
+000, 2033,, RCode, 8, GenOffset, BipRanges,,,,,,,,
+'End If
+'End If
+000, 3009,, Amplitude, {Amplitude * CalFactor},,,,,,,,,,
+000, 3018,, {Amplitude * 0.20}, [RndAmp1],,,,,,,,,,
+000, 3018,, {Amplitude * 0.20}, [RndAmp2],,,,,,,,,,
+000, 3009,, TrigLevel, {(Amplitude * 0.40) - RndAmp1},,,,,,,,,,
+000, 3009,, TrigLevelLow, {(TrigLevel * -1) + RndAmp2},,,,,,,,,,
+000, 3009,, Amplitude, {Amplitude} V, {Scaled},,,,,,,,,
+;Range set to {RangeText}, input (p-p voltage) = {Amplitude}
+' 

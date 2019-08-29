@@ -1,0 +1,696 @@
+;Testing and optionally, external pacing on {Device} using {LibString} in {InputMode} mode
+;Checks analog input rates from {MinAiRate + FudgeAddMinRate}S/s up to {MaxAinRate - FudgeAddMaxRate}S/s
+;{AltMaxRate}
+;
+;Connect HP3325 to AIn {SigChanIdx} (input terminal {AiSigChan})
+;Signal from HP8112 to AIn {PulseChanIdx} (terminal {AiChan}) and to TRIG_IN (terminal {DTrig})
+;Ground AIn {GroundChanIdx} (input terminal {AiGndChan})
+;Analog ground terminal list: {AGnd}
+;{LowGrounds}
+;{FudgeWarning}
+'Initialize
+000, 3029,, 1.3.9, >=,,,,,,,,,,
+000, 3009,, UseDAQFlex, 0, ,,,,,,,,,
+000, 3009,, UseSEMode, 0, ,,,,,,,,,
+000, 3009,, UseMCCControl, -1, ,,,,,,,,,
+000, 3009,, LowChan, 0, ,,,,,,,,,
+000, 3019,, &, {UseSEMode}, AToleranceGroups, [AToleranceList],,,,,,,,
+000, 3009,, SigChanIdx, 1,,,,,,,,,,
+000, 3009,, PulseChanIdx, 0,,,,,,,,,,
+000, 3009,, GroundChanIdx, 2,,,,,,,,,,
+000, 3014,, TrigSrcNames, TRIGGER$HP8112,,,,,,,,,,
+000, 3017,, UseSEMode, MaxAiChanList, [HighChan], ,,,,,,,,
+000, 3017,, UseSEMode, ChanCfgStrList, [InputMode], ,,,,,,,,
+000, 3017,, UseDAQFlex, LibStrList, [LibString], ,,,,,,,,
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3017,, {PulseChanIdx}, AiList, [AiChan], ,,,,,,,,
+000, 3017,, {SigChanIdx}, AiList, [AiSigChan], ,,,,,,,,
+000, 3017,, {GroundChanIdx}, AiList, [AiGndChan], ,,,,,,,,
+000, 3009,, LowGrounds, |,,,,,,,,,,
+000, 3009,, AiLoChans, |,,,,,,,,,,
+'If UseSEMode = 0
+000, 3017,, {GroundChanIdx}, AiNonInvList, [AiGndChan], ,,,,,,,,
+000, 3017,, {LowChan} To {HighChan}, AiInvList, [AiLoChans], ,,,,,,,,
+000, 3009,, LowGrounds, Also ground terminals {AiLoChans},,,,,,,,,,
+'End If
+000, 3017,, 0, MinAiRateList, [MinAiRate],,,,,,,,,
+000, 3017,, 0, MaxAiAggRateList, [MaxAinRate], [NumAggRates],,,,,,,,
+000, 3022,, AiOptionList, 65536, [CapBurstIO], ,,,,,,,,
+000, 3009,, AltMaxRate, |,,,,,,,,,,
+000, 3009,, BurstSupport, {(NumAggRates > 0) And CapBurstIO}, ,,,,,,,,,
+'If BurstSupport
+000, 3017,, 1, MinAiRateList, [MinBurstRate], ,,,,,,,,
+000, 3017,, 1, MaxAiAggRateList, [MaxBurstRate], ,,,,,,,,
+000, 3009,, AltMaxRate, (from {MinBurstRate}S/s to {MaxBurstRate}S/s with BURSTIO), ,,,,,,,,,
+'End If
+000, 3009,, Blocks1, Auto Signaling;Iterate Channel Count;Low Rates;High Rates;Low BurstIO Rates, ,,,,,,,,,
+000, 3009,, Blocks2, {Blocks1};High BurstIO Rates;Low BurstMode Rates;High BurstMode Rates, ,,,,,,,,,
+000, 3009,, Blocks3, {Blocks2};Standard Trigger;Pretrigger;Retrigger;TrigAbove / Below, ,,,,,,,,,
+000, 3009,, Blocks4, {Blocks3};GateNeg / PosHys;GateAbove / Below, ,,,,,,,,,
+000, 3009,, Blocks5, {Blocks4};GateIn / OutWindow;GateHigh / Low, ,,,,,,,,,
+000, 3009,, TestBlocks, {Blocks5};TrigHigh / Low;TrigPos / NegEdge;External Clock, ,,,,,,,,,
+000, 3009,, Test0, 0, ,,,,,,,,,
+000, 3009,, Test1, -1, ,,,,,,,,,
+000, 3009,, Test2, 0, ,,,,,,,,,
+000, 3009,, Test3, -1, ,,,,,,,,,
+000, 3009,, Test4, 0, ,,,,,,,,,
+000, 3009,, Test5, -1, ,,,,,,,,,
+000, 3009,, Test6, 0, ,,,,,,,,,
+000, 3009,, Test7, -1, ,,,,,,,,,
+000, 3009,, Test8, -1, ,,,,,,,,,
+000, 3009,, Test9, -1, ,,,,,,,,,
+000, 3009,, Test10, -1, ,,,,,,,,,
+000, 3009,, Test11, -1, ,,,,,,,,,
+000, 3009,, Test12, -1, ,,,,,,,,,
+000, 3009,, Test13, -1, ,,,,,,,,,
+000, 3009,, Test14, -1, ,,,,,,,,,
+000, 3009,, Test15, -1, ,,,,,,,,,
+000, 3009,, Test16, -1, ,,,,,,,,,
+000, 3009,, Test17, -1, ,,,,,,,,,
+000, 3009,, Test18, 0, ,,,,,,,,,
+000, 3009,, ParameterOpts, Rate Interval;Number of Retriggers;Continuous;Low Rate Override;High Rate Override;Trigger Device, ,,,,,,,,,
+000, 3009,, Param0, 10, ,,,,,,,,,
+000, 3009,, Param1, 3, ,,,,,,,,,
+000, 3009,, Param2, 0, ,,,,,,,,,
+000, 3009,, Param3, {MinAiRate}, ,,,,,,,,,
+000, 3009,, Param4, {MaxAinRate}, ,,,,,,,,,
+000, 3009,, Param5, {TrigSrcNames}, ,,,,,,,,,
+'End Initialize
+;
+;Testing with Rate Interval of {Param0}.
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3020,, LibType,,,,,,,,,,,
+000, 3027,, UseMCCControl,,,,,,,,,,,
+000, 3009,, Continuous, {Param2}, ,,,,,,,,,
+000, 3014,, TimeoutOverride, 0, ,,,,,,,,,
+000, 3009,, AltTrig, HP8112, ,,,,,,,,,
+000, 3009,, XClock, 0, ,,,,,,,,,
+000, 3009,, BlockSize, 500000, ,,,,,,,,,
+000, 2016,, {BlockSize},,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+000, 3009,, OverCount, {PacketSize}, ,,,,,,,,,
+000, 3009,, CountMargin, {PacketSize * -1}, ,,,,,,,,,
+4001, 0, Configuration\Plot\SetPlotPoints.uts, 0, 
+4001, 0, Configuration\Analog\GetAiDefaults.uts, 0, 
+000, 3009,, RateOverride, {Not (Param4 = MaxAiAggRate)}, ,,,,,,,,,
+000, 3009,, MaxAiChanRateList, {Param4};{Param4}, {RateOverride},,,,,,,,,
+000, 3009,, MaxAiAggRateList, {Param4};{Param4}, {RateOverride},,,,,,,,,
+000, 3009,, MaxAiChanRate, {Param4}, {RateOverride},,,,,,,,,
+000, 3009,, MaxAiAggRate, {Param4}, ,,,,,,,,,
+000, 3009,, TriggerDevice, {Param5}, ,,,,,,,,,
+000, 3009,, ReTriggers, {Param1}, ,,,,,,,,,
+000, 3009,, BurstIO, 0, ,,,,,,,,,
+000, 3009,, BurstMode, 0, ,,,,,,,,,
+000, 3022,, AiOptionList, 4096, [CapBurstMode], ,,,,,,,,
+000, 3022,, AiOptionList, 131072, [CapRetrigger], ,,,,,,,,
+000, 3009,, Test10, {CapRetrigger}, ,,,,,,,,,
+000, 3009,, FifoSetting, {FifoSize}, ,,,,,,,,,
+000, 3009,, RateInterval, {Param0}, ,,,,,,,,,
+000, 3009,, HighResRate, 0, ,,,,,,,,,
+000, 3009,, TrigWindow, 256,,,,,,,,,,
+000, 3009,, TrigModeNames, Standard Trigger;PreTrigger;ReTrigger, ,,,,,,,,,
+000, 3009,, TrigTypeBaseList, {Test11};{Test11};{Test12};{Test12};{Test13};{Test13};{Test14};{Test14}, ,,,,,,,,,
+000, 3009,, TrigTypeFullList, {TrigTypeBaseList};{Test15};{Test15};{Test16};{Test16};{Test17};{Test17}, ,,,,,,,,,
+000, 3017,, 0, MaxAiChanRateList, [MaxAiChanRate], ,,,,,,,,
+000, 3017,, UseDAQFlex, SetTrigCountList, [SetFIFO], ,,,,,,,,
+000, 3017,, 0, DTrigTypeList, [Dummy], [NumDTrigTypes],,,,,,,,
+000, 3017,, 0, ATrigTypeList, [Dummy], [NumATrigTypes],,,,,,,,
+000, 3017,, 0, DTrigModeList, [Dummy], [NumDTrigModes],,,,,,,,
+000, 3017,, 0, ATrigModeList, [Dummy], [NumATrigModes],,,,,,,,
+000, 3009,, DCTol, 4, ,,,,,,,,,
+000, 3009,, XTalk, 4, ,,,,,,,,,
+000, 3009,, XTalkComp, 1, ,,,,,,,,,
+000, 3009,, SampComp, -1,,,,,,,,,,
+000, 3009,, ITComp, -1, ,,,,,,,,,
+000, 3009,, XTComp, -1, ,,,,,,,,,
+000, 3009,, XBurstTComp, -1, ,,,,,,,,,
+000, 3009,, ITComp, 1, {RatePerChan},,,,,,,,,
+000, 3009,, XTComp, 1, {RatePerEdge},,,,,,,,,
+000, 3009,, XBurstTComp, 1, {RatePerBurst},,,,,,,,,
+000, 3009,, TComp, {ITComp}, ,,,,,,,,,
+000, 3014,, SwitchWarn, 0,,,,,,,,,,
+000, 3009,, PreviousTrig, 0,,,,,,,,,,
+000, 3009,, PulseChan, {(PulseChanIdx + LowChan)}, ,,,,,,,,,
+000, 3009,, GroundChan, {(GroundChanIdx + LowChan)},,,,,,,,,,
+000, 3009,, WaveChan, {SigChanIdx + LowChan},,,,,,,,,,
+000, 3009,, PTConvert, {PTConvIsRequired},,,,,,,,,,
+4001, 0, Signals\MapSwitch.uts, 0, {Test0}
+4001, 0, opengpib.uts, 0, 
+4001, 0, openain.uts, {Device}
+4001, 0, opencfg.uts, {Device}
+4001, 0, Signals\XCtlTrigLoop.uts, 0, {Test0}
+4001, 0, Signals\XCtlAiClock.uts, 0, {Test0 And Test18}
+000, 3009,, LowSig, {PulseChan}, ,,,,,,,,,
+000, 3009,, HighSig, {WaveChan}, ,,,,,,,,,
+4001, 0, Signals\SwitchSetRange.uts, 0, {Test0}
+000, 3009,, BufferSize, {102400 * (HighChan + 1)}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, 
+4001, 0, Configuration\Analog\InputMode\{ConfigInputFile}, 0
+000, 3009,, TrigOption, 0,,,,,,,,,,
+000, 3009,, SkipTest, 0,,,,,,,,,,
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+000, 3009,, BaseRateLo, {Param3 + FudgeAddMinRate}, ,,,,,,,,,
+000, 3009,, BaseRateHi, {MaxAiAggRate / RateInterval}, ,,,,,,,,,
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, LastChan, {HighChan},,,,,,,,,,
+000, 3009,, DoRepeat, -1, ,,,,,,,,,
+'******************* Low Rates **********************************************************************************************
+'If Test2
+000, 3017,, 2, TestBlocks, [CurTest], ,,,,,,,,
+;*
+;******************   Testing {CurTest}   ******************
+000, 3022,, AiOptionList, 32, [CapSingleIO], ,,,,,,,,
+000, 3022,, AiOptionList, 2097152, [CapHighResRate], ,,,,,,,,
+000, 3009,, HighResRate, {CapHighResRate And (UseDAQFlex = 0)}, ,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOSingleIO.uts, 0, CapSingleIO
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+4001, 0, Configuration\Options\SOHighResRate.uts, 0, HighResRate
+'End If
+'For CTR = 0 To {RateInterval - 1}
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test1},,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, RateFactor, {CTR * 2}, ,,,,,,,,,
+'000, 3009,, Rate, {BaseRateLo + (RateFactor * BaseRateLo)}, ,,,,,,,,,
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+'For ModeTest = 0 To NumDTrigModes
+'If {Not Test18}
+'******************* Not ExtClock  **********************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOSingleIO.uts, 0, CapSingleIO
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+4001, 0, Configuration\Options\SOHighResRate.uts, 0, HighResRate
+'End If
+000, 3009,, TrigComp, 1,,,,,,,,,,
+'For TrigTest = 0 To NumDTrigTypes
+000, 3017,, ModeTest, DTrigModeList, [TrigMode], ,,,,,,,,
+000, 3017,, {TrigMode - 1}, {Test8};{Test9};{Test10}, [RunMode], ,,,,,,,,
+000, 3017,, TrigTest, DTrigTypeList, [TrigType], ,,,,,,,,
+000, 3017,, TrigType, {TrigTypeFullList}, [RunType], ,,,,,,,,
+000, 3009,, RunTest, {RunType And RunMode}, ,,,,,,,,,
+'If Not RunTest
+000, 3016,, 49, 1, {TrigType}, [TrigName],,,,,,,,
+000, 3017,, {TrigMode - 1}, TrigModeNames, [ModeName], ,,,,,,,,
+;Skipping {ModeName} test for trigger type {TrigName}, ,,,,,,,,,
+'End If
+'If RunTest
+000, 3009,, Rate, {BaseRateLo + (RateFactor * BaseRateLo)}, ,,,,,,,,,
+000, 3009,, NumChans, {LastChan - FirstChan},,,,,,,,,,
+000, 3009,, PerChanRate, {Rate \ ChanCount}, ,,,,,,,,,
+000, 3009,, PerChanRate, {Rate}, {RatePerChan},,,,,,,,,
+000, 3009,, AggregateRate, {Rate}, ,,,,,,,,,
+000, 3009,, AggregateRate, {Rate * ChanCount}, {RatePerChan},,,,,,,,,
+4001, 0, Configuration\Trigger\Rates\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetSource.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+4001, 0, ainscan\{TrigTestFile}, 0
+'If {Test18}
+'******************* ExtClock  **************************
+000, 3009,, XClock, -1, ,,,,,,,,,
+000, 3009,, TComp, {XTComp}, ,,,,,,,,,
+000, 3009,, CurrentRate, {BaseRateLo + (RateFactor * BaseRateLo)}, ,,,,,,,,,
+000, 3009,, Rate, {CurrentRate}, ,,,,,,,,,
+000, 3009,, Rate, {CurrentRate * ChanCount}, {TComp = -1},,,,,,,,,
+4001, 0, Configuration\Options\SOExtClock.uts, 0
+4001, 0, Configuration\Clock\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+4001, 0, ainscan\{TrigTestFile}, 0
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOSingleIO.uts, 0, CapSingleIO
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+4001, 0, Configuration\Options\SOHighResRate.uts, 0, HighResRate
+'End If
+000, 3009,, TComp, {ITComp}, ,,,,,,,,,
+000, 3009,, XClock, 0, ,,,,,,,,,
+000, 3009,, SampleMultiplier, 1, ,,,,,,,,,
+'End If
+'Next
+'Next
+'Next
+'Next
+'End If
+'***********************  High Rates   ******************************************************************************
+'If Test3
+000, 3017,, 3, TestBlocks, [CurTest], ,,,,,,,,
+;*
+;******************   Testing {CurTest}   ******************
+000, 3009,, BurstIO, 0, ,,,,,,,,,
+000, 3009,, HighResRate, 0, ,,,,,,,,,
+000, 3017,, BurstIO, MaxAiAggRateList, [MaxAiAggRate], ,,,,,,,,
+000, 3017,, 0, DTrigModeList, [TrigMode], ,,,,,,,,
+'For RateSelector = 0 To {RateInterval - 1}
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test1},,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+000, 3009,, XTalk, 2, ,,,,,,,,,
+000, 3009,, RatePerChan, {UsesScanRate}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+000, 3009,, XTalkComp, {(Rate * ChanCount) \ FudgeMultipleXTalkDiv}, ,,,,,,,,,
+000, 3009,, XTalkComp, 20, {(AggregateRate - Rate) < 10000},,,,,,,,,
+000, 3009,, XTalk, {XTalkComp * XTalk}, {FudgeBoolXTalk},,,,,,,,,
+'For ModeTest = 0 To NumDTrigModes
+000, 3009,, TrigComp, 1,,,,,,,,,,
+000, 3017,, ModeTest, DTrigModeList, [TrigMode], ,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBlockIO.uts, 0, {Not (TrigMode = 2)}
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+'If {Not Test18}
+'******************* Not ExtClock  **********************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBlockIO.uts, 0, {Not (TrigMode = 2)}
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+'For TrigTest = 0 To NumDTrigTypes
+000, 3017,, {TrigMode - 1}, {Test8};{Test9};{Test10}, [RunMode], ,,,,,,,,
+000, 3017,, TrigTest, DTrigTypeList, [TrigType], ,,,,,,,,
+000, 3017,, TrigType, {TrigTypeFullList}, [RunType], ,,,,,,,,
+000, 3009,, RunTest, {RunType And RunMode}, ,,,,,,,,,
+'If Not RunTest
+000, 3016,, 49, 1, {TrigType}, [TrigName],,,,,,,,
+000, 3017,, {TrigMode - 1}, TrigModeNames, [ModeName], ,,,,,,,,
+;Skipping {ModeName} test for trigger type {TrigName}, ,,,,,,,,,
+'End If
+000, 3009,, ModeSkip, {TrigMode = 3}, ,,,,,,,,,
+000, 3009,, TypeSkip, {(TrigType = 10) Or (TrigType = 11)}, ,,,,,,,,,
+'If Not {ModeSkip And TypeSkip}
+'If RunTest
+000, 3009,, RatePerChan, {UsesScanRate}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+000, 3009,, Cycles, 4.0, ,,,,,,,,,
+000, 3009,, CyclesOverride, 0, ,,,,,,,,,
+000, 3009,, CyclesOverride, -1, {AggregateRate > 300000},,,,,,,,,
+4001, 0, Configuration\Trigger\Rates\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetSource.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, BufferSize, {Samples * ChanCount * 2.048}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, {UseDAQFlex}
+4001, 0, ainscan\{TrigTestFile}, 0
+000, 3009,, ATolerance, {AmplitudeTol},,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+000, 3009,, XClock, -1, ,,,,,,,,,
+000, 3009,, TComp, {XTComp}, ,,,,,,,,,
+000, 3009,, RatePerChan, {RatePerEdge}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+4001, 0, Configuration\Options\SOExtClock.uts, 0
+000, 3009,, Cycles, 4.0, ,,,,,,,,,
+000, 3009,, CyclesOverride, 0, ,,,,,,,,,
+000, 3009,, CyclesOverride, -1, {AggregateRate > 300000},,,,,,,,,
+4001, 0, Configuration\Clock\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, BufferSize, {Samples * ChanCount * 2.048}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, {UseDAQFlex}
+4001, 0, ainscan\{TrigTestFile}, 0
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBlockIO.uts, 0, {Not (TrigMode = 2)}
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+000, 3009,, TComp, {ITComp}, ,,,,,,,,,
+000, 3009,, XClock, 0, ,,,,,,,,,
+000, 3009,, SampleMultiplier, 1, ,,,,,,,,,
+'End If
+'End If
+'Next
+'Next
+'Next
+'Next
+'End If
+'***********************************  Low BurstIO Rates  ****************************************************************
+'If {Test4 And CapBurstIO}
+000, 3017,, 4, TestBlocks, [CurTest], ,,,,,,,,
+;*
+;******************   Testing {CurTest}   ******************
+000, 3009,, BurstIO, -1, ,,,,,,,,,
+000, 3009,, MaxAiAggRate, {MaxBurstRate}, ,,,,,,,,,
+000, 3017,, 1, MaxAiChanRateList, [MaxAiChanRate], ,,,,,,,,
+000, 3009,, BaseRateLo, {MinBurstRate}, ,,,,,,,,,
+000, 3009,, BaseRateHi, {MaxAiAggRate / RateInterval}, ,,,,,,,,,
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test1},,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstIO.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+'For LastChan = StartChan To HighChan
+000, 3009,, Rate, {MinBurstRate}, ,,,,,,,,,
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+'For ModeTest = 0 To NumDTrigModes
+'If {Not Test18}
+'******************* Not ExtClock  **********************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstIO.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+000, 3009,, TrigComp, 1,,,,,,,,,,
+'For TrigTest = 0 To NumDTrigTypes
+000, 3017,, ModeTest, DTrigModeList, [TrigMode], ,,,,,,,,
+000, 3017,, {TrigMode - 1}, {Test8};{Test9};{Test10}, [RunMode], ,,,,,,,,
+000, 3017,, TrigTest, DTrigTypeList, [TrigType], ,,,,,,,,
+000, 3017,, TrigType, {TrigTypeFullList}, [RunType], ,,,,,,,,
+000, 3009,, RunTest, {RunType And RunMode}, ,,,,,,,,,
+000, 3009,, ModeSkip, {TrigMode = 3}, ,,,,,,,,,
+000, 3009,, TypeSkip, {(TrigType = 10) Or (TrigType = 11)}, ,,,,,,,,,
+'If Not {ModeSkip And TypeSkip}
+'If Not RunTest
+000, 3016,, 49, 1, {TrigType}, [TrigName],,,,,,,,
+000, 3017,, {TrigMode - 1}, TrigModeNames, [ModeName], ,,,,,,,,
+;Skipping {ModeName} test for trigger type {TrigName}, ,,,,,,,,,
+'End If
+'If RunTest
+4001, 0, Configuration\Trigger\Rates\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetSource.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, NumChans, {LastChan - FirstChan},,,,,,,,,,
+4001, 0, ainscan\{TrigTestFile}, 0
+000, 3009,, ATolerance, {AmplitudeTol},,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+000, 3009,, XClock, -1, ,,,,,,,,,
+000, 3009,, TComp, {XTComp}, ,,,,,,,,,
+4001, 0, Configuration\Options\SOExtClock.uts, 0
+4001, 0, Configuration\Clock\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+4001, 0, ainscan\{TrigTestFile}, 0
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstIO.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+000, 3009,, TComp, {ITComp}, ,,,,,,,,,
+000, 3009,, XClock, 0, ,,,,,,,,,
+000, 3009,, SampleMultiplier, 1, ,,,,,,,,,
+'End If
+'End If
+'Next
+'Next
+'Next
+000, 3009,, BurstIO, 0, ,,,,,,,,,
+'End If
+'******************************  High BurstIO Rates  *********************************************************************
+'If {Test5 And CapBurstIO}
+000, 3017,, 5, TestBlocks, [CurTest], ,,,,,,,,
+;*
+;******************   Testing {CurTest}   ******************
+000, 3009,, BurstIO, -1, ,,,,,,,,,
+000, 3009,, MaxAiAggRate, {MaxBurstRate}, ,,,,,,,,,
+000, 3017,, 1, MaxAiChanRateList, [MaxAiChanRate], ,,,,,,,,
+000, 3009,, BaseRateLo, {MinBurstRate}, ,,,,,,,,,
+000, 3009,, BaseRateHi, {MaxAiAggRate / RateInterval}, ,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstIO.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+'For RateSelector = 0 To {RateInterval - 1}
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test1},,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+000, 3009,, RatePerChan, {RatePerBurst}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+'For ModeTest = 0 To NumDTrigModes
+'If {Not Test18}
+'******************* Not ExtClock  *********************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstIO.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+000, 3009,, TrigComp, 1,,,,,,,,,,
+'For TrigTest = 0 To NumDTrigTypes
+000, 3017,, ModeTest, DTrigModeList, [TrigMode], ,,,,,,,,
+000, 3017,, {TrigMode - 1}, {Test8};{Test9};{Test10}, [RunMode], ,,,,,,,,
+000, 3017,, TrigTest, DTrigTypeList, [TrigType], ,,,,,,,,
+000, 3017,, TrigType, {TrigTypeFullList}, [RunType], ,,,,,,,,
+000, 3009,, RunTest, {RunType And RunMode}, ,,,,,,,,,
+000, 3009,, ModeSkip, {TrigMode = 3}, ,,,,,,,,,
+000, 3009,, TypeSkip, {(TrigType = 10) Or (TrigType = 11)}, ,,,,,,,,,
+'If Not {ModeSkip And TypeSkip}
+'If Not RunTest
+000, 3016,, 49, 1, {TrigType}, [TrigName],,,,,,,,
+000, 3017,, {TrigMode - 1}, TrigModeNames, [ModeName], ,,,,,,,,
+;Skipping {ModeName} test for trigger type {TrigName}, ,,,,,,,,,
+'End If
+'If RunTest
+000, 3009,, RatePerChan, {RatePerBurst}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+000, 3009,, Cycles, 4.0, ,,,,,,,,,
+000, 3009,, CyclesOverride, 0, ,,,,,,,,,
+000, 3009,, CyclesOverride, -1, {AggregateRate > 300000},,,,,,,,,
+4001, 0, Configuration\Trigger\Rates\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetSource.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, NumChans, {LastChan - FirstChan},,,,,,,,,,
+000, 3009,, BufferSize, {Samples * ChanCount * 2.048}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, {UseDAQFlex}
+000, 3009,, Timeout, 15, {TimeoutOverride},,,,,,,,,
+4001, 0, ainscan\{TrigTestFile}, 0
+000, 3009,, ATolerance, {AmplitudeTol},,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+000, 3009,, XClock, -1, ,,,,,,,,,
+000, 3009,, TComp, {XTComp}, ,,,,,,,,,
+000, 3009,, RatePerChan, {RatePerBurst}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+4001, 0, Configuration\Options\SOExtClock.uts, 0
+4001, 0, Configuration\Clock\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, BufferSize, {Samples * ChanCount * 2.048}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, {UseDAQFlex}
+000, 3009,, Timeout, 15, {TimeoutOverride},,,,,,,,,
+4001, 0, ainscan\{TrigTestFile}, 0
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstIO.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+000, 3009,, TComp, {ITComp}, ,,,,,,,,,
+000, 3009,, XClock, 0, ,,,,,,,,,
+000, 3009,, SampleMultiplier, 1, ,,,,,,,,,
+'End If
+'End If
+'Next
+'Next
+'Next
+'Next
+000, 3009,, BurstIO, 0, ,,,,,,,,,
+'End If
+'*****************************************  Low Burst Mode Rates  ********************************************************
+'If {Test6 And CapBurstMode}
+000, 3017,, 6, TestBlocks, [CurTest], ,,,,,,,,
+;*
+;******************   Testing {CurTest}   ******************
+000, 3009,, BurstMode, -1, ,,,,,,,,,
+000, 3017,, 0, MaxAiAggRateList, [MaxAiAggRate], ,,,,,,,,
+000, 3017,, 0, MaxAiChanRateList, [MaxAiChanRate], ,,,,,,,,
+000, 3009,, BaseRateLo, {Param3}, ,,,,,,,,,
+000, 3009,, BaseRateHi, {MaxAiAggRate / RateInterval}, ,,,,,,,,,
+000, 3022,, AiOptionList, 2097152, [CapHighResRate], ,,,,,,,,
+000, 3009,, HighResRate, {CapHighResRate And (UseDAQFlex = 0)}, ,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstMode.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+4001, 0, Configuration\Options\SOHighResRate.uts, 0, HighResRate
+'End If
+'For CTR = 0 To {RateInterval - 1}
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test1},,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, RateFactor, {CTR * 2}, ,,,,,,,,,
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+'For ModeTest = 0 To NumDTrigModes
+'If {Not Test18}
+'******************* Not ExtClock  **********************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstMode.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+4001, 0, Configuration\Options\SOHighResRate.uts, 0, HighResRate
+'End If
+000, 3009,, TrigComp, 1,,,,,,,,,,
+'For TrigTest = 0 To NumDTrigTypes
+000, 3017,, ModeTest, DTrigModeList, [TrigMode], ,,,,,,,,
+000, 3017,, {TrigMode - 1}, {Test8};{Test9};{Test10}, [RunMode], ,,,,,,,,
+000, 3017,, TrigTest, DTrigTypeList, [TrigType], ,,,,,,,,
+000, 3017,, TrigType, {TrigTypeFullList}, [RunType], ,,,,,,,,
+000, 3009,, RunTest, {RunType And RunMode}, ,,,,,,,,,
+000, 3009,, ModeSkip, {TrigMode = 3}, ,,,,,,,,,
+000, 3009,, TypeSkip, {(TrigType = 10) Or (TrigType = 11)}, ,,,,,,,,,
+'If Not {ModeSkip And TypeSkip}
+'If Not RunTest
+000, 3016,, 49, 1, {TrigType}, [TrigName],,,,,,,,
+000, 3017,, {TrigMode - 1}, TrigModeNames, [ModeName], ,,,,,,,,
+;Skipping {ModeName} test for trigger type {TrigName}, ,,,,,,,,,
+'End If
+'If RunTest
+000, 3009,, Rate, {BaseRateLo + (RateFactor * BaseRateLo)}, ,,,,,,,,,
+4001, 0, Configuration\Trigger\Rates\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetSource.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, NumChans, {LastChan - FirstChan},,,,,,,,,,
+4001, 0, ainscan\{TrigTestFile}, 0
+000, 3009,, ATolerance, {AmplitudeTol},,,,,,,,,,
+000, 3022,, AiOptionList, 4, [CapXClock], ,,,,,,,,
+'If {Test18 And CapXClock}
+'******************* ExtClock  **************************
+000, 3009,, XClock, -1, ,,,,,,,,,
+000, 3009,, TComp, {XBurstTComp}, ,,,,,,,,,
+4001, 0, Configuration\Options\SOExtClock.uts, 0
+4001, 0, Configuration\Clock\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+4001, 0, ainscan\{TrigTestFile}, 0
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstMode.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+4001, 0, Configuration\Options\SOHighResRate.uts, 0, HighResRate
+'End If
+000, 3009,, TComp, {ITComp}, ,,,,,,,,,
+000, 3009,, XClock, 0, ,,,,,,,,,
+000, 3009,, SampleMultiplier, 1, ,,,,,,,,,
+'End If
+'End If
+'Next
+'Next
+'Next
+'Next
+000, 3009,, BurstMode, 0, ,,,,,,,,,
+'End If
+'*****************************************  High Burst Mode Rates *******************************************************
+'If {Test7 And CapBurstMode}
+000, 3017,, 7, TestBlocks, [CurTest], ,,,,,,,,
+;*
+;******************   Testing {CurTest}   ******************
+000, 3009,, BurstMode, -1, ,,,,,,,,,
+000, 3009,, XTalk, {4 + FudgeAddDC}, ,,,,,,,,,
+000, 3017,, 0, MaxAiAggRateList, [MaxAiAggRate], ,,,,,,,,
+000, 3017,, 0, MaxAiChanRateList, [MaxAiChanRate], ,,,,,,,,
+000, 3009,, BaseRateLo, {Param3}, ,,,,,,,,,
+000, 3009,, BaseRateHi, {MaxAiAggRate / RateInterval}, ,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstMode.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+'For RateSelector = 0 To {RateInterval - 1}
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test1},,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+000, 3009,, RatePerChan, {UsesScanRate}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+'For ModeTest = 0 To NumDTrigModes
+'If {Not Test18}
+'******************* Not ExtClock  **********************
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstMode.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+000, 3009,, TrigComp, 1,,,,,,,,,,
+'For TrigTest = 0 To NumDTrigTypes
+000, 3017,, ModeTest, DTrigModeList, [TrigMode], ,,,,,,,,
+000, 3017,, {TrigMode - 1}, {Test8};{Test9};{Test10}, [RunMode], ,,,,,,,,
+000, 3017,, TrigTest, DTrigTypeList, [TrigType], ,,,,,,,,
+000, 3017,, TrigType, {TrigTypeFullList}, [RunType], ,,,,,,,,
+000, 3009,, RunTest, {RunType And RunMode}, ,,,,,,,,,
+000, 3009,, ModeSkip, {TrigMode = 3}, ,,,,,,,,,
+000, 3009,, TypeSkip, {(TrigType = 10) Or (TrigType = 11)}, ,,,,,,,,,
+'If Not {ModeSkip And TypeSkip}
+'If Not RunTest
+000, 3016,, 49, 1, {TrigType}, [TrigName],,,,,,,,
+000, 3017,, {TrigMode - 1}, TrigModeNames, [ModeName], ,,,,,,,,
+;Skipping {ModeName} test for trigger type {TrigName}, ,,,,,,,,,
+'End If
+'If RunTest
+000, 3009,, RatePerChan, {RatePerBurst}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+000, 3009,, Cycles, 4.0, ,,,,,,,,,
+000, 3009,, CyclesOverride, 0, ,,,,,,,,,
+000, 3009,, CyclesOverride, -1, {AggregateRate > 300000},,,,,,,,,
+4001, 0, Configuration\Trigger\Rates\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetSource.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, NumChans, {LastChan - FirstChan},,,,,,,,,,
+000, 3009,, BufferSize, {Samples * ChanCount * 2.048}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, {UseDAQFlex}
+4001, 0, ainscan\{TrigTestFile}, 0
+000, 3009,, ATolerance, {AmplitudeTol},,,,,,,,,,
+'If {Test18}
+'******************* ExtClock  **************************
+000, 3009,, XClock, -1, ,,,,,,,,,
+000, 3009,, TComp, {XBurstTComp}, ,,,,,,,,,
+000, 3009,, RatePerChan, {UsesScanRate}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInScanRates\RateIncrement.uts, 0
+4001, 0, Configuration\Options\SOExtClock.uts, 0
+4001, 0, Configuration\Clock\RateSetter.uts, 0
+4001, 0, Configuration\Trigger\SetTriggerTest.uts, 0
+4001, 0, Configuration\Trigger\{TrigCfgFile}, 0
+000, 3009,, BufferSize, {Samples * ChanCount * 2.048}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AInBuffer\SetMsgAInBuf.uts, 0, {UseDAQFlex}
+4001, 0, ainscan\{TrigTestFile}, 0
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+4001, 0, Configuration\Options\SOBurstMode.uts, 0, 
+4001, 0, Configuration\Options\SOContinuous.uts, 0, {Not (Continuous = 0)}
+'End If
+000, 3009,, TComp, {ITComp}, ,,,,,,,,,
+000, 3009,, XClock, 0, ,,,,,,,,,
+000, 3009,, SampleMultiplier, 1, ,,,,,,,,,
+'End If
+'End If
+'Next
+'Next
+'Next
+'Next
+000, 3009,, BurstMode, 0, ,,,,,,,,,
+'End If
+000, 3009,, TrigWindow, 0,,,,,,,,,,
+000, 3009,, BlockSize, -1, ,,,,,,,,,
+000, 2016,, {BlockSize},,,,,,,,,,,
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, closeain.uts, 0
+4001, 0, CloseCfg.uts, 0
+4001, 0, closegpib.uts, 0

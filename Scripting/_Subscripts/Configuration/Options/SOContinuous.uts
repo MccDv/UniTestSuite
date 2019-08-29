@@ -1,0 +1,11 @@
+'Sets static option to CONTINUOUS
+'All scripts run after this one in this session that
+'use the Options argument will have this option applied
+'--
+000, 3014,, BoardID, 100,,,,,,,,,,
+000, 3014,, ContinuousPlot, -1,,,,,,,,,,
+'--
+BoardID, 2002,, ContinuousPlot,,,,,,,,,,,
+BoardID, 3006,, 2,,,,,,,,,,,
+;Static option CONTINUOUS set for form {BoardID}
+' 

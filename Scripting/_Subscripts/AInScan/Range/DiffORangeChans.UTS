@@ -1,0 +1,79 @@
+';Tests AInScan with most parameters set up by previous 
+';configuration subscripts such as 'FPBip10Volts.uts'
+;Scanning from channel {FirstChan} to channel {LastChan}
+';--
+000, 3008,, 100,,,,,,,,,,,
+100, 3014,, Samples, 1000,,,,,,,,,,
+100, 3014,, SampComp, 0,,,,,,,,,,
+100, 3014,, Rate, 1000,,,,,,,,,,
+100, 3014,, ATolerance, 4,,,,,,,,,,
+000, 3009,, Iterations, 3, ,,,,,,,,,
+100, 3014,, MvgAvg, 20,,,,,,,,,,
+100, 3014,, Continuous, 0,,,,,,,,,,
+100, 3014,, TrigWindow, {ATolerance + 32}C,,,,,,,,,,
+100, 3014,, RateTol, 2,,,,,,,,,,
+100, 3014,, TComp, 1,,,,,,,,,,
+000, 3009,, StatusHigh, 4,,,,,,,,,,
+000, 3009,, ContPlot, {(UseDAQFlex = 0) And (Continuous = 1)}, ,,,,,,,,,
+100, 2002,, ContPlot,,,,,,,,,,,
+000, 3009,, StatusHigh, 1, {Continuous = 0},,,,,,,,,
+000, 3009,, ContCount, 1, ,,,,,,,,,
+000, 3009,, ContCount, 2.5, {UseDAQFlex = 0},,,,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+000, 3014,, ChanCount, 1, ,,,,,,,,,
+100, 3009,, EvalCount, {Samples},,,,,,,,,,
+100, 3009,, EvalCount, {Samples * ChanCount}, {PerChan = 1},,,,,,,,,
+100, 3009,, MidORange, {(AbsMaxAi - fsVolts) / 2}, ,,,,,,,,,
+100, 3009,, UnipolarMode, {Threshold > 0},,,,,,,,,,
+'For Channel = FirstChan To LastChan
+'For Index = 0 To Iterations
+'If Test2
+100, 3006,, 0, ,,,,,,,,,,
+100, 3006,, 1, ,,,,,,,,,,
+100, 3006,, 32768, {Index > 0},,,,,,,,,,
+'End If
+000, 3009,, VTest, {fsVolts * 0.99}, ,,,,,,,,,
+000, 3009,, VTol, {ATolerance + FudgeAddAInAmp}, ,,,,,,,,,
+000, 3009,, VTest, {Index}|{fsVolts * 1.1};{fsVolts + MidORange};{AbsMaxAi * 0.98}, ,,,,,,,,,
+000, 3009,, VTestNeg, {VTest * -1}, ,,,,,,,,,
+000, 3009,, VTestNeg, {fsVolts * 0.01}, {UnipolarMode},,,,,,,,,
+000, 3009,, VTestNeg, {Index}|{0 - (fsVolts * 0.1)};{0 - (fsVolts + MidORange)};{0 - (AbsMaxAi * 0.98)}, {UnipolarMode},,,,,,,,,
+000, 3009,, VTol, {Index}|0;0;0, ,,,,,,,,,
+'For Pol = 0 To 1
+000, 3017,, Pol, LinearMaxAiList, [LinearLim], ,,,,,,,,
+000, 3009,, OutsideLimit, {(LinearLim - fsVolts) < 0}, ,,,,,,,,,
+000, 3009,, TolSet, {VTol}, ,,,,,,,,,
+000, 3009,, VSet, {VTest}, ,,,,,,,,,
+000, 3009,, VSet, {Pol}|{VTestNeg}, ,,,,,,,,,
+'If OutsideLimit
+000, 3009,, VSet, {LinearLim}, ,,,,,,,,,
+000, 3009,, VSet, {Pol}|{LinearLim * -1}, ,,,,,,,,,
+000, 3009,, TolSet, 5, ,,,,,,,,,
+'End If
+000, 3028,, {VSet}, [DPCommand],,,,,,,,,,
+800, 202,,, DP8200, DPCommand, ,,,,,,,,
+800, 202,,, SWITCH, CHS {Channel + DiffBase}-{Channel + DiffBase}, , {Test0},,,,,,,
+;Voltage set to {VSet} at channel {Channel} inverting input.
+000, 3008,, 500,,,,,,,,,,,
+100, 2,,, Channel, Channel, {Samples}, Rate, Range,, 0,,,,
+100, 2056,, {Samples * ContCount}, {Timeout},,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 10010, {EvalCount}, 0, {VSet * -1}V, {TolSet}, {MvgAvg},,,,,,,,
+100, 10001, 0, {Samples}, {Samples * StatusHigh}, 1,,,,,,,,,
+800, 202,,, SWITCH, CHS {Channel}-{Channel}, , {Test0},,,,,,,
+;Voltage set to {VSet} at channel {Channel} input.
+000, 3008,, 500,,,,,,,,,,,
+100, 2,,, Channel, Channel, {Samples}, Rate, Range,, 0,,,,
+100, 2056,, {Samples * ContCount}, {Timeout},,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+100, 10010, {EvalCount}, 0, {VSet}V, {TolSet}, {MvgAvg},,,,,,,,
+'Next
+'Next
+'Next
+100, 2002,, 0,,,,,,,,,,,
+800, 202,,, DP8200, L, ,,,,,,,,
+800, 205,,,All devices,,,,,,,,,,
+';AInScan base range tests complete
+'; 

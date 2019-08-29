@@ -1,0 +1,11 @@
+';Configure the rate before configuring trigger type
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, FormID, 100,,,,,,,,,,
+FormID, 3009,, ComplPulse, C1,,,,,,,,,,
+FormID, 3009,, TrigType, 9, ,,,,,,,,,
+FormID, 3009,, HiBy, {Samples * 2},,,,,,,,,,
+FormID, 3009,, LoBy, 2,,,,,,,,,,
+FormID, 3009,, ChangeState, C0,,,,,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+'; 

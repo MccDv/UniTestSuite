@@ -1,0 +1,103 @@
+000, 3008,, 100,,,,,,,,,,,
+301, 2042,, -1, ,,,,,,,,,,
+300, 2042,, -1, ,,,,,,,,,,
+'For TestPorts = {FirstPort} To {LastPort}
+000, 3017,, {TestPorts}, PortArray, [PortIndex], ,,,,,,,,
+301, 2042,, {PortIndex - CtlPort}, {PortIndex - CtlPort},,,,,,,,,,
+300, 2042,, PortIndex, PortIndex,,,,,,,,,,
+'Next
+000, 3017,, {FirstPort}, PortArray, [PortIndex], ,,,,,,,,
+000, 3017,, {PortIndex}, DioPortList, [PortType], ,,,,,,,,
+000, 3017,, {FirstPort + ChanCount - 1}, PortArray, [PortIndex], ,,,,,,,,
+000, 3017,, {PortIndex}, DioPortList, [EndPortType], ,,,,,,,,
+300, 3016,, 24, 0, {PortType}, [StartPortName],,,,,,,,
+300, 3016,, 24, 0, {EndPortType}, [EndPortName],,,,,,,,
+000, 3009,, PortName, {StartPortName}, ,,,,,,,,,
+000, 3009,, PortName, {ChanCount} ports between {StartPortName} and {EndPortName}, {LastPort > FirstPort},,,,,,,,,
+000, 3017,, {CurPort}, PortArray, [PortIndex], ,,,,,,,,
+000, 3017,, {PortIndex}, DioPortList, [SinglePortType], ,,,,,,,,
+300, 3016,, 24, 0, {SinglePortType}, [SinglePortName],,,,,,,,
+000, 3009,, PortName, {SinglePortName}, {ChanCount = 1},,,,,,,,,
+'********************* Digital Output **********************
+'If Test6
+;Checking port output on {PortName} on test board
+301, 2043,, 2,,,,,,,,,,,
+300, 2043,, 1,,,,,,,,,,,
+000, 3009,, OutputSet, -1, ,,,,,,,,,
+'If Test8
+300, 2049,, 1, 1, {Samples * ChanCount}, {ChanCount}, {MaxCount}, {HalfCount}, 3, -1, -1, 0,,
+'For index = 0 To {Samples - 1}
+300, 2045,, 1,,,,,,,,,,,
+301, 2044,, 1,,,,,,,,,,,
+000, 3009,, Channel, 0, ,,,,,,,,,
+'For PortIndex = FirstPort To LastPort
+000, 3017,, {PortIndex}, PortArray, [ThisPort], [NumPorts],,,,,,,,
+000, 3017,, {ThisPort}, NumBitsInPortList, [BitsInPort], ,,,,,,,,
+301, 10022, 1, {Channel}, {BitsInPort * OutInvert}, 300, 0,,,,,,,,
+000, 3009,, Channel, {Channel + 1}, ,,,,,,,,,
+'Next
+'Next
+300, 2049,, 1, 1, 0, 1, {MaxCount}, {HalfCount}, 3, -1, 0, 0,,
+'End If
+'If Test9
+300, 2049,, 1, 1, {Samples * ChanCount}, {ChanCount}, {MaxCount}, {HalfCount}, 5, -1, -1, 0,,
+'For index = 0 To {Samples - 1}
+300, 2045,, 1,,,,,,,,,,,
+301, 2044,, 1,,,,,,,,,,,
+000, 3009,, Channel, 0, ,,,,,,,,,
+'For PortIndex = FirstPort To LastPort
+000, 3017,, {PortIndex}, PortArray, [ThisPort], [NumPorts],,,,,,,,
+000, 3017,, {ThisPort}, NumBitsInPortList, [BitsInPort], ,,,,,,,,
+301, 10022, 1, {Channel}, {BitsInPort * OutInvert}, 300, 0,,,,,,,,
+000, 3009,, Channel, {Channel + 1}, ,,,,,,,,,
+'Next
+'Next
+'End If
+'End If
+'If {OutInvert}
+300, 2049,, 1, 1, 0, {ChanCount}, 0, 0, 0, -1, -1, 0,,
+300, 2049,, 1, 1, {ChanCount}, {ChanCount}, {MaxCount}, 0, 0, -1, -1, 0,,
+300, 2045,, -1,,,,,,,,,,,
+300, 2045,, 1,,,,,,,,,,,
+'End If
+'********************* Digital Input **********************
+'If Test5
+;Checking port input on {PortName} on test board
+300, 2043,, 2,,,,,,,,,,,
+301, 2043,, 1,,,,,,,,,,,
+000, 3009,, OutputSet, 0, ,,,,,,,,,
+'If Test8
+300, 2049,, 1, 3, 0, 1, 80%, 50%, 2, -1, -1, 0,,
+301, 2049,, 1, 1, {Samples * ChanCount}, {ChanCount}, {MaxCount}, {HalfCount}, 3, -1, -1, 0,,
+'For index = 0 To {Samples - 1}
+301, 2045,, 1,,,,,,,,,,,
+300, 2044,, 1,,,,,,,,,,,
+000, 3009,, Channel, 0, ,,,,,,,,,
+'For PortIndex = FirstPort To LastPort
+000, 3017,, {PortIndex}, PortArray, [ThisPort], [NumPorts],,,,,,,,
+000, 3017,, {ThisPort}, NumBitsInPortList, [BitsInPort], ,,,,,,,,
+300, 10022, 1, {Channel}, {BitsInPort * InInvert}, 301, 0,,,,,,,,
+000, 3009,, Channel, {Channel + 1}, ,,,,,,,,,
+'Next
+'300, 10022, 1, 0, BitCount, 301, 0,,,,,,,,
+'Next
+'End If
+'If Test9
+301, 2049,, 1, 1, 0, 1, {MaxCount}, {HalfCount}, 3, -1, 0, 0,,
+301, 2049,, 1, 1, {Samples * ChanCount}, {ChanCount}, {MaxCount}, {HalfCount}, 5, -1, -1, 0,,
+'For index = 0 To {Samples - 1}
+301, 2045,, 1,,,,,,,,,,,
+300, 2044,, 1,,,,,,,,,,,
+000, 3009,, Channel, 0, ,,,,,,,,,
+'For PortIndex = FirstPort To LastPort
+000, 3017,, {PortIndex}, PortArray, [ThisPort], [NumPorts],,,,,,,,
+000, 3017,, {ThisPort}, NumBitsInPortList, [BitsInPort], ,,,,,,,,
+300, 10022, 1, {Channel}, {BitsInPort * InInvert}, 301, 0,,,,,,,,
+000, 3009,, Channel, {Channel + 1}, ,,,,,,,,,
+'Next
+'Next
+'End If
+'End If
+301, 2049,, 1, 3, 0, 1, 80%, 50%, 2, -1, -1, 0,,
+000, 3008,, 500,,,,,,,,,,,
+'; 

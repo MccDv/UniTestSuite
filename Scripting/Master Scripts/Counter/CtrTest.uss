@@ -1,0 +1,32 @@
+;Connect digital out 0 on test device to Ctr In
+;
+'Initialize
+000, 3029,, 1.3.9, >=,,,,,,,,,,
+000, 3009,, UseDAQFlex, 0, ,,,,,,,,,
+000, 3009,, UseMCCControl, -1, ,,,,,,,,,
+000, 3009,, TestBlocks, Auto Signaling;DOut Source, ,,,,,,,,,
+000, 3009,, Test0, 0, ,,,,,,,,,
+000, 3009,, Test1, -1, ,,,,,,,,,
+000, 3009,, ParameterOpts, MaxSamples, ,,,,,,,,,
+000, 3009,, Param0, 10, ,,,,,,,,,
+'End Initialize
+';
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3020,, LibType,,,,,,,,,,,
+000, 3027,, UseMCCControl,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+000, 3009,, Iterations, {Param0}, ,,,,,,,,,
+4001, 0, opendin.uts, {Device}
+4001, 0, openCtr.uts, {Device}
+000, 3017,, UseDAQFlex, CtrBaseList, [CtrBase], ,,,,,,,,
+000, 3017,, 0, PortIdxList, [FirstPort], [NumPorts],,,,,,,,
+000, 3009,, LastPort, {FirstPort}, ,,,,,,,,,
+000, 3009,, Direction, 1, ,,,,,,,,,
+000, 3009,, DIOBoard, 300, ,,,,,,,,,
+4001, 0, Configuration\Digital\SetPortBits.uts, 0, 
+4001, 0, Configuration\Digital\SelectPorts.uts, 0, 
+4001, 0, Configuration\Digital\SelectPortDir.uts, 0, 
+4001, 0, Counter\CIn.uts, 0
+4001, 0, Configuration\Digital\SetPortInputs.uts, 0, 
+4001, 0, closedin.uts, 0
+4001, 0, closeCtr.uts, 0

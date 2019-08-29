@@ -1,0 +1,16 @@
+'Set channel variables before calling this
+'to configure channels other than 0
+'Sets input mode per UseSEMode value
+';
+000, 3009,, ChanMode, 1, ,,,,,,,,,
+100, 3014,, ChanModeOffset, -1,,,,,,,,,,
+000, 3009,, CurChanOffset, 0, ,,,,,,,,,
+000, 3009,, ChanMode, 0, {UseSEMode = 0},,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+'For Channel = LowChan To HighChan
+'If Not {Channel < ChanModeOffset}
+'000, 3009,, CurChanOffset, {ChanModeOffset}, ,,,,,,,,,
+'End If
+100, 132,,, SetSingleEnded, {Channel - CurChanOffset}, ChanMode,,,,,,,,
+'Next
+;Input mode set to {InputMode}

@@ -1,0 +1,85 @@
+;Signal from each D/A Ch{LowChan} through Ch{HighChan}
+;to corresponding A/D Inputs
+;
+'Initialize
+000, 3029,, 1.3.9, >=,,,,,,,,,,
+000, 3009,, UseDAQFlex, 0, ,,,,,,,,,
+000, 3009,, UseSEMode, 0, ,,,,,,,,,
+000, 3009,, UseMCCControl, -1, ,,,,,,,,,
+000, 3009,, LowChan, 0, ,,,,,,,,,
+000, 3009,, HighChan, {MaxAoChan}, ,,,,,,,,,
+000, 3017,, UseDAQFlex, AoutRateList, [RateEst], ,,,,,,,,
+000, 3017,, UseSEMode, ChanCfgStrList, [InputMode], ,,,,,,,,
+000, 3009,, TestBlocks, Auto Signaling;Individual Channels;Iterate Channel Count, ,,,,,,,,,
+000, 3009,, Test0, 0, ,,,,,,,,,
+000, 3009,, Test1, 0, ,,,,,,,,,
+000, 3009,, Test2, 0, ,,,,,,,,,
+000, 3009,, ParameterOpts, Rate Estimate, ,,,,,,,,,
+000, 3009,, Param0, {RateEst}, ,,,,,,,,,
+'End Initialize
+;
+000, 3017,, UseDAQFlex, LibTypeList, [LibType], ,,,,,,,,
+000, 3020,, LibType,,,,,,,,,,,
+000, 3027,, UseMCCControl,,,,,,,,,,,
+000, 3008,, 100,,,,,,,,,,,
+000, 3009,, DataType, 6, ,,,,,,,,,
+000, 3009,, DataType, 1, {UseDAQFlex = 0},,,,,,,,,
+4001, 0, Configuration\Analog\GetAiDefaults.uts, 0
+4001, 0, Configuration\Analog\GetAoDefaults.uts, 0
+000, 3019,, &, {UseSEMode}, LoopAiRangeIndexList, [LoopAiRangeIndex],,,,,,,,
+000, 2001,, This device doesn't support simultaneous input and output. Ending script., 0, , Simultaneous In/Out Not Supported, , {LoopAiRangeIndex = -1},,,,,,
+000, 3026,, {LoopAiRangeIndex = -1},,,,,,,,,,,
+000, 3017,, RangeIndex, LoopAiRangeIndex, [LoopRangeIndex], ,,,,,,,,
+000, 3017,, LoopRangeIndex, RangeList, [LoopAiRangeCode], ,,,,,,,,
+4001, 0, Signals\MapSwitch.uts, 0, {Test0}
+4001, 0, openain.uts, {Device}
+4001, 0, opengpib.uts, 0
+4001, 0, OpenCfg.uts, {Device}
+4001, 0, OpenAo2.uts, {Device}
+4001, 0, Configuration\Analog\InputMode\{ConfigInputFile}, 0
+000, 3009,, LowSig, {LowChan}, ,,,,,,,,,
+000, 3009,, HighSig, {HighChan}, ,,,,,,,,,
+4001, 0, Signals\AOLoopback.uts, 0, {Test0}
+000, 3009,, BoardID, 100, ,,,,,,,,,
+4001, 0, Configuration\Options\SODefault.uts, 0
+4001, 0, Configuration\Options\SOBackground.uts, 0
+000, 3009,, InRange, {LoopAiRangeCode}, ,,,,,,,,,
+000, 3009,, OutRange, {AoRangeCode}, ,,,,,,,,,
+000, 3009,, RangeCode, {AoRangeCode}, ,,,,,,,,,
+4001, 0, Configuration\Analog\RangeParams\RangeSetter.UTS, 0
+000, 3009,, AOThresh, {Threshold * 1.0}, ,,,,,,,,,
+000, 3009,, AOAmplitude, {Amplitude}, ,,,,,,,,,
+'********************************************************************************************
+'If Test1
+000, 3009,, BoardID, 201, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, ,,,,,,,,,
+000, 3009,, DACRate, {Param0}, ,,,,,,,,,
+'For CurChan = StartChan To HighChan
+000, 3009,, FirstChan, {CurChan}, ,,,,,,,,,
+000, 3009,, LastChan, {CurChan}, ,,,,,,,,,
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+000, 3009,, Samples, {(DACRate * 2) \ ChanCount}, ,,,,,,,,,
+000, 3009,, ADRate, {DACRate \ ChanCount}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AOutBuffer\SetMsgAOutBuf.uts, 0
+4001, 0, AInOutScan\AIScanOut.UTS, 0
+'Next
+'End If
+'********************************************************************************************
+000, 3009,, BoardID, 201, ,,,,,,,,,
+000, 3009,, FirstChan, {LowChan},,,,,,,,,,
+000, 3009,, StartChan, {HighChan}, ,,,,,,,,,
+000, 3009,, StartChan, {LowChan}, {Test2},,,,,,,,,
+000, 3009,, DACRate, {Param0}, ,,,,,,,,,
+'For LastChan = StartChan To HighChan
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+000, 3009,, Samples, {(DACRate * 2) \ ChanCount}, ,,,,,,,,,
+000, 3009,, ADRate, {DACRate \ ChanCount}, ,,,,,,,,,
+4001, 0, Configuration\Analog\AOutBuffer\SetMsgAOutBuf.uts, 0
+4001, 0, AInOutScan\AIScanOut.UTS, 0
+'Next
+'********************************************************************************************
+4001, 0, closegpib.uts, 0, 
+4001, 0, closecfg.uts, 0, 
+4001, 0, closeain.uts, 0
+4001, 0, closeAo2.uts, 0
+';

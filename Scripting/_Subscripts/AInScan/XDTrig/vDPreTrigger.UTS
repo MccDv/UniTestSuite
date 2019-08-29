@@ -1,0 +1,77 @@
+'If SkipTest
+000, 3009,, SkipTest, 0,,,,,,,,,,
+'End
+'End If
+000, 3016,, 49, 1, TrigType, [TrigSetting],,,,,,,,
+;{TrigSetting} {PTSamples} pretrigger samples - channel {FirstChan} to {LastChan} @ {Rate}Hz
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, TriggerDevice, HP8112, ,,,,,,,,,
+800, 202,,, {TriggerDevice}, M2,,,,,,,,,
+800, 202,,, {TriggerDevice}, PulseWidth,,,,,,,,,
+800, 202,,, {TriggerDevice}, HIL 2V,,,,,,,,,
+800, 202,,, {TriggerDevice}, D0,,,,,,,,,
+800, 202,,, {TriggerDevice}, ComplPulse,,,,,,,,,
+800, 202,,, HP3325, FU1,,,,,,,,,
+800, 202,,, HP3325, GenRate,,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+100, 3014,, QueueRequired, 0,,,,,,,,,,
+100, 3014,, Samples, 1000,,,,,,,,,,
+100, 3014,, PTSamples, 100,,,,,,,,,,
+100, 3014,, Rate, 1000,,,,,,,,,,
+100, 3014,, Amplitude, 1,,,,,,,,,,
+100, 3014,, TrigATol, 64,,,,,,,,,,
+100, 3014,, ATolerance, 4,,,,,,,,,,
+100, 3014,, Iterations, 0,,,,,,,,,,
+100, 3014,, MvgAvg, 3,,,,,,,,,,
+100, 3014,, TrigWindow, 8,,,,,,,,,,
+100, 3014,, RateTol, 2,,,,,,,,,,
+100, 3014,, TComp, 1,,,,,,,,,,
+000, 3014,, SampComp, 0,,,,,,,,,,
+000, 3014,, QueueSize, 1,,,,,,,,,,
+000, 3009,, DeltaVal, {Amplitude * 0.03},,,,,,,,,,
+000, 3009,, QComp, 1,,,,,,,,,,
+100, 3009,, ClockRate, 0, {Not XClock},,,,,,,,,
+'If Not TrigType > 11
+'If TriggerDevice = "TRIGGER"
+800, 202,,, {TriggerDevice}, WID 50 NS,,,,,,,,,
+'End If
+800, 202,,, {TriggerDevice}, ComplPulse,,,,,,,,,
+'End If
+100, 3009,, TotalCount, {Samples},,,,,,,,,,
+100, 3009,, TotalCount, {Samples * ChanCount}, {Not (PerChan = 0)},,,,,,,,,
+100, 31,,, {PTConvert},,,,,,,,,,
+100, 49,,, TrigType, 0, 0, 0,,,,,,,
+100, 3009,, EdgeTrig, {(TrigType = 12) Or (TrigType = 13)}, ,,,,,,,,,
+100, 3009,, LevelTrig, {(TrigType > 7) And (TrigType < 12)}, ,,,,,,,,,
+000, 3008,, 500,,,,,,,,,,,
+000, 3000,, {Time * 4},,,,,,,,,,,
+100, 4,,, FirstChan, LastChan, PTSamples, Samples, Rate, Range, 0, 0,,,
+100, 10001, 1, 0, PTSamples, 0,,,,,,,,,
+100, 3000,, 1,,,,,,,,,,,
+'If EdgeTrig
+800, 204,,, {TriggerDevice},,,,,,,,,,
+'End If
+'If LevelTrig
+800, 202,,, {TriggerDevice}, ChangeState,,,,,,,,,
+'End If
+000, 3008,, 300,,,,,,,,,,,
+100, 2055,, 1, 2, {TimeOut * 2},,,,,,,,,
+100, 10001, 2, 10, Samples, 0,,,,,,,,,
+100, 2053,, {Samples * 2.5}, {TimeOut},,,,,,,,,,
+100, 59,,,,,,,,,,,,,
+100, 10001, 0, Samples, {Samples * 3}, -1,,,,,,,,,
+'If Not PulseChan > {LastChan}
+'If Not LowChan > PulseChan
+100, 10015, Samples, PulseChanIdx, TrigType, 2.5, TrigATol, 12,,,,,,,
+'End If
+'End If
+'If Not {WaveChan} > {LastChan}
+'If Not {LowChan} > {WaveChan}
+100, 10013, TotalCount, SigChanIdx, Amplitude, {ATolerance + FudgeAddAInAmp}C, MvgAvg,,,,,,,,
+100, 10012, TotalCount, SigChanIdx, 0.5, 0, 1,,,,,,,,
+100, 10021, TotalCount, SigChanIdx, Threshold, TrigWindow, SourceFreq, {ClockRate}, {RateTol * TComp}, ,,,,,
+'End If
+'End If
+800, 205,,,All devices,,,,,,,,,,
+'; 

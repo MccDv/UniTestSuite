@@ -1,0 +1,15 @@
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, CtlPort, 0, ,,,,,,,,,
+000, 3014,, DIOBoard, 300, ,,,,,,,,,
+{DIOBoard}, 2058,, MaxDioPort, -1, ,,,,,,,,,
+000, 3009,, PortOffset, 0, ,,,,,,,,,
+000, 3009,, PortOffset, {CtlPort}, {DIOBoard > 300},,,,,,,,,
+{DIOBoard}, 3009,, BitCount, 0, ,,,,,,,,,
+'For DPort = 0 To {MaxDioPort - PortOffset}
+000, 3017,, {DPort + PortOffset}, NumBitsInPortList, [BitsInPort], ,,,,,,,,
+{DIOBoard}, 3009,, BitCount, {BitCount + BitsInPort}, ,,,,,,,,,
+{DIOBoard}, 2058,, DPort, {BitCount}, {BitsInPort},,,,,,,,,
+000, 3017,, {DPort + PortOffset}, DioPortList, [ThisPortType], ,,,,,,,,
+{DIOBoard}, 3009,, BitCount, 0, {ThisPortType = 1},,,,,,,,,
+'Next
+'; 

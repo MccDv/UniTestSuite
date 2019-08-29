@@ -1,0 +1,18 @@
+';All scripts run after this one from the same master script that
+';use these variables as arguments will have these values applied
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3009,, RateFactor, {RateSelector * 2}, ,,,,,,,,,
+000, 3009,, Rate, {BaseRateLo + (RateFactor * BaseRateLo)}, ,,,,,,,,,
+000, 3009,, ChanCount, {(LastChan - FirstChan) + 1}, ,,,,,,,,,
+000, 3009,, PerChanRate, {Rate}, ,,,,,,,,,
+000, 3009,, PerChanRate, {Rate / ChanCount}, {RatePerChan},,,,,,,,,
+000, 3009,, Rate, {PerChanRate}, {Not (PerChanRate < MinChanRate)},,,,,,,,,
+000, 3009,, AggregateRate, {Rate}, ,,,,,,,,,
+000, 3009,, AggregateRate, {Rate * ChanCount}, {RatePerChan},,,,,,,,,
+000, 3009,, PerChanAdjust, {PerChanRate > MaxAiChanRate}, ,,,,,,,,,
+000, 3009,, Rate, {MaxAiChanRate}, {PerChanAdjust},,,,,,,,,
+000, 3009,, RateAdjust, {AggregateRate > (MaxAiAggRate - FudgeAddMaxRate)}, ,,,,,,,,,
+000, 3009,, RateSelector, {RateInterval - 1}, {RateAdjust And (Not Test0)},,,,,,,,,
+000, 3009,, Rate, {(MaxAiAggRate - FudgeAddMaxRate) \ ChanCount}, {RateAdjust And (Not PerChanAdjust)},,,,,,,,,
+'; 

@@ -1,0 +1,31 @@
+000, 3008,, 100,,,,,,,,,,,
+301, 2042,, -1, ,,,,,,,,,,
+300, 2042,, -1, ,,,,,,,,,,
+000, 3017,, {FirstPort}, PortArray, [FirstPortToSet], ,,,,,,,,
+000, 3017,, {LastPort}, PortArray, [LastPortToSet], ,,,,,,,,
+301, 2042,, {FirstPortToSet - CtlPort}, {LastPortToSet - CtlPort},,,,,,,,,,
+300, 2042,, FirstPortToSet, LastPortToSet,,,,,,,,,,
+000, 3017,, {FirstPortToSet}, DioPortList, [PortType], ,,,,,,,,
+300, 3016,, 24, 0, {PortType}, [StartPortName],,,,,,,,
+000, 3017,, {LastPortToSet}, DioPortList, [PortType], ,,,,,,,,
+300, 3016,, 24, 0, {PortType}, [EndPortName],,,,,,,,
+000, 3009,, PortName, {StartPortName}, ,,,,,,,,,
+000, 3009,, PortName, {StartPortName} To {EndPortName}, {LastPort > FirstPort},,,,,,,,,
+'********************* Digital Input **********************
+000, 3009,, StateSet, ., ,,,,,,,,,
+'If {PortProg}
+300, 2043,, 2,,,,,,,,,,,
+'End If
+301, 2043,, 2,,,,,,,,,,,
+'If Not {PortProg}
+300, 2049,, 1, 1, 0, {ChanCount}, 0, 0, 0, -1, -1, 0,,
+300, 2049,, 1, 1, {ChanCount}, {ChanCount}, 0, 0, 0, -1, -1, 0,,
+300, 2045,, -1,,,,,,,,,,,
+300, 2045,, 1,,,,,,,,,,,
+000, 3009,, StateSet, and output zeroed on test board., ,,,,,,,,,
+'End If
+000, 3009,, BoardConfigured, control, ,,,,,,,,,
+000, 3009,, BoardConfigured, test and control, {PortProg},,,,,,,,,
+;{PortName} set to input on {BoardConfigured} board {StateSet}
+301, 2049,, 1, 3, 0, 1, 80%, 50%, 2, -1, -1, 0,,
+'; 

@@ -1,0 +1,9 @@
+'Sets static option to SINGLEIO
+'All scripts run after this one in this session that
+'use the Options argument will have this option applied
+'--
+000, 3014,, BoardID, 100,,,,,,,,,,
+'--
+BoardID, 3006,, 32,,,,,,,,,,,
+;Static option SINGLEIO set for form {BoardID}
+' 

@@ -1,0 +1,3 @@
+000, 3014,, NumADChans, 8,,,,,,,,,,
+700, 55,, 2, 0,, 7, NumADChans,,,,,,,
+;Number of AD channels set to {NumADChans}

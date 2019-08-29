@@ -1,0 +1,7 @@
+'If UseDAQFlex = 1
+000, 3014,, BufferSize, 1024000, ,,,,,,,,,
+000, 3009,, BufferSize, {BufferSize \ 1}, ,,,,,,,,,
+700, 55,, 4, 0,, BUFSIZE, {BufferSize},,,,,,,
+;Buffer set to {BufferSize}
+'End If
+';

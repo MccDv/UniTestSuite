@@ -1,0 +1,24 @@
+';Test AIn with preselected ranges and rates
+';Checks settling after switching channels
+';--
+800, 202,,, HP3325, FU0, ,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+000, 3014,, MvgAvg, 1,,,,,,,,,,
+000, 3014,, TestChan, 0,,,,,,,,,,
+000, 3014,, ATolerance, 4,,,,,,,,,,
+800, 202,,, SWITCH, CHS {LowSig}-{HighSig}, ,,,,,,,,
+000, 3009,, DeltaLimit, {Settling + (ATolerance * 2)}, ,,,,,,,,,
+000, 3009,, DCLimit, {(2 ^ AiResolution) * (0.05 / FSVolts)}, ,,,,,,,,,
+100, 114,,,, Range,, 0, TestChan, TestChan, Samples,,,,
+100, 10030, {Samples \ 10}, 0, DeltaLimit, 0, 1,,,,,,,,
+100, 10010, {Samples \ 10}, 0, {Amplitude / ADiv}, {DCLimit},,,,,,,,,
+'If Not UseSEMode
+800, 202,,, SWITCH, CHS {LowSig + DiffBase}-{HighSig + DiffBase}, , {Test0},,,,,,,
+000, 3009,, InvAmplitude, {(Amplitude / ADiv) * -1}, ,,,,,,,,,
+100, 114,,,, Range,, 0, TestChan, TestChan, Samples,,,,
+100, 10030, {Samples \ 10}, 0, DeltaLimit, 0, 1,,,,,,,,
+100, 10010, {Samples \ 10}, 0, {InvAmplitude}, {DCLimit},,,,,,,,,
+'End If
+800, 205,,,All devices,,,,,,,,,,
+';

@@ -1,0 +1,23 @@
+';All scripts run after this one from the same master script that
+';use these variables as arguments will have these values applied
+';--
+000, 3008,, 100,,,,,,,,,,,
+000, 3014,, CalFactor, 1.0,,,,,,,,,,
+000, 3009,, GenVolts, AM9.95VO,,,,,,,,,,
+000, 3009,, Amplitude, {19.9 * CalFactor},,,,,,,,,,
+000, 3018,, {Amplitude * 0.20}, [RndAmp1],,,,,,,,,,
+000, 3018,, {Amplitude * 0.20}, [RndAmp2],,,,,,,,,,
+000, 3009,, TrigLevel, {(Amplitude * 0.40) - RndAmp1},,,,,,,,,,
+000, 3009,, TrigLevelLow, {(TrigLevel * -1) + RndAmp2},,,,,,,,,,
+'If Scaled
+000, 3009,, Amplitude, 19.9 V,,,,,,,,,,
+'End If
+000, 3009,, Range, 20,,,,,,,,,,
+000, 3009,, GenOffset, OF0VO,,,,,,,,,,
+000, 3009,, Threshold, 0.0,,,,,,,,,,
+000, 3009,, ADiv, 2, ,,,,,,,,,
+'If Not ScriptRateSet
+000, 3008,, 500,,,,,,,,,,,
+'End If
+;Range set to ±60V, input (p-p voltage) = {Amplitude}
+'; 

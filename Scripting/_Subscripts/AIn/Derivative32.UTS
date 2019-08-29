@@ -1,0 +1,24 @@
+';Test AIn with preselected ranges and rates
+';Checks amplitude and approximate rate
+';Requires running subscripts to set ExtClockRate, Samples, etc
+';Testing cbAIn on channel {TestChan} for approximately {ExtClockRate} S/s
+';--
+800, 202,,, HP3325, FU1,,,,,,,,,
+800, 202,,, HP3325, GenRate,,,,,,,,,
+800, 202,,, HP3325, GenVolts,,,,,,,,,
+800, 202,,, HP3325, GenOffset,,,,,,,,,
+000, 3014,, MvgAvg, 1,,,,,,,,,,
+000, 3014,, DiffFactor, 1,,,,,,,,,,
+000, 3014,, TestChan, 0,,,,,,,,,,
+000, 3009,, DiffAmpComp, {DiffAmplitude / DiffFactor}, ,,,,,,,,,
+000, 3009,, DiffTolerance, {DiffAmpComp * 0.6}, ,,,,,,,,,
+;Testing first derivative limits of {DiffAmpComp} ±{DiffTolerance} counts
+;for {TestIterations} iterations and moving average = {MvgAvg} samples
+'For Iteration = 0 To {TestIterations - 1}
+100, 114,,,, Range,, 0, TestChan, TestChan, Samples,,,,
+100, 2022,, 6,,,,,,,,,,,
+100, 10013, Samples, 0, {DiffAmpComp}C, {DiffTolerance}C, MvgAvg,,,,,,,,
+'Next
+100, 2022,, 0,,,,,,,,,,,
+800, 205,,,All devices,,,,,,,,,,
+';
