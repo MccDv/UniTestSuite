@@ -309,12 +309,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_24B12FD180BD4D3BB2212BDDE1727AA0"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2506DE4C5C7F4616818F3A35BB238C72"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -443,12 +437,6 @@
         {
         "MsmKey" = "8:_322C431F79384091BF8B49C313023317"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_326642A054E45495311C0F7A90484910"
-        "OwnerKey" = "8:_A60F68EF2AD94C569ADD866D10682024"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -981,12 +969,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_85776CB6D9CC455EBD90D48FDE8A1291"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_861924070416458397B84D5348E5D8BD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1305,12 +1287,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A60F68EF2AD94C569ADD866D10682024"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A6916703868F4064A1C1C7E953ED2644"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1600,12 +1576,6 @@
         "Entry"
         {
         "MsmKey" = "8:_C9E332EE285F4E9CA883609084172717"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CA283FBF338B4664B53832832AAF4720"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1990,19 +1960,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A60F68EF2AD94C569ADD866D10682024"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_611E54F537404E4086DE05A130DBDD7A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_326642A054E45495311C0F7A90484910"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -2712,7 +2670,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_193E60568E7B4816B003D46CAAC52945"
             {
-            "SourcePath" = "8:..\\..\\..\\MC.ico"
+            "SourcePath" = "8:..\\..\\MC.ico"
             "TargetName" = "8:MC.ico"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -3070,26 +3028,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24B12FD180BD4D3BB2212BDDE1727AA0"
-            {
-            "SourcePath" = "8:H:\\FileStorage\\FileLister4\\FileLister4.pdb"
-            "TargetName" = "8:FileLister4.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_6097F766C8884B94858671B0A6E5DAD8"
-            "Condition" = "8:CHECKBOXA2"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2506DE4C5C7F4616818F3A35BB238C72"
             {
             "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\XDTrig\\vDTrigger.uts"
@@ -3112,7 +3050,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_25E497169861896F686520286A67A71A"
             {
-            "SourcePath" = "8:MBDClass.tlb"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\MBDClass.tlb"
             "TargetName" = "8:MBDClass.tlb"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -3530,37 +3468,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_326642A054E45495311C0F7A90484910"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_326642A054E45495311C0F7A90484910"
-                    {
-                    "Name" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6097F766C8884B94858671B0A6E5DAD8"
-            "Condition" = "8:CHECKBOXA2"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_32B0671120A04E4783727AFBFC7D92DE"
             {
             "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6030\\DeviceParams.uts"
@@ -3854,7 +3761,7 @@
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\..\\MBDClass\\Backup\\MBDClass\\bin\\Release\\MBDClass.dll"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\MBDClass.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -4925,7 +4832,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E78571BC38F4D8CB35A8D1568AC105D"
             {
-            "SourcePath" = "8:HELP.ICO"
+            "SourcePath" = "8:..\\..\\HELP.ICO"
             "TargetName" = "8:HELP.ICO"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -5330,26 +5237,6 @@
             "Tag" = "8:"
             "Folder" = "8:_6CF1E996559F434DB088BD139EBAFE17"
             "Condition" = "8:CHECKBOXA4"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_85776CB6D9CC455EBD90D48FDE8A1291"
-            {
-            "SourcePath" = "8:H:\\FileStorage\\FileLister4\\FileLister4.vshost.exe.config"
-            "TargetName" = "8:FileLister4.vshost.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_6097F766C8884B94858671B0A6E5DAD8"
-            "Condition" = "8:CHECKBOXA2"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
@@ -6205,7 +6092,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0E8D0290C494F5484F2A04577C77DE7"
             {
-            "SourcePath" = "8:CHECKMRK.ICO"
+            "SourcePath" = "8:..\\..\\CHECKMRK.ICO"
             "TargetName" = "8:CHECKMRK.ICO"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6410,37 +6297,6 @@
             "Tag" = "8:"
             "Folder" = "8:_310CAF8FF3EC4380AC2B2E45407A0114"
             "Condition" = "8:CHECKBOXA4"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A60F68EF2AD94C569ADD866D10682024"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:vshost, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_A60F68EF2AD94C569ADD866D10682024"
-                    {
-                    "Name" = "8:FileLister4.vshost.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:H:\\FileStorage\\FileLister4\\FileLister4.vshost.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6097F766C8884B94858671B0A6E5DAD8"
-            "Condition" = "8:CHECKBOXA2"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
@@ -7276,7 +7132,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2F09C9E99FC4B1A9A2C36BD1F533BDF"
             {
-            "SourcePath" = "8:..\\..\\..\\NOTE16.ICO"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\NOTE16.ICO"
             "TargetName" = "8:NOTE16.ICO"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -7421,26 +7277,6 @@
             "Tag" = "8:"
             "Folder" = "8:_5514CFDBB925459EBCED44B7BA0783C6"
             "Condition" = "8:CHECKBOXA4"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA283FBF338B4664B53832832AAF4720"
-            {
-            "SourcePath" = "8:H:\\FileStorage\\FileLister4\\FileLister4.xml"
-            "TargetName" = "8:FileLister4.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_6097F766C8884B94858671B0A6E5DAD8"
-            "Condition" = "8:CHECKBOXA2"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"

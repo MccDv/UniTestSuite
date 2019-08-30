@@ -105,12 +105,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0EF2497A456A95042F4689CD0DC68EE5"
-        "OwnerKey" = "8:_3B9213AC993F415BB6445BAFCB0784BE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0FBA034BBF02427A93BD211D778DB0E6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1431,6 +1425,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B888F0E7DE4621D9D568D541A54CE3CE"
+        "OwnerKey" = "8:_3B9213AC993F415BB6445BAFCB0784BE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B90329CC32054DB98E6A219B63609D6A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2333,26 +2333,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0EF2497A456A95042F4689CD0DC68EE5"
-            {
-            "SourcePath" = "8:MBDClass.tlb"
-            "TargetName" = "8:MBDClass.tlb"
-            "Tag" = "8:"
-            "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:2"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0FBA034BBF02427A93BD211D778DB0E6"
@@ -6777,6 +6757,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B888F0E7DE4621D9D568D541A54CE3CE"
+            {
+            "SourcePath" = "8:MBDClass.tlb"
+            "TargetName" = "8:MBDClass.tlb"
+            "Tag" = "8:"
+            "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:2"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B90329CC32054DB98E6A219B63609D6A"
             {
             "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt1Volts.uts"
@@ -10260,7 +10260,7 @@
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
-        "PostBuildEvent" = "8:"
+        "PostBuildEvent" = "8:cscript //nologo \"$(ProjectDir)WiRunSql.vbs\" \"$(BuiltOuputPath)\" \"INSERT INTO Property(Property, Value) VALUES ('DISABLEADVTSHORTCUTS', '1')\""
         "RunPostBuildEvent" = "3:0"
         }
         "Registry"
