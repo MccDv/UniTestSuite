@@ -1987,7 +1987,7 @@
         {
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_01245F0A75D5440CAE102CA8C283C1D7"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-200 Series\\USB-202\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-200 Series\\USB-202\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_1EA7CBD012044843990FC12B433886F3"
@@ -2007,7 +2007,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0202CE259BB049BDB43C7F16C2A19FF0"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDataRate.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDataRate.uts"
             "TargetName" = "8:SetDataRate.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -2027,7 +2027,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_028805B5071544F6BA3F575A3932EA5C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\LoadQueue\\ClearQueue.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\LoadQueue\\ClearQueue.uts"
             "TargetName" = "8:ClearQueue.uts"
             "Tag" = "8:"
             "Folder" = "8:_30509AB81E95425EB66A81E0FBC0725C"
@@ -2047,7 +2047,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_02FA57E17BFB434085361083A5F71ADD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SONoCalibrateData.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SONoCalibrateData.uts"
             "TargetName" = "8:SONoCalibrateData.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -2067,7 +2067,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_043DCDAEA21B4CF7971918BD2BADF0B5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-200 Series\\USB-204\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-200 Series\\USB-204\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_CD0C4105736A4243AAC5E0311D3AC2FF"
@@ -2087,7 +2087,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_045828DF6EC84F0E973F99F12BA50AD1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\CloseLgr.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\CloseLgr.uts"
             "TargetName" = "8:CloseLgr.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -2107,7 +2107,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_066AF43691D84D8F9394D5558657DEC9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Plot\\SetPlotPoints.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Plot\\SetPlotPoints.uts"
             "TargetName" = "8:SetPlotPoints.uts"
             "Tag" = "8:"
             "Folder" = "8:_59E14564F6554887AC65723377BB25E7"
@@ -2127,7 +2127,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0860ED2B2A2D42248354D1E6A8A7049A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt125Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt125Volts.uts"
             "TargetName" = "8:FPBipPt125Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2147,7 +2147,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_08B765C3ABB54619AB05DC0D99A1313A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeDiffOld.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeDiffOld.uts"
             "TargetName" = "8:SetModeDiffOld.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -2167,7 +2167,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0B3054BA934440E1B830970FB21134C8"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenLgr.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenLgr.uts"
             "TargetName" = "8:OpenLgr.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -2187,7 +2187,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0B4A01317A15477C8F4E3F1E5C4E9D6A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Openain2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Openain2.uts"
             "TargetName" = "8:Openain2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -2207,7 +2207,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0B81E1CF7E9E4053905A775F6AAE167D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\LGR-5300 Series\\LGR-5329\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\LGR-5300 Series\\LGR-5329\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_F6C808771E564354BA601A2AF3620378"
@@ -2227,7 +2227,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0BDF8CD678B84CBBAAB978669B97B160"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1408FS Series\\USB-1408FS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1408FS Series\\USB-1408FS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_0AEB99BA55B241ECB3CB9C31BB7BCF7A"
@@ -2247,7 +2247,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0D207A30839A457C8D580D55C941FBEA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AOutAIn\\AOutAInScan\\AIScanOut.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AOutAIn\\AOutAInScan\\AIScanOut.uss"
             "TargetName" = "8:AIScanOut.uss"
             "Tag" = "8:"
             "Folder" = "8:_343074D895F548C7B95EDF9F98014BEC"
@@ -2267,7 +2267,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0D4F04625F254FB0A0C0667C9F988FEE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR50.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR50.uts"
             "TargetName" = "8:Set0-15DR50.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -2287,7 +2287,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0DD5978DAC4847DAB9EA0C5DB7E3C42A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip1pt25Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip1pt25Volts.uts"
             "TargetName" = "8:FPBip1pt25Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2307,7 +2307,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0DE721D7F777459C94D5372E9B7A04F6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR5.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR5.uts"
             "TargetName" = "8:SetDR5.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -2327,7 +2327,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F0E70941D044CD1AB9CE73BB34130FE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeDiff.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeDiff.uts"
             "TargetName" = "8:SetModeDiff.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -2347,7 +2347,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_106740E6455A40BF8B6471048E8A463D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\GetAiDefaults.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\GetAiDefaults.uts"
             "TargetName" = "8:GetAiDefaults.uts"
             "Tag" = "8:"
             "Folder" = "8:_079A1A520CD9426484B01F67E51F63FB"
@@ -2367,7 +2367,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_148FA0182885466CA15F547176385F6C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\LGR-5300 Series\\LGR-5325\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\LGR-5300 Series\\LGR-5325\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_6ADDBDCA737D46B1A2D42E6B2E476536"
@@ -2387,7 +2387,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_150983008635478396834316902FFF5F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2408 Series\\USB-2408-2AO\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2408 Series\\USB-2408-2AO\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_723E360932304FD187613082E34829E1"
@@ -2407,7 +2407,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_15F75766C7044E758C8B18E50CBC52C6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetTCType.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetTCType.uts"
             "TargetName" = "8:SetTCType.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -2427,7 +2427,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_16265F32509A4FFC8EE957FC6D7137EC"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2500 Series\\USB-2527\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2500 Series\\USB-2527\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_8C04AD14E8214A1C9075FD83C4D34650"
@@ -2447,7 +2447,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_168AF83946AB4B6394441CB53298CCAD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\Events\\EventTests.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\Events\\EventTests.uss"
             "TargetName" = "8:EventTests.uss"
             "Tag" = "8:"
             "Folder" = "8:_F8A4F5FF94FE48AD9C5BD5C026F5B00E"
@@ -2487,7 +2487,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_189CF1D65E9D4B458ED5B12ECCD2FCB7"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Signals\\AOLoopback.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Signals\\AOLoopback.uts"
             "TargetName" = "8:AOLoopback.uts"
             "Tag" = "8:"
             "Folder" = "8:_852D186F1A9C434483A39D2277F720E7"
@@ -2507,7 +2507,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_18F44554E6FD45459D6E7DAB1FDFE7F8"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Openain.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Openain.uts"
             "TargetName" = "8:Openain.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -2547,7 +2547,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1B0D013DA96A49AEBF849884E531D1B9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa1To5.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa1To5.uts"
             "TargetName" = "8:FPMa1To5.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2567,7 +2567,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1BAE6F6BD7B545BDB8C1723EA509710C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR500.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR500.uts"
             "TargetName" = "8:Set0-15DR500.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -2587,7 +2587,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1C122E7801264887BB7C21E9584CD27C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Openctr.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Openctr.uts"
             "TargetName" = "8:Openctr.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -2627,7 +2627,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1D68D40A59B04F5993169303D52BC1B6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Events\\InScanEvents.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Events\\InScanEvents.UTS"
             "TargetName" = "8:InScanEvents.UTS"
             "Tag" = "8:"
             "Folder" = "8:_D30F0C5468DA479AABFED3E6CDC2A7D4"
@@ -2647,7 +2647,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E4DA5928AD84C4FBCC948F4565BBBC8"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt078Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt078Volts.uts"
             "TargetName" = "8:FPBipPt078Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2667,7 +2667,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_205E2BBE4AD047A9B7446E9AC80E6EBD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2020 Series\\USB-2020-001\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2020 Series\\USB-2020-001\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_C84E6B010FEF452CBF8E6E5CFF3A562E"
@@ -2687,7 +2687,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_20C0E765B7B0409ABF3B03D5A38C6441"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\Rate\\RateTest.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\Rate\\RateTest.uss"
             "TargetName" = "8:RateTest.uss"
             "Tag" = "8:"
             "Folder" = "8:_A7E685F6754D4891939C66E22158DA84"
@@ -2707,7 +2707,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_214021E3DAA34947B6A0BC3C0910D79D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closedo.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closedo.uts"
             "TargetName" = "8:Closedo.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -2727,7 +2727,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_21D5E02CF8C94B1CA82C0E64DF7BECCF"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\Range\\RangeChansProp.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\Range\\RangeChansProp.uss"
             "TargetName" = "8:RangeChansProp.uss"
             "Tag" = "8:"
             "Folder" = "8:_D1DA4D85C8D6451CA7F105780B47D0A5"
@@ -2747,7 +2747,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_228E7F8056AC4475BB156D3C3625629D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip5Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip5Volts.uts"
             "TargetName" = "8:FPBip5Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2767,7 +2767,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22FF7998A96640298A1F7715FBED3A1F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\RangeSetter.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\RangeSetter.uts"
             "TargetName" = "8:RangeSetter.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2787,7 +2787,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_23D4EF5A8C274EF58BE6608CD8345F77"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closeao2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closeao2.uts"
             "TargetName" = "8:Closeao2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -2807,7 +2807,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24C7D10EF6954486BBC49B0E1B567098"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetInputModeADCfg.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetInputModeADCfg.uts"
             "TargetName" = "8:SetInputModeADCfg.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -2827,7 +2827,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_275AC98BAEA5496684B758CD18209223"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOBlockIO.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOBlockIO.uts"
             "TargetName" = "8:SOBlockIO.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -2847,7 +2847,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_27C13415D7FC4B78B021BE2956415E9B"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AIn\\Derivative\\AInIntegrity.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AIn\\Derivative\\AInIntegrity.uss"
             "TargetName" = "8:AInIntegrity.uss"
             "Tag" = "8:"
             "Folder" = "8:_1EC815A8A11C4430990D30752363B667"
@@ -2867,7 +2867,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_28DB54A9D3D748B89D1CA523CB1BA907"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\FifoStreamRate\\FifoRateTest.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\FifoStreamRate\\FifoRateTest.uss"
             "TargetName" = "8:FifoRateTest.uss"
             "Tag" = "8:"
             "Folder" = "8:_095B908DF0EF475492A469FF9EE7B5FB"
@@ -2887,7 +2887,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2939574299BE41E7B34240657D31EC52"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\MiniLab Series\\USB-1208LS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\MiniLab Series\\USB-1208LS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_38473FED21EF4B42B8D82D62F3F5EF1A"
@@ -2907,7 +2907,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_29A4491D22974CA99D8F9F94F1C9F597"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt5Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt5Volts.uts"
             "TargetName" = "8:FPBipPt5Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2927,7 +2927,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A9166DE45BF4FE2B654B6F8A4777CE5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\StartupParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\StartupParams.uts"
             "TargetName" = "8:StartupParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_9916371335494233AE3D376269823956"
@@ -2947,7 +2947,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2B4BF63C305D4571B93FA933C3279B97"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetMsgModeSE.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetMsgModeSE.uts"
             "TargetName" = "8:SetMsgModeSE.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -2967,7 +2967,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2BEED52F02A6457E806E2C61471E91FF"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPRangeNotUsed.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPRangeNotUsed.uts"
             "TargetName" = "8:FPRangeNotUsed.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -2987,7 +2987,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2C5234E535C14159A795C551C449D1B6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\CloseCfg2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\CloseCfg2.uts"
             "TargetName" = "8:CloseCfg2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -3007,7 +3007,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2DCE3F92DFC84FB58F1405C26F25FB61"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenCfg2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenCfg2.uts"
             "TargetName" = "8:OpenCfg2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -3027,7 +3027,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E20FA55C9C9402ABEC4EF29875B9CD9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2500 Series\\USB-2523\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2500 Series\\USB-2523\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_AF88FD787D9E42AAAB3C4079C0417D90"
@@ -3047,7 +3047,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3091DB9F1C4A4202B13B41B265E64664"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR500.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR500.uts"
             "TargetName" = "8:SetDR500.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -3067,7 +3067,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_32A7C0B22A3A44F3BDC2AED970B9D82A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\DemoRanges.txt"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\DemoRanges.txt"
             "TargetName" = "8:DemoRanges.txt"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -3087,7 +3087,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_32EBC8AB2A404A918220AF07B5212868"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SODMAIO.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SODMAIO.uts"
             "TargetName" = "8:SODMAIO.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -3107,7 +3107,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3335A539B73B40618527BC45432DA5B9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOCtr32Bit.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOCtr32Bit.uts"
             "TargetName" = "8:SOCtr32Bit.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -3147,7 +3147,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_33A6202707ED4D5FBBBCE3AEF24D3AF5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AIn\\Derivative32.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AIn\\Derivative32.UTS"
             "TargetName" = "8:Derivative32.UTS"
             "Tag" = "8:"
             "Folder" = "8:_CBB5FC26537E46CDB505222F256C1DFD"
@@ -3187,7 +3187,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_35F8784CC8A64E569A92A276DCD4ACA5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Range\\DiffORangeChans.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Range\\DiffORangeChans.UTS"
             "TargetName" = "8:DiffORangeChans.UTS"
             "Tag" = "8:"
             "Folder" = "8:_624FAE5A813746A0BF72E59663EC7A61"
@@ -3207,7 +3207,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_36DEF8BC53E44B358CE532E16DF4FB75"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip60Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip60Volts.uts"
             "TargetName" = "8:FPBip60Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3227,7 +3227,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3700A339A9D242AF9364ADAB5C985167"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\GetAoDefaults.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\GetAoDefaults.uts"
             "TargetName" = "8:GetAoDefaults.uts"
             "Tag" = "8:"
             "Folder" = "8:_079A1A520CD9426484B01F67E51F63FB"
@@ -3247,7 +3247,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_374907196C064D218F9F7B4E07F8BE7F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Range\\DiffRangeChans.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Range\\DiffRangeChans.UTS"
             "TargetName" = "8:DiffRangeChans.UTS"
             "Tag" = "8:"
             "Folder" = "8:_624FAE5A813746A0BF72E59663EC7A61"
@@ -3287,7 +3287,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_389951DC39FC4ADD8795054714AA53C6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1608FS Series\\USB-1608FS-Plus\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1608FS Series\\USB-1608FS-Plus\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_1B93B3D163834B4884A5C21D73C393F4"
@@ -3327,7 +3327,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_394CAD4F17C54A8487B968DD4D5474F4"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Signals\\MapSwitch.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Signals\\MapSwitch.uts"
             "TargetName" = "8:MapSwitch.uts"
             "Tag" = "8:"
             "Folder" = "8:_852D186F1A9C434483A39D2277F720E7"
@@ -3347,7 +3347,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3997F8A2A7044D2A89A7B98759308EFE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\LoadQueue\\RandomQueue.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\LoadQueue\\RandomQueue.uts"
             "TargetName" = "8:RandomQueue.uts"
             "Tag" = "8:"
             "Folder" = "8:_30509AB81E95425EB66A81E0FBC0725C"
@@ -3367,7 +3367,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3A2551C88C57412EB2C8644522BCA86F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOHighResRate.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOHighResRate.uts"
             "TargetName" = "8:SOHighResRate.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -3387,7 +3387,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3BC7CDF1940448659E4E108B58C1D7B9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\TrigSource\\SetTrigSource.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\TrigSource\\SetTrigSource.uts"
             "TargetName" = "8:SetTrigSource.uts"
             "Tag" = "8:"
             "Folder" = "8:_831BF1F08EFD4B68A7F100B99C2606FC"
@@ -3407,7 +3407,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3BE7E4C42FC449E4B6E9390345BE6814"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOExtTrigger.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOExtTrigger.uts"
             "TargetName" = "8:SOExtTrigger.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -3447,7 +3447,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E6DA17AD8254209A81D32BDE0172EB1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2600 Series\\USB-2623\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2600 Series\\USB-2623\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_18EE644BF5AF4F70853C788A19E624BD"
@@ -3467,7 +3467,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E781258F3CB48A9B14885853D6197C1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_9916371335494233AE3D376269823956"
@@ -3487,7 +3487,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_40AA367ABB1A4D419B311D9F486822C6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt02Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt02Volts.uts"
             "TargetName" = "8:FPUniPt02Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3507,7 +3507,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_40F5867B26E546CDAEE180AA5F6B6C21"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip1Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip1Volts.uts"
             "TargetName" = "8:FPBip1Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3567,7 +3567,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_41BDEE017DAB477CA5CF8F521141C50E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OPENGPIB.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OPENGPIB.UTS"
             "TargetName" = "8:OPENGPIB.UTS"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -3587,7 +3587,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_429B7CB217254C65B45273F4A7061D1E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2600 Series\\USB-2637-MR\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2600 Series\\USB-2637-MR\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_0B253AFB056A40A99973DF890EC7868A"
@@ -3607,7 +3607,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42A835ACF7B14116867F17FACEEC8EB5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2500 Series\\USB-2533\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2500 Series\\USB-2533\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_D6B0D0A9F5DC461B999E8B2D2D4F9C9A"
@@ -3627,7 +3627,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_436E37D3BE61464C839E23F88074FB92"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOContinuous.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOContinuous.uts"
             "TargetName" = "8:SOContinuous.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -3647,7 +3647,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43780A1AD477478C8AB85F030C1A8E8E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-7200 Series\\USB-7204\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-7200 Series\\USB-7204\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_F895C42494704AD6B4A9B927FF9A2E80"
@@ -3667,7 +3667,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_440FD74C8C424FE79112F68C044A81DE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni1Pt67Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni1Pt67Volts.uts"
             "TargetName" = "8:FPUni1Pt67Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3687,7 +3687,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_450DC7C029BD402EAF153DE5FEC13D2F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\Uni3QRangeParams.txt"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\Uni3QRangeParams.txt"
             "TargetName" = "8:Uni3QRangeParams.txt"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3707,7 +3707,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_45533995E9F940DB80F7B90FF4122D1B"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOBackground.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOBackground.uts"
             "TargetName" = "8:SOBackground.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -3727,7 +3727,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_45535F7577F5448DB8A73073E87E94A0"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\DigitalIO\\DIOPort.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\DigitalIO\\DIOPort.uts"
             "TargetName" = "8:DIOPort.uts"
             "Tag" = "8:"
             "Folder" = "8:_485C776FD44E4D5EB041AA37EB8CA5C7"
@@ -3747,7 +3747,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4555CCF77CC542CAB2F7865AE90F5528"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2600 Series\\USB-2633\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2600 Series\\USB-2633\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_2568566C3BE64F7BB95B369892707BBF"
@@ -3767,7 +3767,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_45AFAA095103497E9479E1E8FA563942"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2416 Series\\USB-2416\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2416 Series\\USB-2416\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_8A4BD11F776641668221ED51C1BE7579"
@@ -3787,7 +3787,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_45DCFD824D6F4B75B7D3B46F53BF7ECB"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AOutScanRates\\RateIncrement.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AOutScanRates\\RateIncrement.uts"
             "TargetName" = "8:RateIncrement.uts"
             "Tag" = "8:"
             "Folder" = "8:_1CF2A88F1B6542E1AB3F46307AC58E60"
@@ -3807,7 +3807,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46C94118B94D4E4CB9EF3A0E2D051139"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\PCI\\PCIe-DAS1602_16\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCIe-DAS1602_16\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_82F7EF717E5D4784BF23004C0D190FA1"
@@ -3827,7 +3827,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_474CEE4F69B247338FB896502D3ED4FD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Counter\\CIn.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Counter\\CIn.uts"
             "TargetName" = "8:CIn.uts"
             "Tag" = "8:"
             "Folder" = "8:_8BBB152C3AB842BFA11E49D8536D7A01"
@@ -3847,7 +3847,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_47BD472147ED4AB59F1621A87B022201"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInOutScan\\AIScanOut.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInOutScan\\AIScanOut.UTS"
             "TargetName" = "8:AIScanOut.UTS"
             "Tag" = "8:"
             "Folder" = "8:_596BADB6E7664D87AA3EBF25C18180DA"
@@ -3867,7 +3867,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4807658FE0B9484683B99F31E3B72EFD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa4To20.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa4To20.uts"
             "TargetName" = "8:FPMa4To20.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3887,7 +3887,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_48FECC286525428FAB6BF9F0F2B5170B"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1608HS Series\\USB-1608HS-2AO\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1608HS Series\\USB-1608HS-2AO\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_E868B2DEB02F4B359AC3342F0B7F5EA8"
@@ -3907,7 +3907,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4AE2D7E616F44D86A3FE75A5C8B9DDD2"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR2000.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR2000.uts"
             "TargetName" = "8:SetDR2000.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -3927,7 +3927,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C4A26D87EB242E7BADAD0C09D0D36B1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt05Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt05Volts.uts"
             "TargetName" = "8:FPUniPt05Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3947,7 +3947,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C5497F367584C229438D91CF62ED3DC"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip15Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip15Volts.uts"
             "TargetName" = "8:FPBip15Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -3967,7 +3967,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C8CD8861D8B4B21AB8AE93191858FF9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR25.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR25.uts"
             "TargetName" = "8:Set0-15DR25.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -3987,7 +3987,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4CABDD8DE9E14CFDAFE6F3AD66A6C585"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\Derivative\\ScanIntegrity.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\Derivative\\ScanIntegrity.uss"
             "TargetName" = "8:ScanIntegrity.uss"
             "Tag" = "8:"
             "Folder" = "8:_C70C8EE2024E48228AF6D0B41B4C32F0"
@@ -4007,7 +4007,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4FBB3AD3C3F8489ABB134660F056F39C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt5Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt5Volts.uts"
             "TargetName" = "8:FPUniPt5Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4027,7 +4027,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_50C4386668D24490AEB6295506DBC6A5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AIn\\AInSettle.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AIn\\AInSettle.UTS"
             "TargetName" = "8:AInSettle.UTS"
             "Tag" = "8:"
             "Folder" = "8:_CBB5FC26537E46CDB505222F256C1DFD"
@@ -4047,7 +4047,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_50E011B08AC84B1C841845BC6070CD40"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR5.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR5.uts"
             "TargetName" = "8:Set0-15DR5.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -4067,7 +4067,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5197AC40AA28403DB7A9906B49CE3E30"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6052\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6052\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_BDC6841B2A3243DD94CC7CDBF51531A2"
@@ -4087,7 +4087,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_539405DE2B694519815D0E55C4CB7433"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AIn\\Rate and Amplitude\\RangeEach.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AIn\\Rate and Amplitude\\RangeEach.uss"
             "TargetName" = "8:RangeEach.uss"
             "Tag" = "8:"
             "Folder" = "8:_E95AE99DE85D49AC856982CCC9D6240C"
@@ -4107,7 +4107,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_53A230FF5D21484BB0BCFCFCA67C72A6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni2Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni2Volts.uts"
             "TargetName" = "8:FPUni2Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4127,7 +4127,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_55726ED53F584877BA35D67310E3C5F5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip1Pt67Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip1Pt67Volts.uts"
             "TargetName" = "8:FPBip1Pt67Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4147,7 +4147,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_55EA410FD0A747C988541428CFA41AEA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOConvertdata.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOConvertdata.uts"
             "TargetName" = "8:SOConvertdata.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -4167,7 +4167,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5649D665768047EBAA7A93E3F32DF632"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1208HS Series\\USB-1208HS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1208HS Series\\USB-1208HS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_64E478F6D821496C8362C532D6A266C5"
@@ -4187,7 +4187,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59A3012509304CEE8220D76FC7811C99"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Derivative\\Derivative.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Derivative\\Derivative.UTS"
             "TargetName" = "8:Derivative.UTS"
             "Tag" = "8:"
             "Folder" = "8:_A90DAF5DAAB242368D5C747CBE596AA6"
@@ -4207,7 +4207,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59B181FBD59240E08DD07A0A5205A4C1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2500 Series\\USB-2537\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2500 Series\\USB-2537\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_1BD30105964D4836B0063177C4900B43"
@@ -4227,7 +4227,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A830AF6F78A4CEF93641C5203FCA7E5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Signals\\XCtlAiClock.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Signals\\XCtlAiClock.uts"
             "TargetName" = "8:XCtlAiClock.uts"
             "Tag" = "8:"
             "Folder" = "8:_852D186F1A9C434483A39D2277F720E7"
@@ -4247,7 +4247,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A8CF9C205854859923C54067585E765"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetMsgModeSeDiff.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetMsgModeSeDiff.uts"
             "TargetName" = "8:SetMsgModeSeDiff.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -4267,7 +4267,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5BB7C03EA3434D1DA27F5DCC854ED833"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni1Pt25Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni1Pt25Volts.uts"
             "TargetName" = "8:FPUni1Pt25Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4287,7 +4287,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5CA9C90AB433468C94D653FD662149BF"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt2Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt2Volts.uts"
             "TargetName" = "8:FPBipPt2Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4307,7 +4307,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5D33B6D662D846D78A286D6EA098ACDE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Range\\ORangeChans.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Range\\ORangeChans.UTS"
             "TargetName" = "8:ORangeChans.UTS"
             "Tag" = "8:"
             "Folder" = "8:_624FAE5A813746A0BF72E59663EC7A61"
@@ -4347,7 +4347,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6271857E7A8841908BC87824604EA008"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt312Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt312Volts.uts"
             "TargetName" = "8:FPBipPt312Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4387,7 +4387,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_629ABBEF080645C2849949E3E90C4B1D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCN.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCN.uts"
             "TargetName" = "8:FPTCN.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4407,7 +4407,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_629E772A35564688AE6CABDA8A30295D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Digital\\SelectPortDir.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Digital\\SelectPortDir.uts"
             "TargetName" = "8:SelectPortDir.uts"
             "Tag" = "8:"
             "Folder" = "8:_A6A0747E18A045D989C39F37F5D8BAA1"
@@ -4427,7 +4427,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_62E62E205D324FAEB1B08E9DA8C043F9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip10Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip10Volts.uts"
             "TargetName" = "8:FPBip10Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4447,7 +4447,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_64DB39EA88DF46A0A1D450BFA6B1AE0D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOSingleIO.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOSingleIO.uts"
             "TargetName" = "8:SOSingleIO.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -4467,7 +4467,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_64FDA9B8935C4CE6B998A79AE1104FDD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR100.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR100.uts"
             "TargetName" = "8:Set0-15DR100.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -4507,7 +4507,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65244121BC814574A3F96E68C1C6701C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-SSR Series\\USB-SSR24\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-SSR Series\\USB-SSR24\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_3CD7B7883E4E483F952164E864703A01"
@@ -4527,7 +4527,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6733A900EF3745F7A2B9473921CDAD3D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigHigh.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigHigh.uts"
             "TargetName" = "8:TrigHigh.uts"
             "Tag" = "8:"
             "Folder" = "8:_B73E961FCDD040F780CBE3648E84EC56"
@@ -4547,7 +4547,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68C5034512AA47469C729D2614E53CA9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AIn\\EachAIn32.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AIn\\EachAIn32.UTS"
             "TargetName" = "8:EachAIn32.UTS"
             "Tag" = "8:"
             "Folder" = "8:_CBB5FC26537E46CDB505222F256C1DFD"
@@ -4567,7 +4567,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68DDAC501E9647868422F079DEDE4CD9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\MiniLab Series\\miniLAB 1008\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\MiniLab Series\\miniLAB 1008\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_23650024B213419C82088E6EBD6038B9"
@@ -4587,7 +4587,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69487E20488742E89480ED0B96BD9DFB"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR25.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR25.uts"
             "TargetName" = "8:SetDR25.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -4607,7 +4607,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A22A3D4104B4CB5B62EABD70E24BAFC"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR100.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR100.uts"
             "TargetName" = "8:SetDR100.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -4627,7 +4627,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A5A57B8DD6C456DB85B9D3771E5B21C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetAdAiMode.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetAdAiMode.uts"
             "TargetName" = "8:SetAdAiMode.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -4647,7 +4647,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6AB0177C47134F949E36986F586E0DF6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Clock\\PacerEdge\\SetADPacerEdge.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Clock\\PacerEdge\\SetADPacerEdge.uts"
             "TargetName" = "8:SetADPacerEdge.uts"
             "Tag" = "8:"
             "Folder" = "8:_A7AD112735784C08B3A27C80853CEFE3"
@@ -4667,7 +4667,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B00CE4251AC47D7B8219CD5B50449E9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\CloseCtr.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\CloseCtr.uts"
             "TargetName" = "8:CloseCtr.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -4687,7 +4687,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B9DD33A78874169983A482E6EFD2EDF"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCS.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCS.uts"
             "TargetName" = "8:FPTCS.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4707,7 +4707,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C27D071CFCB41359163DDCA33836D7D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetNumAdChans.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetNumAdChans.uts"
             "TargetName" = "8:SetNumAdChans.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -4747,7 +4747,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F2BF037D76947079E0DCCAC6F72BD96"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR2.uts"
             "TargetName" = "8:SetDR2.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -4787,7 +4787,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6FD5AE6CCC5B4566917050D9A338AEA2"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Digital\\SetPortBits.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Digital\\SetPortBits.uts"
             "TargetName" = "8:SetPortBits.uts"
             "Tag" = "8:"
             "Folder" = "8:_A6A0747E18A045D989C39F37F5D8BAA1"
@@ -4807,7 +4807,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_706F5FED87EB438D84A6BD7BEBF529D1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closedin2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closedin2.uts"
             "TargetName" = "8:Closedin2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -4827,7 +4827,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_719D559AE7B042C099D0807AB240F469"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6070\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6070\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_5CC3E2E01CCD4767AF57D9576EC2800D"
@@ -4847,7 +4847,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7263F792A41D4274B91BA4519CD7CF4D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenDOut.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenDOut.uts"
             "TargetName" = "8:OpenDOut.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -4867,7 +4867,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_72B03DF2794F416AA87894B648545200"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR60.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR60.uts"
             "TargetName" = "8:SetDR60.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -4887,7 +4887,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_745C09A15F414081A965C1D5CCEE1973"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closedin.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closedin.uts"
             "TargetName" = "8:Closedin.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -4907,7 +4907,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7582E6A80C5D416E85FE60F9CBA6EC53"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-200 Series\\USB-205\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-200 Series\\USB-205\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_B677586D9EAE42A999E993EEBECB7C9E"
@@ -4927,7 +4927,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7791285B1D384F3D8B5459345CE67524"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\InitRange.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\InitRange.uts"
             "TargetName" = "8:InitRange.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -4947,7 +4947,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78733280CEFD46609CFA40E0576B1904"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\ClosedOut2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\ClosedOut2.uts"
             "TargetName" = "8:ClosedOut2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -4967,7 +4967,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79553E846C754CACA48EC230127706DD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetAdAiModeOld.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetAdAiModeOld.uts"
             "TargetName" = "8:SetAdAiModeOld.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -4987,7 +4987,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79660342DAF44615886E2476FB0A07CB"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\DigitalIO\\BitIO.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\DigitalIO\\BitIO.uts"
             "TargetName" = "8:BitIO.uts"
             "Tag" = "8:"
             "Folder" = "8:_485C776FD44E4D5EB041AA37EB8CA5C7"
@@ -5007,7 +5007,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7978A7F5F22047388E9DE831BE7D79E2"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOAdcClockTrig.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOAdcClockTrig.uts"
             "TargetName" = "8:SOAdcClockTrig.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -5027,7 +5027,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79F8E827AF6E4C54BAD7C6097E78FEAA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AIn\\AInSettle32.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AIn\\AInSettle32.UTS"
             "TargetName" = "8:AInSettle32.UTS"
             "Tag" = "8:"
             "Folder" = "8:_CBB5FC26537E46CDB505222F256C1DFD"
@@ -5047,7 +5047,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7A5604B6A0194AB78B4FFD6D48156C7B"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\ExtTrigger\\TrigRateTest.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\ExtTrigger\\TrigRateTest.uss"
             "TargetName" = "8:TrigRateTest.uss"
             "Tag" = "8:"
             "Folder" = "8:_9303FABF2F7C463387AC2671C0B2CD0D"
@@ -5067,7 +5067,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7A71B8BD5B6141C3AE6AEF3584C2398D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenAo3.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenAo3.uts"
             "TargetName" = "8:OpenAo3.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -5087,7 +5087,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7ABF4396DA954750A8B3A29540A3842F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SODefault.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SODefault.uts"
             "TargetName" = "8:SODefault.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -5107,7 +5107,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7B4D15F3E40A4A5AA7A50BB540F54049"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AIn\\EachAIn.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AIn\\EachAIn.UTS"
             "TargetName" = "8:EachAIn.UTS"
             "Tag" = "8:"
             "Folder" = "8:_CBB5FC26537E46CDB505222F256C1DFD"
@@ -5127,7 +5127,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7BBA39F3059E452D83BEDB03140636EA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetTempSensorType.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetTempSensorType.uts"
             "TargetName" = "8:SetTempSensorType.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -5147,7 +5147,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D4939663CAB459081BB1003BC99169D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt01Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt01Volts.uts"
             "TargetName" = "8:FPBipPt01Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -5167,7 +5167,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D73119D650848BE83CC2D1851A9BB66"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1208FS Series\\USB-1208FS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1208FS Series\\USB-1208FS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_B3EAB47854B04F428F987714E2EA40B8"
@@ -5187,7 +5187,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7E31EFA4B68E4C3C9E3E9B7E2B89EC14"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Rate\\StreamTest.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Rate\\StreamTest.UTS"
             "TargetName" = "8:StreamTest.UTS"
             "Tag" = "8:"
             "Folder" = "8:_ECDC9D36CC7B4A429ECC6301A69471F8"
@@ -5207,7 +5207,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7EA6BC0EE6CD408B9AAD5266D65EFC0A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt156Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt156Volts.uts"
             "TargetName" = "8:FPBipPt156Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -5227,7 +5227,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7F8E2FDED27545F7A73401AAF3B2835D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Digital\\SetPortInputs.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Digital\\SetPortInputs.uts"
             "TargetName" = "8:SetPortInputs.uts"
             "Tag" = "8:"
             "Folder" = "8:_A6A0747E18A045D989C39F37F5D8BAA1"
@@ -5247,7 +5247,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7FEC62B8837143FCA3E2050190DFFFCB"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt005Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt005Volts.uts"
             "TargetName" = "8:FPBipPt005Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -5267,7 +5267,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_809E05D508784F49BB9B39123972B338"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetNumAdChansOld.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetNumAdChansOld.uts"
             "TargetName" = "8:SetNumAdChansOld.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -5287,7 +5287,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80B55A9A0E104C2C871BDEFED254738A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenDOut2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenDOut2.uts"
             "TargetName" = "8:OpenDOut2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -5307,7 +5307,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80E75B5341044B97B3A893683EE9C93C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1608G Series\\USB-1608GX-2AO\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1608G Series\\USB-1608GX-2AO\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_8F9F9F0BBACB42E4A828226CC47B7059"
@@ -5327,7 +5327,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80FFC94E4C9A45209795E82216D6E589"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1608HS Series\\USB-1608HS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1608HS Series\\USB-1608HS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_0CE8D55910924D0B9DB4EDD86EC8EA77"
@@ -5347,7 +5347,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_84B99935490749A386266006EBCAD779"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AOutBuffer\\SetMsgAOutBuf.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AOutBuffer\\SetMsgAOutBuf.uts"
             "TargetName" = "8:SetMsgAOutBuf.uts"
             "Tag" = "8:"
             "Folder" = "8:_75E3B3D777FF442E9E1930D0B649C073"
@@ -5387,7 +5387,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8831CF75700E4A6D9FC2E3DF73BB6321"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip2Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip2Volts.uts"
             "TargetName" = "8:FPBip2Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -5427,7 +5427,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8BCAABF6E39745A5BEAF65ECD73C2C1A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\ExternalClock\\XRateTest.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\ExternalClock\\XRateTest.uss"
             "TargetName" = "8:XRateTest.uss"
             "Tag" = "8:"
             "Folder" = "8:_6503FEEBA05142CD8A3F3B16336BFCCA"
@@ -5447,7 +5447,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8CBFE96A15184183837644152A70F6BC"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\LGR-5300 Series\\LGR-5327\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\LGR-5300 Series\\LGR-5327\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_121ED04F62864F2F949841FE4ECA465E"
@@ -5467,7 +5467,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8E7385BD11CA47359B34E96623186ED9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni5Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni5Volts.uts"
             "TargetName" = "8:FPUni5Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -5487,7 +5487,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9098B57C06AC49CC98BC590504936918"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR10.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR10.uts"
             "TargetName" = "8:SetDR10.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -5507,7 +5507,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_92EAB379845644CD9AC5A30B86784519"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-230 Series\\USB-234\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-230 Series\\USB-234\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_8204B5016EE14240931583DC30DC712A"
@@ -5527,7 +5527,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93F7849CC6DF4CBAB1B3D162A502DFED"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Rate\\RateTest.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Rate\\RateTest.UTS"
             "TargetName" = "8:RateTest.UTS"
             "Tag" = "8:"
             "Folder" = "8:_ECDC9D36CC7B4A429ECC6301A69471F8"
@@ -5547,7 +5547,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_94D9A1304A6C46BF8D83F648B877E964"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2416 Series\\USB-2416-4AO\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2416 Series\\USB-2416-4AO\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_6D7870B0A9484C54A17041297395B2A0"
@@ -5567,7 +5567,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96C56549242A42CA8499B8FDC8763A46"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AInScanRates\\LowRateIncrement.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AInScanRates\\LowRateIncrement.uts"
             "TargetName" = "8:LowRateIncrement.uts"
             "Tag" = "8:"
             "Folder" = "8:_959E7EBDCCC14EC989F494BD4D54E1A8"
@@ -5587,7 +5587,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9822AF51514D4A49A9EA0190B8FE2CE3"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1208HS Series\\USB-1208HS-2AO\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1208HS Series\\USB-1208HS-2AO\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_A4BAB14D135D4BEF9864B788F5606720"
@@ -5607,7 +5607,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_98321F1CFE4544C9A12A0857C6EFBBCD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\SetSource.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\SetSource.uts"
             "TargetName" = "8:SetSource.uts"
             "Tag" = "8:"
             "Folder" = "8:_FB81B3D6ED7C46D6BA23CE2ADF2A8A6E"
@@ -5627,7 +5627,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9867414A030C4ED2BF5123D01A808BF5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AOutScanRates\\RateSetter.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AOutScanRates\\RateSetter.uts"
             "TargetName" = "8:RateSetter.uts"
             "Tag" = "8:"
             "Folder" = "8:_1CF2A88F1B6542E1AB3F46307AC58E60"
@@ -5647,7 +5647,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9985FCD1B5EB4296AD28698001BEF5E3"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt1Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt1Volts.uts"
             "TargetName" = "8:FPUniPt1Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -5667,7 +5667,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9A140DCE4AC143EA942904EBF61F53E9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\Bip3QRangeParams.txt"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\Bip3QRangeParams.txt"
             "TargetName" = "8:Bip3QRangeParams.txt"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -5687,7 +5687,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9A27B8D02D40436F82F997B56D9CFB18"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Clock\\RateSetter.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Clock\\RateSetter.uts"
             "TargetName" = "8:RateSetter.uts"
             "Tag" = "8:"
             "Folder" = "8:_27352F5855BD4C6B90A017E2519719C0"
@@ -5707,7 +5707,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9A8E12591BBE41B18509DE2015E05F1E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\XDTrig\\vDTrigger.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\XDTrig\\vDTrigger.uts"
             "TargetName" = "8:vDTrigger.uts"
             "Tag" = "8:"
             "Folder" = "8:_CFAD0B9ADCA14DFB9D2D50FC2142FBD0"
@@ -5727,7 +5727,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9AD5D265BD9E42EDB247B3DB945A8DE2"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1616FS Series\\USB-1616FS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1616FS Series\\USB-1616FS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_CD4407B10FF442E3AF0250B176E6B394"
@@ -5747,7 +5747,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B2D0D08D382483B838459DC4BFCDADA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AInScanRates\\RateSetter.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AInScanRates\\RateSetter.uts"
             "TargetName" = "8:RateSetter.uts"
             "Tag" = "8:"
             "Folder" = "8:_959E7EBDCCC14EC989F494BD4D54E1A8"
@@ -5767,7 +5767,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9CF21FFBCF2A4FD4AB53A35AEB2B8590"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1608G Series\\USB-1608G\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1608G Series\\USB-1608G\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_20BAAFF6B74447928A6C2DD1FD19A9BD"
@@ -5787,7 +5787,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9D20D695CC3547A6942E9D86D56382FC"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\GateLow.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\GateLow.uts"
             "TargetName" = "8:GateLow.uts"
             "Tag" = "8:"
             "Folder" = "8:_B73E961FCDD040F780CBE3648E84EC56"
@@ -5807,7 +5807,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F203A0513964DA79D26E8C2A10A71D6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2020 Series\\USB-2020\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2020 Series\\USB-2020\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_7CCA8D4CEA3644EA983DC601F7E9F66D"
@@ -5847,7 +5847,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A10F9949C66146A89D5BDDB6B1E2464D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\GateHigh.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\GateHigh.uts"
             "TargetName" = "8:GateHigh.uts"
             "Tag" = "8:"
             "Folder" = "8:_B73E961FCDD040F780CBE3648E84EC56"
@@ -5867,7 +5867,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A29DD0F029194C2FBB3A0D2EF2D20F0A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closeain2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closeain2.uts"
             "TargetName" = "8:Closeain2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -5887,7 +5887,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A2DB990514B346BD9A8557F647DCCE9E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\XDTrig\\vDPreTrigger.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\XDTrig\\vDPreTrigger.UTS"
             "TargetName" = "8:vDPreTrigger.UTS"
             "Tag" = "8:"
             "Folder" = "8:_CFAD0B9ADCA14DFB9D2D50FC2142FBD0"
@@ -5907,7 +5907,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A48F9FFBEE0B45C3BC6BDA80F2FF3CD7"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenDIn2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenDIn2.uts"
             "TargetName" = "8:OpenDIn2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -5927,7 +5927,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A582BB430B664F519F953BB6B357C696"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Clock\\Output\\RateSetter.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Clock\\Output\\RateSetter.uts"
             "TargetName" = "8:RateSetter.uts"
             "Tag" = "8:"
             "Folder" = "8:_EF3EDF2D8A0E492C9179DB7E05E6C837"
@@ -5947,7 +5947,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A69167C192CE40C49F5C2E99EE654D71"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1208FS Series\\PMD-1208FS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1208FS Series\\PMD-1208FS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_EB4917C3E0764100A9B87E8FADE26A7D"
@@ -5967,7 +5967,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A72B414B43A840EB866BF7A6402B9461"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6032\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6032\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_C591B5895A144FB0B8E56AE77F845289"
@@ -5987,7 +5987,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8B72CFA435A493395B7F7DC63C54D2D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCT.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCT.uts"
             "TargetName" = "8:FPTCT.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6007,7 +6007,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8C46E8910E5482C898395F8C531B1CA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOAdcClock.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOAdcClock.uts"
             "TargetName" = "8:SOAdcClock.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -6047,7 +6047,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A99C45398F1C4772856EB5ED133CF5DC"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInOutScan\\AIOScanCont.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInOutScan\\AIOScanCont.UTS"
             "TargetName" = "8:AIOScanCont.UTS"
             "Tag" = "8:"
             "Folder" = "8:_596BADB6E7664D87AA3EBF25C18180DA"
@@ -6067,7 +6067,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AAEA4514F31649B681FF0C2FC433FAA9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AInScanRates\\RateIncrement.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AInScanRates\\RateIncrement.uts"
             "TargetName" = "8:RateIncrement.uts"
             "Tag" = "8:"
             "Folder" = "8:_959E7EBDCCC14EC989F494BD4D54E1A8"
@@ -6087,7 +6087,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ABD5BBA6BC32438BB35669562D8C1C91"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AInScan\\ORange\\OverRangeChans.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AInScan\\ORange\\OverRangeChans.uss"
             "TargetName" = "8:OverRangeChans.uss"
             "Tag" = "8:"
             "Folder" = "8:_A9AC675BE4C749FEBB07E4678FC45C37"
@@ -6107,7 +6107,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC12929C5D5F4F6F9D28DDC428ECBCA5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2600 Series\\USB-2637\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2600 Series\\USB-2637\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_1A502EDAE4FB42F786135BE24183D1AE"
@@ -6127,7 +6127,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC7FC748D18449B990EAD15597C0D97C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenAo.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenAo.uts"
             "TargetName" = "8:OpenAo.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -6147,7 +6147,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AE090AB3154E4813AE13A6B53FF3BAF9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1608FS Series\\USB-1608FS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1608FS Series\\USB-1608FS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_C0F78C2233D04AB2A7C6F74023FA5970"
@@ -6167,7 +6167,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AE64CFC4C66D4DE88E6852C1BE410161"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt625Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt625Volts.uts"
             "TargetName" = "8:FPBipPt625Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6187,7 +6187,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AE8E7C2EBD484A4CABA22643F2EFDC55"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigPosEdge.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigPosEdge.uts"
             "TargetName" = "8:TrigPosEdge.uts"
             "Tag" = "8:"
             "Folder" = "8:_B73E961FCDD040F780CBE3648E84EC56"
@@ -6207,7 +6207,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFA506721C2244E0BC0A5C553740A346"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-200 Series\\USB-201\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-200 Series\\USB-201\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_637EF3CADB774A0B8C307193A56B6CC4"
@@ -6247,7 +6247,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B00F4CB579F74E84B5CF5F975D10D3C7"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6025\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6025\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_548B0D3367B443FB9472505FD1BAC4AD"
@@ -6267,7 +6267,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B168F13315684237B7DD48FC3FDDC615"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt05Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt05Volts.uts"
             "TargetName" = "8:FPBipPt05Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6307,7 +6307,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B2BD4354E8F747AA92AE4C1794898DEB"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AInBuffer\\SetMsgAInBuf.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AInBuffer\\SetMsgAInBuf.uts"
             "TargetName" = "8:SetMsgAInBuf.uts"
             "Tag" = "8:"
             "Folder" = "8:_D4836C0713FA4D9FA1692D0F66ADA017"
@@ -6327,7 +6327,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B2CE57313E5D44E593D633C8E10B040D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni10Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni10Volts.uts"
             "TargetName" = "8:FPUni10Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6347,7 +6347,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B33FD872FFD44224A18CA2E3D3095B73"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-DIO96H Series\\USB-DIO96H\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-DIO96H Series\\USB-DIO96H\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_46E9352A05EF41BE8F0B901EC57186B0"
@@ -6367,7 +6367,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B538B69F30834DE3B4E5807E07471395"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip4Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip4Volts.uts"
             "TargetName" = "8:FPBip4Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6407,7 +6407,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B69344461F5B494BAD39F0CEA711B4A3"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\Counter\\CtrTest.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\Counter\\CtrTest.uss"
             "TargetName" = "8:CtrTest.uss"
             "Tag" = "8:"
             "Folder" = "8:_026DE0F2172E4408883FE7F57BA93554"
@@ -6427,7 +6427,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6C718525CF246D3A4D7BF477AE2400D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOScaleData.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOScaleData.uts"
             "TargetName" = "8:SOScaleData.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -6447,7 +6447,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6D4A75CFC6B45769177BDC00ED7EE6E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\XClock\\ClockEdge.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\XClock\\ClockEdge.uts"
             "TargetName" = "8:ClockEdge.uts"
             "Tag" = "8:"
             "Folder" = "8:_84F30EF2CD0840CFB819796BACF0089C"
@@ -6487,7 +6487,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B8B549C0D9974BFB80E4D21AB2D05564"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-101\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-101\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_46B126CB82294DE693D7AEFD813479C0"
@@ -6507,7 +6507,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B9513B9613D3424E9CEB31F51738B105"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR2000.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR2000.uts"
             "TargetName" = "8:Set0-15DR2000.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -6527,7 +6527,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B99A8EC4B3074E4E87542E6ADE283B97"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6030\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCI-DAS6000 Series\\PCI-DAS6030\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_6ACC20014C904FB98DC322190C421358"
@@ -6547,7 +6547,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B9AC9256C87A44979674DE20B3784657"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\Rates\\RateSetter.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\Rates\\RateSetter.uts"
             "TargetName" = "8:RateSetter.uts"
             "Tag" = "8:"
             "Folder" = "8:_3DDCDA7B3A654482ACBD92BFEFD1ECD9"
@@ -6567,7 +6567,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BAA7A83F4FFC4B24AECF1C23BB4E4E5E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\UniRangeParams.txt"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\UniRangeParams.txt"
             "TargetName" = "8:UniRangeParams.txt"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6587,7 +6587,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BB44976DD7AD4D01BA854196E7B69B52"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Startup.utm"
+            "SourcePath" = "8:..\\..\\Scripting\\Startup.utm"
             "TargetName" = "8:Startup.utm"
             "Tag" = "8:"
             "Folder" = "8:_9916371335494233AE3D376269823956"
@@ -6607,7 +6607,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC5FC61C728A4B18AEF8E70720A81D44"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\AInRates\\RateSetter.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\AInRates\\RateSetter.uts"
             "TargetName" = "8:RateSetter.uts"
             "Tag" = "8:"
             "Folder" = "8:_14E8308C6D2D4BA094520426D0C01FD3"
@@ -6627,7 +6627,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BD62A7D75BB242D497345FC3EC4D1C00"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetInputModeADCfgOld.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetInputModeADCfgOld.uts"
             "TargetName" = "8:SetInputModeADCfgOld.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -6647,7 +6647,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C243A20A8F0049ACA811C202D4376109"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\AOutAIn\\AOutScanAInScan\\AIOScan.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\AOutAIn\\AOutScanAInScan\\AIOScan.uss"
             "TargetName" = "8:AIOScan.uss"
             "Tag" = "8:"
             "Folder" = "8:_B4AD20DC0ADC4649AE91F203A827B63E"
@@ -6667,7 +6667,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2774B700BF3495B931359881D3E4046"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt2Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt2Volts.uts"
             "TargetName" = "8:FPUniPt2Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6707,7 +6707,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C443273226814CEDA97A77DD8AB16FEF"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closeao.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closeao.uts"
             "TargetName" = "8:Closeao.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -6727,7 +6727,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C44F5710252D4EA99C41DCA090392AF9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni2Pt5Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni2Pt5Volts.uts"
             "TargetName" = "8:FPUni2Pt5Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6747,7 +6747,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C4F7D9CE3073462CBF30614EA9536D6F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Signals\\SwitchSetRange.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Signals\\SwitchSetRange.uts"
             "TargetName" = "8:SwitchSetRange.uts"
             "Tag" = "8:"
             "Folder" = "8:_852D186F1A9C434483A39D2277F720E7"
@@ -6767,7 +6767,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C555C3A974E947869DD498FD157BD6A6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOExtClock.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOExtClock.uts"
             "TargetName" = "8:SOExtClock.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -6787,7 +6787,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C780A6ECB52A4AC7A304D4DF925D7EFE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOWordXfer.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOWordXfer.uts"
             "TargetName" = "8:SOWordXfer.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -6827,7 +6827,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA2AA5EF18104422846921FF68523D27"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Digital\\SelectPorts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Digital\\SelectPorts.uts"
             "TargetName" = "8:SelectPorts.uts"
             "Tag" = "8:"
             "Folder" = "8:_A6A0747E18A045D989C39F37F5D8BAA1"
@@ -6847,7 +6847,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CAF3DCCFC9BA40FC9C457D5FC0651CA7"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip20Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip20Volts.uts"
             "TargetName" = "8:FPBip20Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6867,7 +6867,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CC7F52135EC14CF49649F3A4C6958BD4"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCE.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCE.uts"
             "TargetName" = "8:FPTCE.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -6887,7 +6887,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE2604BB7BC04A4E9B1F3736A16450D4"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1208HS Series\\USB-1208HS-4AO\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1208HS Series\\USB-1208HS-4AO\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_916AD249B66E41E7B0D0ADE0293FF2E0"
@@ -6907,7 +6907,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE452FFE432B4C948B5C24909801F29A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AIn\\Derivative.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AIn\\Derivative.UTS"
             "TargetName" = "8:Derivative.UTS"
             "Tag" = "8:"
             "Folder" = "8:_CBB5FC26537E46CDB505222F256C1DFD"
@@ -6927,7 +6927,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D02A23CEE28D487D8AC67F0E713217B6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2600 Series\\USB-2627\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2600 Series\\USB-2627\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_52C137C103144F54BBBD14C6CDC57CB6"
@@ -6947,7 +6947,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D20CCAB280724623A27263B384624D7A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Signals\\XCtlTrigLoop.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Signals\\XCtlTrigLoop.uts"
             "TargetName" = "8:XCtlTrigLoop.uts"
             "Tag" = "8:"
             "Folder" = "8:_852D186F1A9C434483A39D2277F720E7"
@@ -7007,7 +7007,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D38DAAE675BB4C888BE9113D8DCDAA2D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1608G Series\\USB-1608GX\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1608G Series\\USB-1608GX\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_FC733B60B81B4F7AA27764C8925D641E"
@@ -7027,7 +7027,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D44B3E82DFA34CE892C4F45C2A0DBCC1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt25Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt25Volts.uts"
             "TargetName" = "8:FPUniPt25Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7047,7 +7047,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D5CEB3BAE7D44B329257D9466255D350"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\XClock\\ExtClock.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\XClock\\ExtClock.uts"
             "TargetName" = "8:ExtClock.uts"
             "Tag" = "8:"
             "Folder" = "8:_84F30EF2CD0840CFB819796BACF0089C"
@@ -7067,7 +7067,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D5D5F200F33C4BE6930C0EC87CA211B1"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenCfg.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenCfg.uts"
             "TargetName" = "8:OpenCfg.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -7087,7 +7087,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D63A6102C029486F9A6CADBF5E3CC125"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Signals\\XCtlAoClock.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Signals\\XCtlAoClock.uts"
             "TargetName" = "8:XCtlAoClock.uts"
             "Tag" = "8:"
             "Folder" = "8:_852D186F1A9C434483A39D2277F720E7"
@@ -7127,7 +7127,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7015DE59C9E413EBB72455BC061A75C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOBurstIO.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOBurstIO.uts"
             "TargetName" = "8:SOBurstIO.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -7147,7 +7147,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D732EC8DADF9480E8AE602798B855766"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SOBurstMode.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SOBurstMode.uts"
             "TargetName" = "8:SOBurstMode.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -7167,7 +7167,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D77C7DDF2F6444779085A64961FE67FA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\CloseCfg.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\CloseCfg.uts"
             "TargetName" = "8:CloseCfg.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -7187,7 +7187,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7CC80737C87405AAEFDD0D70A7923B4"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetMsgModeDiff.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetMsgModeDiff.uts"
             "TargetName" = "8:SetMsgModeDiff.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -7207,7 +7207,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D83E4B33DBCF4BD59C6C88FBD6C6C163"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\CLOSEGPIB.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\CLOSEGPIB.UTS"
             "TargetName" = "8:CLOSEGPIB.UTS"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -7227,7 +7227,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D88F703B4110425BB206437967B12C17"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR50.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR50.uts"
             "TargetName" = "8:SetDR50.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -7247,7 +7247,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DAF8CAAF607445608D429D09B0029218"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\PCI\\PCI-DAS1000 Series\\PCI-DAS1002\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\PCI\\PCI-DAS1000 Series\\PCI-DAS1002\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_0AADA164114D4F158209FC24310F7747"
@@ -7267,7 +7267,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBCA56EADAFA4E64BFE1A2BB3CC9959D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Range\\RangeChans.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Range\\RangeChans.UTS"
             "TargetName" = "8:RangeChans.UTS"
             "Tag" = "8:"
             "Folder" = "8:_624FAE5A813746A0BF72E59663EC7A61"
@@ -7287,7 +7287,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DC75A17545FF48179017C1A2B815A544"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMaPt5To2Pt5.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMaPt5To2Pt5.uts"
             "TargetName" = "8:FPMaPt5To2Pt5.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7307,7 +7307,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE01AEEB7DDD437880B6AACBFADE138A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-2408 Series\\USB-2408\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-2408 Series\\USB-2408\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_87C3B6071F3D40769C3173E6036C3081"
@@ -7327,7 +7327,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF1D4444921047408E1C5A0F14A1B0CE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenDIn.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenDIn.uts"
             "TargetName" = "8:OpenDIn.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -7347,7 +7347,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF70F4710B354CF3A63175EC8470D488"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR3750.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR3750.uts"
             "TargetName" = "8:Set0-15DR3750.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -7367,7 +7367,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E0AD5F940C6D4B95B114F00B7517B71A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip2pt5Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip2pt5Volts.uts"
             "TargetName" = "8:FPBip2pt5Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7387,7 +7387,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E0D36A5A58F746BDA67ED309D5D216B4"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR3750.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR3750.uts"
             "TargetName" = "8:SetDR3750.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -7407,7 +7407,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1BBE8C3A7FE4664B63F264E23BED6C8"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\SetTriggerTest.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\SetTriggerTest.uts"
             "TargetName" = "8:SetTriggerTest.uts"
             "Tag" = "8:"
             "Folder" = "8:_FB81B3D6ED7C46D6BA23CE2ADF2A8A6E"
@@ -7427,7 +7427,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1C69C11D23F40C98B210F7A09219940"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\DigitalIO\\BitIOMix.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\DigitalIO\\BitIOMix.uts"
             "TargetName" = "8:BitIOMix.uts"
             "Tag" = "8:"
             "Folder" = "8:_485C776FD44E4D5EB041AA37EB8CA5C7"
@@ -7447,7 +7447,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1C7FEE2357A447BA9BDF498D59F6487"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\BipRangeParams.txt"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\BipRangeParams.txt"
             "TargetName" = "8:BipRangeParams.txt"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7467,7 +7467,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1DAFE945E144AB198F7DDD4D7C42AB6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1208FS Series\\USB-1208FS-Plus\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1208FS Series\\USB-1208FS-Plus\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_B1266315010A453C807DCCB29D3CFB99"
@@ -7487,7 +7487,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E3427105B7BB427F8BFE7B86CFBA90AA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeSE.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeSE.uts"
             "TargetName" = "8:SetModeSE.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -7507,7 +7507,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E46343D149FF4381A2C7471EA2D8FAAF"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCJ.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCJ.uts"
             "TargetName" = "8:FPTCJ.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7527,7 +7527,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E4798BE5613E49D082C30025B1F2DB0C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR2.uts"
             "TargetName" = "8:Set0-15DR2.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -7547,7 +7547,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E4CB2EB89F7C417DAB8AFFB004AEBD1D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Ethernet\\E-1608\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\Ethernet\\E-1608\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_8F5537C93E5E45D391781D748CAAB8E9"
@@ -7567,7 +7567,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E57C6729A1414494912AE13EFECE9DEB"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-1408FS Series\\USB-1408FS-Plus\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-1408FS Series\\USB-1408FS-Plus\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_4481BEC107B449CA961872318CD878B9"
@@ -7587,7 +7587,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E8FEDF108DA04119882B8ED9A8CE1C16"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closeao3.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closeao3.uts"
             "TargetName" = "8:Closeao3.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -7607,7 +7607,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E9395CD4B8664F9BBA5C3CCDBF56CD91"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigNegEdge.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigNegEdge.uts"
             "TargetName" = "8:TrigNegEdge.uts"
             "Tag" = "8:"
             "Folder" = "8:_B73E961FCDD040F780CBE3648E84EC56"
@@ -7627,7 +7627,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EA45F3BBA08342958A0A3BBB7B3A1551"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt01Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUniPt01Volts.uts"
             "TargetName" = "8:FPUniPt01Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7647,7 +7647,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EAAFCD20192648CC82A96C5FE4602668"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni1Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni1Volts.uts"
             "TargetName" = "8:FPUni1Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7667,7 +7667,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC487EF353D342BFA2DBF398E0A80310"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigLow.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Trigger\\Digital\\TrigLow.uts"
             "TargetName" = "8:TrigLow.uts"
             "Tag" = "8:"
             "Folder" = "8:_B73E961FCDD040F780CBE3648E84EC56"
@@ -7687,7 +7687,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED2C807CD9D3449E822222084F6C4D7C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Closeain.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Closeain.uts"
             "TargetName" = "8:Closeain.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -7707,7 +7707,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED539683645E4D0295281C6C62DC4FAD"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR10.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR10.uts"
             "TargetName" = "8:Set0-15DR10.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -7747,7 +7747,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF0048FA83BF4FF1A48BBD8050E9BB84"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCK.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCK.uts"
             "TargetName" = "8:FPTCK.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7767,7 +7767,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EFA1CA35040845DB8AB7DAE47C24B922"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\MiniLab Series\\miniLAB 1008-004\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\MiniLab Series\\miniLAB 1008-004\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_642C18B042D14189A304C046BBB2BB4E"
@@ -7787,7 +7787,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F01289EC1AD44228837FA641EECBB797"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\BTH-1208LS\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\BTH-1208LS\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_2F58556C659043C8B627818D1F298839"
@@ -7807,7 +7807,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F0BA1E1AF3134E5094B8D433A810A6A8"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR1000.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\SetDR1000.uts"
             "TargetName" = "8:SetDR1000.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -7827,7 +7827,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2DBF8759D51434B9655AAD46ABAA2AE"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Digital\\SetInputs.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Digital\\SetInputs.uts"
             "TargetName" = "8:SetInputs.uts"
             "Tag" = "8:"
             "Folder" = "8:_A6A0747E18A045D989C39F37F5D8BAA1"
@@ -7847,7 +7847,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2EDDD39651C47FDA8B9EC6E4E4568BA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-DIO96H Series\\USB-DIO96H_50\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-DIO96H Series\\USB-DIO96H_50\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_8075C32C41C24A2089289F7DA62365BB"
@@ -7867,7 +7867,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2F7FF94F83C4419AF1419B3C35B9BF8"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Options\\SORetrigger.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Options\\SORetrigger.uts"
             "TargetName" = "8:SORetrigger.uts"
             "Tag" = "8:"
             "Folder" = "8:_E2388E0CC66D42E9A103F7B5639835BA"
@@ -7887,7 +7887,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F4817474A58D48C784C51E278E65C70A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni4Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPUni4Volts.uts"
             "TargetName" = "8:FPUni4Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7907,7 +7907,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F4DFCA358223427AA15D7835D8796C1C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR1000.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR1000.uts"
             "TargetName" = "8:Set0-15DR1000.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -7927,7 +7927,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F6507AA565564EFB971954DD6576648C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa0To20.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa0To20.uts"
             "TargetName" = "8:FPMa0To20.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -7947,7 +7947,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F662C03A25274D26BF0A41A18B080466"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\Rate\\LowCountRate.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\Rate\\LowCountRate.UTS"
             "TargetName" = "8:LowCountRate.UTS"
             "Tag" = "8:"
             "Folder" = "8:_ECDC9D36CC7B4A429ECC6301A69471F8"
@@ -7967,7 +7967,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F6BBAD7F67704D4D8A090EB2BCD74089"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCB.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCB.uts"
             "TargetName" = "8:FPTCB.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -8007,7 +8007,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F76878E9E0D24BDBA1B3D69140D0F218"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt1Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt1Volts.uts"
             "TargetName" = "8:FPBipPt1Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -8027,7 +8027,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F90D798947184916AC78183867949062"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa2To10.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPMa2To10.uts"
             "TargetName" = "8:FPMa2To10.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -8047,7 +8047,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F970E8A7E0A2456BB7288BCA97F28DA9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInScan\\XDTrig\\vDigitalReTrig.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInScan\\XDTrig\\vDigitalReTrig.uts"
             "TargetName" = "8:vDigitalReTrig.uts"
             "Tag" = "8:"
             "Folder" = "8:_CFAD0B9ADCA14DFB9D2D50FC2142FBD0"
@@ -8067,7 +8067,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F987E4A157B647ACB22440B16E7B99F2"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeSEOld.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\InputMode\\SetModeSEOld.uts"
             "TargetName" = "8:SetModeSEOld.uts"
             "Tag" = "8:"
             "Folder" = "8:_8D516FCA54A34133B696A2C1DF69A149"
@@ -8087,7 +8087,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA1668A7F4F240E69992F51FB399AA64"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\Master Scripts\\DigitalIO\\DInOut\\DIOTest.uss"
+            "SourcePath" = "8:..\\..\\Scripting\\Master Scripts\\DigitalIO\\DInOut\\DIOTest.uss"
             "TargetName" = "8:DIOTest.uss"
             "Tag" = "8:"
             "Folder" = "8:_107F77A2F043402A879CC548F733DAFA"
@@ -8107,7 +8107,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA4F0FB3AB44411E91C940B917D705C9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR60.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\DataRate\\Set0-15DR60.uts"
             "TargetName" = "8:Set0-15DR60.uts"
             "Tag" = "8:"
             "Folder" = "8:_D1B794FBBDBA405FA4179FAA00D4460E"
@@ -8127,7 +8127,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA6FEE5A5B844248B528E893E41B145E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\MiniLab Series\\miniLAB 1008-001\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\MiniLab Series\\miniLAB 1008-001\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_C6DF89856DC047138E04B051AC1CB27D"
@@ -8147,7 +8147,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FC7295260F77496A900D142652618307"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-230 Series\\USB-231\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-230 Series\\USB-231\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_DADDB1662EA747398E2038789EB415CB"
@@ -8167,7 +8167,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD694091801D443A93FE402A5DC0F602"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\OpenAo2.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\OpenAo2.uts"
             "TargetName" = "8:OpenAo2.uts"
             "Tag" = "8:"
             "Folder" = "8:_4080C0B47EA742288C76F8B4DB2E030F"
@@ -8187,7 +8187,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FE0F7751B0CB42BCAB8780FD4304B8F5"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip30Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBip30Volts.uts"
             "TargetName" = "8:FPBip30Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -8207,7 +8207,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FE39E686ED5F4E44B3C8F100AF6136A9"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCR.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPTCR.uts"
             "TargetName" = "8:FPTCR.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
@@ -8227,7 +8227,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FE646E27371E4CD193D2188627F56D65"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\AInOutScan\\AIOScan.UTS"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\AInOutScan\\AIOScan.UTS"
             "TargetName" = "8:AIOScan.UTS"
             "Tag" = "8:"
             "Folder" = "8:_596BADB6E7664D87AA3EBF25C18180DA"
@@ -8247,7 +8247,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF1B8EE3496C4CD2AC70310D35DE9E03"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\USB\\USB-7200 Series\\USB-7202\\DeviceParams.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\USB\\USB-7200 Series\\USB-7202\\DeviceParams.uts"
             "TargetName" = "8:DeviceParams.uts"
             "Tag" = "8:"
             "Folder" = "8:_4E0A26E783904B1B930043DDEC8F615C"
@@ -8267,7 +8267,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF95A1F1B1EC4B30BD0A9C76E919A643"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt25Volts.uts"
+            "SourcePath" = "8:..\\..\\Scripting\\_Subscripts\\Configuration\\Analog\\RangeParams\\FPBipPt25Volts.uts"
             "TargetName" = "8:FPBipPt25Volts.uts"
             "Tag" = "8:"
             "Folder" = "8:_0400140CE02B46F09BD66247544B3A85"
