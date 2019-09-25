@@ -2467,7 +2467,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_17DBE815DBB249E49E0F46E8C1A94360"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\SEdit.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\SEdit.exe"
             "TargetName" = "8:SEdit.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -2527,7 +2527,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_193E60568E7B4816B003D46CAAC52945"
             {
-            "SourcePath" = "8:..\\..\\..\\MC.ico"
+            "SourcePath" = "8:..\\..\\MC.ico"
             "TargetName" = "8:MC.ico"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -2607,7 +2607,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1C3E961389FB427AB1E9B963A5C69DFA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Cfg488crh.ini"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\Cfg488crh.ini"
             "TargetName" = "8:Cfg488crh.ini"
             "Tag" = "8:"
             "Folder" = "8:_199F1A5828D444EDB5BBDEE9C243FD14"
@@ -3127,7 +3127,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3361C5657AE248AE8FD2711F1E82C8AA"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\7-Zip\\7z.exe"
+            "SourcePath" = "8:..\\..\\7-Zip\\7z.exe"
             "TargetName" = "8:7z.exe"
             "Tag" = "8:"
             "Folder" = "8:_BC56F6640887459989ACF7B9826E8D30"
@@ -3167,7 +3167,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_34896BAB99304CED938459826F8DEED6"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\MSFLXGRD.OCX"
+            "SourcePath" = "8:..\\..\\MSFLXGRD.OCX"
             "TargetName" = "8:MSFLXGRD.OCX"
             "Tag" = "8:"
             "Folder" = "8:_4EDEFCFDA4FB49A5AC3A1CAF26BEFB59"
@@ -3267,7 +3267,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_37C9E9CE9CF44D12B7C59ECB45B2F306"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\TABCTL32.OCX"
+            "SourcePath" = "8:..\\..\\TABCTL32.OCX"
             "TargetName" = "8:TABCTL32.OCX"
             "Tag" = "8:"
             "Folder" = "8:_4EDEFCFDA4FB49A5AC3A1CAF26BEFB59"
@@ -3307,7 +3307,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_392B4BC7F771432E904DFA494A310E32"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\VB5STKIT.DLL"
+            "SourcePath" = "8:..\\..\\VB5STKIT.DLL"
             "TargetName" = "8:VB5STKIT.DLL"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -3427,7 +3427,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C4F4505013D40ABB40CD41CE15A5887"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\FileList3.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\FileList3.exe"
             "TargetName" = "8:FileList3.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -3527,7 +3527,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_411923AF75A14FB2AC4EA1DA2B36566A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\7-Zip\\7-zip.chm"
+            "SourcePath" = "8:..\\..\\7-Zip\\7-zip.chm"
             "TargetName" = "8:7-zip.chm"
             "Tag" = "8:"
             "Folder" = "8:_BC56F6640887459989ACF7B9826E8D30"
@@ -3547,7 +3547,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_414579D5757B42D8A2A62BF655AC75A8"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\UZCmd.bat"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\UZCmd.bat"
             "TargetName" = "8:UZCmd.bat"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -4327,7 +4327,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5FF85989B56541C9B3340A921832C862"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\DOutSpeed.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\DOutSpeed.exe"
             "TargetName" = "8:DOutSpeed.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -4367,7 +4367,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_627B17846CF24A0D96E25EC62A6A4714"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\FileList30.ini"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\FileList30.ini"
             "TargetName" = "8:FileList30.ini"
             "Tag" = "8:"
             "Folder" = "8:_199F1A5828D444EDB5BBDEE9C243FD14"
@@ -4487,7 +4487,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_651687464CE84AC6B5C0C1E65B0CC51D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\KeySender.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\KeySender.exe"
             "TargetName" = "8:KeySender.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -4727,7 +4727,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E78571BC38F4D8CB35A8D1568AC105D"
             {
-            "SourcePath" = "8:HELP.ICO"
+            "SourcePath" = "8:..\\..\\HELP.ICO"
             "TargetName" = "8:HELP.ICO"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -4767,7 +4767,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6FA66646FD1F45FE901FBF31F504C41E"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\ScriptEdit.ini"
+            "SourcePath" = "8:..\\..\\ScriptEdit.ini"
             "TargetName" = "8:ScriptEdit.ini"
             "Tag" = "8:"
             "Folder" = "8:_199F1A5828D444EDB5BBDEE9C243FD14"
@@ -5367,7 +5367,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_86663E4A1E9442029FC55E25A51B5A88"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\UniTest.ini"
+            "SourcePath" = "8:..\\..\\UniTest.ini"
             "TargetName" = "8:UniTest.ini"
             "Tag" = "8:"
             "Folder" = "8:_199F1A5828D444EDB5BBDEE9C243FD14"
@@ -5407,7 +5407,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8AE30CBA8F69412385BA91D8091CD038"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\utul32x.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\utul32x.exe"
             "TargetName" = "8:utul32x.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -5827,7 +5827,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0E8D0290C494F5484F2A04577C77DE7"
             {
-            "SourcePath" = "8:CHECKMRK.ICO"
+            "SourcePath" = "8:..\\..\\CHECKMRK.ICO"
             "TargetName" = "8:CHECKMRK.ICO"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6027,7 +6027,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A91487077EEA47AC87796BB68CFAED6C"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\Switch.pdf"
+            "SourcePath" = "8:..\\..\\Switch.pdf"
             "TargetName" = "8:Switch.pdf"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6227,7 +6227,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFFE9E05C0E64D2C8230A074F796BA8F"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\BoardList.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\BoardList.exe"
             "TargetName" = "8:BoardList.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6287,7 +6287,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B26CFE7A401D40C599CC496FBFB5ABA2"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\AOutSpeed.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\AOutSpeed.exe"
             "TargetName" = "8:AOutSpeed.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6387,7 +6387,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B56E1CE5B80B4AF288BD69971A17778D"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\PlotForm.ini"
+            "SourcePath" = "8:..\\..\\PlotForm.ini"
             "TargetName" = "8:PlotForm.ini"
             "Tag" = "8:"
             "Folder" = "8:_199F1A5828D444EDB5BBDEE9C243FD14"
@@ -6467,7 +6467,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B77E26C52F3B4C4BADB942DD2A5BEF15"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\RunScript.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\RunScript.exe"
             "TargetName" = "8:RunScript.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6687,7 +6687,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2F09C9E99FC4B1A9A2C36BD1F533BDF"
             {
-            "SourcePath" = "8:..\\..\\..\\NOTE16.ICO"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\NOTE16.ICO"
             "TargetName" = "8:NOTE16.ICO"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6807,7 +6807,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C916C2DB2E0344D5818EB23D8F38542A"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\UniScript.chm"
+            "SourcePath" = "8:..\\..\\UniScript.chm"
             "TargetName" = "8:UniScript.chm"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -6967,7 +6967,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D2DE9076EE5A45F9A2D98A2678419BC4"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\7-Zip\\7z.dll"
+            "SourcePath" = "8:..\\..\\7-Zip\\7z.dll"
             "TargetName" = "8:7z.dll"
             "Tag" = "8:"
             "Folder" = "8:_BC56F6640887459989ACF7B9826E8D30"
@@ -6987,7 +6987,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D34A48E93D5C4362BD00ED42A2642C78"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\ScriptParams.ini"
+            "SourcePath" = "8:..\\..\\ScriptParams.ini"
             "TargetName" = "8:ScriptParams.ini"
             "Tag" = "8:"
             "Folder" = "8:_199F1A5828D444EDB5BBDEE9C243FD14"
@@ -7107,7 +7107,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D6AA35C397E1486BA70B0ECEAC5F60C7"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\LOGX.BAT"
+            "SourcePath" = "8:..\\..\\LOGX.BAT"
             "TargetName" = "8:LOGX.BAT"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
@@ -7727,7 +7727,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE34AB165FC44C529B70299F0A5B8DF0"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\UniBoards.ini"
+            "SourcePath" = "8:..\\..\\UniBoards.ini"
             "TargetName" = "8:UniBoards.ini"
             "Tag" = "8:"
             "Folder" = "8:_199F1A5828D444EDB5BBDEE9C243FD14"
@@ -7987,7 +7987,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F6BC2BD63D9A4269BE6B9C62E0E5C631"
             {
-            "SourcePath" = "8:..\\..\\Scripting\\ScanRate.exe"
+            "SourcePath" = "8:..\\..\\..\\FileStorage\\ScanRate.exe"
             "TargetName" = "8:ScanRate.exe"
             "Tag" = "8:"
             "Folder" = "8:_D590470A15AF459585EC14C84A4B1535"
