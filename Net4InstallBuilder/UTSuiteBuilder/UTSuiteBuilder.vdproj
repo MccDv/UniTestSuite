@@ -99,12 +99,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0A80AA52A184408EB323B897315999C7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0D68BCD4215F04AB8630E4137D5134CA"
         "OwnerKey" = "8:_3B9213AC993F415BB6445BAFCB0784BE"
         "MsmSig" = "8:_UNDEFINED"
@@ -2321,26 +2315,6 @@
             "Tag" = "8:"
             "Folder" = "8:_21D7118985D34288B03291484FE408AB"
             "Condition" = "8:CHECKBOXA4"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A80AA52A184408EB323B897315999C7"
-            {
-            "SourcePath" = "8:..\\..\\..\\FileStorage\\UZCmd.bat"
-            "TargetName" = "8:UZCmd.bat"
-            "Tag" = "8:"
-            "Folder" = "8:_6097F766C8884B94858671B0A6E5DAD8"
-            "Condition" = "8:CHECKBOXA2"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
@@ -8409,7 +8383,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FileLister4, Version=1.4.3.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:FileLister4, Version=1.4.4.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_FB22C0A8A3A44D478FA985A8A63BEE55"

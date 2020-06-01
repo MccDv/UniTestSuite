@@ -1389,12 +1389,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B44D899566B44C48855BA3DC6CFC2680"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B4F7CDAE0C584BD28C604B7D5D1C79EE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6630,26 +6624,6 @@
             "Tag" = "8:"
             "Folder" = "8:_C8FD3E43BCD34DE78F6DF8B8FCBA4DD1"
             "Condition" = "8:CHECKBOXA4"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B44D899566B44C48855BA3DC6CFC2680"
-            {
-            "SourcePath" = "8:..\\..\\..\\FileStorage\\UZCmd.bat"
-            "TargetName" = "8:UZCmd.bat"
-            "Tag" = "8:"
-            "Folder" = "8:_EEBDB15F3E9F4E46A16C3411F8BEB732"
-            "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
